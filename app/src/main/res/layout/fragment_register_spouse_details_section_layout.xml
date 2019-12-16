@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/register_layout_section_data_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    tools:context=".ui.register.RegisterFragment">
+
+    <TextView
+        android:id="@+id/spouseDetailsSectionTitleLabel"
+        style="@style/register_layout_section_header_title"
+        android:layout_margin="16dp"
+        android:text="@string/spouse_details_section_title" />
+
+    <LinearLayout
+        style="@style/register_layout_section_data_container"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/spouseDetailsMandatoryIndicatorId"
+                style="@style/register_mandatory_input"
+                android:layout_marginTop="24dp" />
+
+            <EditText
+                android:id="@+id/spouseDetailsIdNumberInput"
+                style="@style/register_layout_section_input"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:hint="@string/spouse_details_id_number_input_hint"
+                android:inputType="textCapCharacters"
+                android:maxLength="@integer/id_number_length"
+                tools:ignore="TextFields" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/spouseDetailsMandatoryIndicatorName"
+                style="@style/register_mandatory_input" />
+
+            <EditText
+                android:id="@+id/spouseDetailsNameInput"
+                style="@style/register_layout_section_input"
+                android:layout_marginBottom="24dp"
+                android:hint="@string/spouse_details_name_input_hint"
+                android:nextFocusDown="@+id/spouseDetailsFatherNameInput" />
+
+            <TextView
+                android:id="@+id/spouseDetailsMandatoryIndicatorFatherName"
+                style="@style/register_mandatory_input" />
+
+            <EditText
+                android:id="@+id/spouseDetailsFatherNameInput"
+                style="@style/register_layout_section_input"
+                android:hint="@string/spouse_details_father_name_input_hint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/spouseDetailsMandatoryIndicatorGrandfatherName"
+                style="@style/register_mandatory_input" />
+
+            <EditText
+                android:id="@+id/spouseDetailsGrandfatherNameInput"
+                style="@style/register_layout_section_input"
+                android:layout_marginBottom="32dp"
+                android:hint="@string/spouse_details_grandfather_name_input_hint"
+                android:imeOptions="actionDone" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

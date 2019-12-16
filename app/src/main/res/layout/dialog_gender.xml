@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RadioGroup
+        android:id="@+id/gender_dialog_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:checkedButton="@id/gender_dialog_male_choice"
+        android:orientation="vertical"
+        android:padding="8dp" >
+
+        <RadioButton
+            android:id="@+id/gender_dialog_male_choice"
+            style="@style/label"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:text="@string/personal_details_gender_male_choice" />
+
+        <RadioButton
+            android:id="@+id/gender_dialog_female_choice"
+            style="@style/label"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:text="@string/personal_details_gender_female_choice" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/gender_dialog_done_button"
+        style="@style/button.dark.green.dialog"
+        android:layout_gravity="bottom|end"
+        android:text="@string/sample_button_done" />
+</LinearLayout>

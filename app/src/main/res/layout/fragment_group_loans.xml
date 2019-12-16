@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    tools:context=".ui.home.main.groupedloans.GroupedLoansFragment">
+
+    <View
+        android:id="@+id/groupedLoansToolbarShadow"
+        style="@style/shadow.horizontal.bottom"
+        android:layout_below="@+id/groupedLoansToolbar" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/groupedLoansToolbar"
+        style="@style/toolbar">
+        <LinearLayout style="@style/toolbar_menu_container">
+
+            <TextView
+                android:id="@+id/groupLoanMenuDone"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_group_loan_done" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/groupedLoanRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/groupedLoansToolbarShadow"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/group_applications_item_layout" />
+
+</RelativeLayout>

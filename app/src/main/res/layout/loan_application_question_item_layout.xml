@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="24dp"
+    android:paddingTop="24dp">
+
+    <TextView
+        android:id="@+id/questionItemLayoutNumberLabel"
+        style="@style/label.gray"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="4dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/questionItemLayoutMessageLabel"
+            style="@style/label"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/questionItemLayoutCommentLabel"
+            style="@style/label.small.gray"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/questionLoanItemLayoutMandatoryIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/label.red"
+        android:layout_marginTop="8dp"
+        android:text="@string/asterisk"/>
+
+    <LinearLayout
+        android:id="@+id/questionItemLayoutChoiceContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:padding="4dp" />
+</LinearLayout>

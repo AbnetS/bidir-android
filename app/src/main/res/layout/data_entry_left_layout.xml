@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/data_entry_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingBottom="2dp"
+    android:paddingTop="2dp">
+
+    <TextView
+        android:id="@+id/data_entry_item_button"
+        style="@style/label.large"
+        android:layout_width="match_parent"
+        android:background="@drawable/acat_green_custom_border"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" />
+</LinearLayout>

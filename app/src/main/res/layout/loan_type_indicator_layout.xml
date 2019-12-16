@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:orientation="horizontal"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/loanTypeIndividualLabel"
+        style="@style/label.gray"
+        android:layout_width="120sp"
+        android:drawablePadding="4dp"
+        android:text="@string/menu_main_individual_type_label"
+        android:gravity="center"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <TextView
+        android:id="@+id/loanTypeGroupLabel"
+        style="@style/label.gray"
+        android:layout_width="120sp"
+        android:drawablePadding="4dp"
+        android:text="@string/menu_main_group_type_label"
+        android:gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+</LinearLayout>

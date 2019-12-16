@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="24dp"
+    android:paddingTop="24dp">
+
+    <TextView
+        android:id="@+id/questionItemLayoutNumberLabel"
+        style="@style/label.gray"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" />
+
+    <TextView
+        android:id="@+id/questionItemLayoutMessageLabel"
+        style="@style/label"
+        android:layout_width="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="9" />
+
+    <TextView
+        android:id="@+id/questionItemLayoutMandatoryIndicator"
+        style="@style/label.red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/asterisk"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+    <LinearLayout
+        android:id="@+id/questionItemLayoutChoiceContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="10"
+        android:orientation="vertical"
+        android:padding="4dp" />
+
+    <TextView
+        android:id="@+id/questionItemLayoutCommentLabel"
+        style="@style/label.gray"
+        android:layout_width="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="8"
+        android:gravity="center_horizontal" />
+
+</LinearLayout>

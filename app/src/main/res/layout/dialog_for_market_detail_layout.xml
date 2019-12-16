@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp" >
+    
+    <TextView
+        style="@style/label.large"
+        android:text="@string/produce_for_the_market_label_title"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:paddingBottom="16dp"/>
+
+    <LinearLayout
+        style="@style/summary_inputs_row_container"
+        android:layout_marginBottom="8dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="15" />
+
+        <TextView
+            style="@style/label.green"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:gravity="center_horizontal"
+            android:text="@string/summary_inputs_estimated_title_label" />
+
+        <TextView
+            style="@style/label.green"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:gravity="center_horizontal"
+            android:text="@string/summary_inputs_actual_title_label" />
+
+        <TextView
+            style="@style/label.green"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:gravity="center_horizontal"
+            android:text="@string/for_market_detail_dialog_remark_title" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/for_market_detail_row_container">
+
+        <TextView
+            style="@style/label"
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            android:text="@string/for_market_detail_union_title" />
+
+        <EditText
+            android:id="@+id/forMarketUnionExpectedAmountInput"
+            style="@style/input"
+            android:text="@null"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:inputType="numberDecimal"
+            android:hint="@string/for_market_detail_dialog_amount_hint"
+            />
+
+        <EditText
+            android:id="@+id/forMarketUnionActualAmountInput"
+            style="@style/input"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:inputType="numberDecimal"
+            android:hint="@string/for_market_detail_dialog_amount_hint" />
+
+        <EditText
+            android:id="@+id/forMarketUnionRemarkInput"
+            style="@style/input"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:inputType="text"
+            android:hint="@string/for_market_detail_dialog_remark_title"/>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/for_market_detail_row_container">
+
+        <TextView
+            style="@style/label"
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            android:text="@string/for_market_detail_factory_title" />
+
+        <EditText
+            android:id="@+id/forMarketFactoryExpectedAmountInput"
+            style="@style/input"
+            android:text="@null"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:inputType="numberDecimal"
+            android:hint="@string/for_market_detail_dialog_amount_hint"
+            />
+
+        <EditText
+            android:id="@+id/forMarketFactoryActualAmountInput"
+            style="@style/input"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:inputType="numberDecimal"
+            android:hint="@string/for_market_detail_dialog_amount_hint" />
+
+        <EditText
+            android:id="@+id/forMarketFactoryRemarkInput"
+            style="@style/input"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:inputType="text"
+            android:hint="@string/for_market_detail_dialog_remark_title"/>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/for_market_detail_row_container">
+
+        <TextView
+            style="@style/label"
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            android:text="@string/for_market_detail_trader_title" />
+
+        <EditText
+            android:id="@+id/forMarketTraderExpectedAmountInput"
+            style="@style/input"
+            android:text="@null"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:inputType="numberDecimal"
+            android:hint="@string/for_market_detail_dialog_amount_hint"
+            />
+
+        <EditText
+            android:id="@+id/forMarketTraderActualAmountInput"
+            style="@style/input"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:inputType="numberDecimal"
+            android:hint="@string/for_market_detail_dialog_amount_hint" />
+
+        <EditText
+            android:id="@+id/forMarketTraderRemarkInput"
+            style="@style/input"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:inputType="text"
+            android:hint="@string/for_market_detail_dialog_remark_title"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="end">
+
+        <Button
+            android:id="@+id/forMarketDialogCancelButton"
+            style="@style/button.dark.gray.dialog"
+            android:layout_weight="1"
+            android:text="@string/sample_button_cancel" />
+
+        <Button
+            android:id="@+id/forMarketDialogOKButton"
+            style="@style/button.dark.green.dialog"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/acat_dialog_ok_button"
+            />
+    </LinearLayout>
+
+</LinearLayout>

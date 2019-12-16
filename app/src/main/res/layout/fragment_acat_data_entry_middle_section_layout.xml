@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/acat_item_input_field_container"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="2"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/acat_item_cost_estimation_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="64dp"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                style="@style/label"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:text="@string/acat_unit" />
+
+            <TextView
+                style="@style/label"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="32dp"
+                android:text="@string/acat_quantity" />
+
+            <TextView
+                style="@style/label"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="32dp"
+                android:text="@string/acat_unit_price" />
+
+            <TextView
+                style="@style/label"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="32dp"
+                android:text="@string/acat_total" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/estimated_yield_title_label"
+                style="@style/label.large"
+                android:layout_width="match_parent"
+                android:background="@color/green_super_light"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/acat_estimated"
+                android:textColor="@color/green" />
+
+            <EditText
+                android:id="@+id/estimated_yield_unit_input"
+                style="@style/acat_layout_input"
+                android:hint="@string/acat_unit"
+                android:padding="16dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_below="@id/estimated_yield_title_label"
+                />
+
+            <EditText
+                android:id="@+id/estimated_yield_quantity_input"
+                style="@style/acat_layout_input"
+                android:hint="@string/acat_quantity"
+                android:padding="16dp"
+                android:inputType="numberDecimal"
+                android:layout_below="@id/estimated_yield_unit_input"
+                android:selectAllOnFocus="true"/>
+
+            <EditText
+                android:id="@+id/estimated_yield_unit_price_input"
+                style="@style/acat_layout_input"
+                android:hint="@string/acat_unit_price"
+                android:padding="16dp"
+                android:inputType="numberDecimal"
+                android:layout_below="@id/estimated_yield_quantity_input"
+                android:selectAllOnFocus="true"/>
+
+            <TextView
+                android:id="@+id/estimated_yield_total_label"
+                style="@style/label"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/green_light"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/acat_default_value"
+                android:layout_below="@id/estimated_yield_unit_price_input"/>
+            <View
+                android:id="@+id/estimated_yield_read_only_shield"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/read_only_shield_color"
+                android:visibility="gone"
+                android:layout_alignTop="@id/estimated_yield_title_label"
+                android:layout_alignBottom="@id/estimated_yield_total_label"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/actual_yield_title_label"
+                style="@style/label.large"
+                android:layout_width="match_parent"
+                android:background="@color/green_super_light"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/acat_actual"
+                android:textColor="@color/green" />
+
+            <EditText
+                android:id="@+id/actual_yield_unit_input"
+                style="@style/acat_layout_input"
+                android:hint="@string/acat_unit"
+                android:padding="16dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_below="@id/actual_yield_title_label"/>
+
+            <EditText
+                android:id="@+id/actual_yield_quantity_input"
+                style="@style/acat_layout_input"
+                android:hint="@string/acat_quantity"
+                android:padding="16dp"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:layout_below="@id/actual_yield_unit_input"/>
+
+            <EditText
+                android:id="@+id/actual_yield_unit_price_input"
+                style="@style/acat_layout_input"
+                android:hint="@string/acat_unit_price"
+                android:padding="16dp"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:layout_below="@id/actual_yield_quantity_input"/>
+
+            <TextView
+                android:id="@+id/actual_yield_total_label"
+                style="@style/label"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/green_light"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/acat_default_value"
+                android:layout_below="@id/actual_yield_unit_price_input"/>
+            <View
+                android:id="@+id/actual_yield_read_only_shield"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/read_only_shield_color"
+                android:visibility="gone"
+                android:layout_alignTop="@id/actual_yield_title_label"
+                android:layout_alignBottom="@id/actual_yield_total_label"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/acat_item_yield_read_only_shield"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/read_only_shield_color"
+        android:visibility="gone" />
+    <LinearLayout
+        android:id="@+id/acat_item_cost_estimation_remark_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_below="@id/acat_item_cost_estimation_container"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/label.large"
+            android:text="@string/acat_remark" />
+
+        <EditText
+            android:id="@+id/acatItemRemarkInput"
+            style="@style/acat_layout_input"
+            android:hint="@string/acat_remark" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seed_variety_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="32dp"
+        android:visibility="gone">
+        <TextView
+            style="@style/label"
+            android:padding="8dp"
+            android:text="@string/seed_variety"/>
+        <EditText
+            android:id="@+id/seed_variety_input"
+            style="@style/input"
+            android:padding="8dp"
+            android:hint="@string/seed_variety"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seed_source_choice_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingLeft="64dp"
+            android:paddingRight="64dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+            <CheckBox
+                android:id="@+id/seed_source_union"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seed_source_union"
+                android:textSize="18sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:padding="8dp"
+                android:checked="false"/>
+            <CheckBox
+                android:id="@+id/seed_source_factory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seed_source_factory"
+                android:textSize="18sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:padding="8dp"
+                android:checked="false"/>
+            <CheckBox
+                android:id="@+id/seed_source_trader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seed_source_trader"
+                android:textSize="18sp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:padding="8dp"
+                android:checked="false"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+
+

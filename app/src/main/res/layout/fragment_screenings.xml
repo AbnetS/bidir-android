@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    tools:context=".ui.home.main.screenings.ScreeningsFragment">
+
+    <RelativeLayout
+        android:id="@+id/screeningsFilterContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_super_light"
+        android:padding="8dp">
+
+        <include layout="@layout/sync_indicator_layout" />
+
+        <TextView
+            android:id="@+id/screeningsFragmentFilterLabel"
+            style="@style/label.large.green"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableEnd="@drawable/main_menu_filter_list_icon"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/main_menu_filter_list_icon"
+            android:gravity="end"
+            android:text="@string/menu_main_filter_label" />
+
+        <include layout="@layout/loan_type_indicator_layout" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/screeningsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/screeningsFilterContainer"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/main_item_layout" />
+
+    <TextView
+        android:id="@+id/screeningsNoScreeningsLabel"
+        style="@style/label.green"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="@string/screenings_fragment_no_screenings_label"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/screeningsNoGroupedScreeningsLabel"
+        style="@style/label.green"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="@string/screenings_fragment_no_group_screenings_label"
+        android:visibility="gone"/>
+</RelativeLayout>

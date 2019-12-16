@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    android:padding="8dp"
+    tools:context=".ui.summary_costs.SummaryCostsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/summaryCostsTitleLabel"
+                style="@style/label"
+                android:paddingBottom="16dp"
+                android:paddingLeft="48dp"
+                android:paddingRight="48dp"
+                android:paddingTop="16dp"
+                tools:text="@string/summary_costs_title_labor_costs_label" />
+
+            <RelativeLayout
+                android:id="@+id/summaryMonitorFabContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/monitorNewFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:fabSize="normal"
+                    app:srcCompat="@drawable/ic_monitor_acat" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View style="@style/summary_divider" />
+
+        <TextView
+            style="@style/label"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/summary_costs_subtitle_estimated_label" />
+
+        <LinearLayout style="@style/summary_costs_list_container">
+
+            <include layout="@layout/summary_costs_list_header_container" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/summaryCostsEstimatedRecyclerView"
+                style="@style/summary_costs_list"
+                tools:itemCount="5"
+                tools:listitem="@layout/summary_costs_list_item_layout" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/label"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/summary_costs_subtitle_actual_label" />
+
+        <LinearLayout style="@style/summary_costs_list_container">
+
+            <include layout="@layout/summary_costs_list_header_container" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/summaryCostsActualRecyclerView"
+                style="@style/summary_costs_list"
+                tools:itemCount="5"
+                tools:listitem="@layout/summary_costs_list_item_layout" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/label"
+            android:paddingBottom="16dp"
+            android:paddingLeft="48dp"
+            android:paddingRight="48dp"
+            android:paddingTop="16dp"
+            android:text="@string/summary_inputs_cash_flow" />
+
+        <View style="@style/summary_divider" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/summaryCostsCashFlowRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@color/white"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

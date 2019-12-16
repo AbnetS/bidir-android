@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single" >
+
+        <item android:id="@+id/allGroupsMenu"
+            android:title="@string/group_filter_menu_label_all"
+            android:checked="true"/>
+        <item android:id="@+id/newGroupsMenu"
+            android:title="@string/group_filter_menu_label_new" />
+        <item android:id="@+id/screeningGroupsMenu"
+            android:title="@string/group_filter_menu_label_screening" />
+        <item android:id="@+id/loanGroupsMenu"
+            android:title="@string/group_filter_menu_label_loan_application" />
+        <item android:id="@+id/acatGroupsMenu"
+            android:title="@string/group_filter_menu_label_acat" />
+
+    </group>
+</menu>

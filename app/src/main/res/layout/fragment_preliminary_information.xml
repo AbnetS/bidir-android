@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    tools:context=".ui.questions.acat.initializeclientacat.PreliminaryInformationFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/preliminaryInfoToolbar"
+        style="@style/toolbar">
+
+        <LinearLayout style="@style/toolbar_menu_container">
+
+            <TextView
+                android:id="@+id/preliminaryInfoMenuNext"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_preliminary_info_next" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/acat_lower_toolbar_container"
+        style="@style/lower_toolbar"
+        android:layout_below="@id/preliminaryInfoToolbar">
+
+        <TextView
+            android:id="@+id/preliminaryInfoTitle"
+            style="@style/lower_toolbar_title_label"
+            android:text="@string/acat_title_preliminary_info" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/preliminaryInfoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/acat_lower_toolbar_container"
+        android:background="@color/gray_super_light">
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/loanProductSpinner"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/acat_preliminary_info_horizontal_container"
+            android:layout_alignStart="@id/acat_preliminary_info_horizontal_container"
+            android:layout_margin="12dp"
+            android:padding="8dp"
+            android:prompt="@string/loan_product_prompt" />
+
+        <RelativeLayout
+            android:id="@+id/acat_preliminary_info_horizontal_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/loanProductSpinner"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/type_of_crop_label"
+                style="@style/label.small.green"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="@string/type_of_crop" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:id="@+id/acatPreliminaryInfoSelectedCropsLabel"
+                    style="@style/label.small"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/preliminary_no_crops_selected_label" />
+
+                <TextView
+                    android:id="@+id/acatPreliminaryInfoSelectedCropsCounterLabel"
+                    style="@style/label.small.white"
+                    android:layout_width="36dp"
+                    android:visibility="gone"
+                    android:layout_height="36dp"
+                    android:background="@drawable/question_indicator_completed_background"
+                    android:gravity="center"
+                    tools:text="12" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/choicesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/type_of_crop_label"
+                android:layout_marginBottom="24dp"
+                android:paddingLeft="48dp"
+                android:paddingRight="48dp"
+                tools:listitem="@layout/preliminary_information_single_choice_item_layout" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

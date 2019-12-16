@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    tools:context=".ui.questions.acat.acatapplication.ACATPreliminaryInfoFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/acatPreliminaryInfoToolbar"
+        style="@style/toolbar">
+
+        <LinearLayout style="@style/toolbar_menu_container">
+
+            <TextView
+                android:id="@+id/acatPreliminaryInfoMenuSave"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_preliminary_info_next" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/acat_preliminary_info_lower_toolbar_container"
+        style="@style/lower_toolbar"
+        android:layout_below="@id/acatPreliminaryInfoToolbar">
+
+        <View
+            style="@style/list_separator"
+            android:layout_height="4dp"
+            android:layout_alignParentBottom="true" />
+
+        <TextView
+            android:id="@+id/preliminaryInfoTitle"
+            style="@style/lower_toolbar_title_label"
+            android:text="@string/acat_title_preliminary_info" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/recyclerViewholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/acat_preliminary_info_lower_toolbar_container"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/acatPreliminaryInfoRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/acat_preliminary_info_item_layout" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,210 @@
+{
+  "token": "NeLJerzT/hETXZnARgau0NiY3Kgaha/a/2+n71M9K8Y=",
+  "user": {
+    "_id": "5a64633b8f51840001e16494",
+    "last_login": "2018-02-17T13:56:22.882Z",
+    "last_modified": "2018-02-17T13:56:22.882Z",
+    "date_created": "2018-01-21T09:54:04.256Z",
+    "username": "senior@buusaa.com",
+    "created_by": "super@bidir.com",
+    "account": {
+      "_id": "5a64633c8f51840001e16495",
+      "last_modified": "2018-01-21T09:54:04.260Z",
+      "date_created": "2018-01-21T09:54:04.260Z",
+      "user": "5a64633b8f51840001e16494",
+      "archived": false,
+      "multi_branches": false,
+      "access_branches": [
+        {
+          "_id": "5a5fc3b4819f060001fbb12a",
+          "last_modified": "2018-01-17T21:44:20.414Z",
+          "date_created": "2018-01-17T21:44:20.414Z",
+          "name": "Test Branch",
+          "location": "Meki",
+          "phone": "091245677888",
+          "email": "",
+          "branch_type": "Regional office",
+          "opening_date": "2017-11-01T07:00:00.000Z",
+          "status": "active"
+        },
+        {
+          "_id": "5a5fc3b4819f060001fbb12a",
+          "last_modified": "2018-01-17T21:44:20.414Z",
+          "date_created": "2018-01-17T21:44:20.414Z",
+          "name": "Test Branch",
+          "location": "Meki",
+          "phone": "091245677888",
+          "email": "",
+          "branch_type": "Regional office",
+          "opening_date": "2017-11-01T07:00:00.000Z",
+          "status": "active"
+        }
+      ],
+      "default_branch": {
+        "_id": "5a5fc3b4819f060001fbb12a",
+        "last_modified": "2018-01-17T21:44:20.414Z",
+        "date_created": "2018-01-17T21:44:20.414Z",
+        "name": "Test Branch",
+        "location": "Meki",
+        "phone": "091245677888",
+        "email": "",
+        "branch_type": "Regional office",
+        "opening_date": "2017-11-01T07:00:00.000Z",
+        "status": "active"
+      },
+      "role": {
+        "_id": "5a5fc3600b96e60001bc08b5",
+        "name": "Senior Loan Officer",
+        "permissions": [
+          {
+            "_id": "5a5fbf110b96e60001bc08ad",
+            "last_modified": "2018-01-17T21:38:16.480Z",
+            "date_created": "2018-01-17T21:24:33.970Z",
+            "name": "Create Loan Application",
+            "module": "LOAN_MODULE",
+            "operation": "CREATE",
+            "entity": "LOAN",
+            "endpoints": [],
+            "description": "Create and fill loan application for a client"
+          },
+          {
+            "_id": "5a5fa2a90b96e60001bc08ac",
+            "last_modified": "2018-01-17T19:23:21.907Z",
+            "date_created": "2018-01-17T19:23:21.907Z",
+            "name": "View Form",
+            "module": "FORM_BUILDER",
+            "operation": "VIEW",
+            "entity": "FORM",
+            "endpoints": [],
+            "description": "View forms"
+          },
+          {
+            "_id": "5a5fa2450b96e60001bc08ab",
+            "last_modified": "2018-01-17T21:39:21.770Z",
+            "date_created": "2018-01-17T19:21:41.796Z",
+            "name": "Authorize Loan Application",
+            "module": "LOAN_MODULE",
+            "operation": "AUTHORIZE",
+            "entity": "LOAN",
+            "endpoints": [],
+            "description": "Evaluate and accept/decline loan application of a client"
+          },
+          {
+            "_id": "5a5fa2170b96e60001bc08aa",
+            "last_modified": "2018-01-17T21:39:35.399Z",
+            "date_created": "2018-01-17T19:20:55.271Z",
+            "name": "Edit Loan Application",
+            "module": "LOAN_MODULE",
+            "operation": "UPDATE",
+            "entity": "LOAN",
+            "endpoints": [],
+            "description": "Edit loan application of a client"
+          },
+          {
+            "_id": "5a5fa2020b96e60001bc08a9",
+            "last_modified": "2018-01-17T21:39:44.790Z",
+            "date_created": "2018-01-17T19:20:34.418Z",
+            "name": "View Loan Application",
+            "module": "LOAN_MODULE",
+            "operation": "VIEW",
+            "entity": "LOAN",
+            "endpoints": [],
+            "description": "View loan application of a client"
+          },
+          {
+            "_id": "5a5f9f470b96e60001bc08a8",
+            "last_modified": "2018-01-17T19:08:55.788Z",
+            "date_created": "2018-01-17T19:08:55.788Z",
+            "name": "Authorize Screening",
+            "module": "SCREENING_MODULE",
+            "operation": "AUTHORIZE",
+            "entity": "SCREENING",
+            "endpoints": [],
+            "description": "Evaluate and approve/decline client screening"
+          },
+          {
+            "_id": "5a5f9e9e0b96e60001bc08a7",
+            "last_modified": "2018-01-17T19:06:06.961Z",
+            "date_created": "2018-01-17T19:06:06.961Z",
+            "name": "Edit Screening",
+            "module": "SCREENING_MODULE",
+            "operation": "UPDATE",
+            "entity": "SCREENING",
+            "endpoints": [],
+            "description": "Edit screening"
+          },
+          {
+            "_id": "5a5f9e5e0b96e60001bc08a6",
+            "last_modified": "2018-01-17T19:05:02.893Z",
+            "date_created": "2018-01-17T19:05:02.893Z",
+            "name": "View Screening",
+            "module": "SCREENING_MODULE",
+            "operation": "VIEW",
+            "entity": "SCREENING",
+            "endpoints": [],
+            "description": "View screening"
+          },
+          {
+            "_id": "5a5f9e360b96e60001bc08a5",
+            "last_modified": "2018-01-17T19:04:22.385Z",
+            "date_created": "2018-01-17T19:04:22.385Z",
+            "name": "Create Screening",
+            "module": "SCREENING_MODULE",
+            "operation": "CREATE",
+            "entity": "SCREENING",
+            "endpoints": [],
+            "description": "Create and fill up screening for own client"
+          },
+          {
+            "_id": "5a5f9db20b96e60001bc08a4",
+            "last_modified": "2018-01-17T19:02:10.218Z",
+            "date_created": "2018-01-17T19:02:10.218Z",
+            "name": "Edit Client",
+            "module": "SCREENING_MODULE",
+            "operation": "UPDATE",
+            "entity": "CLIENT",
+            "endpoints": [],
+            "description": "Edit client's information"
+          },
+          {
+            "_id": "5a5f9d950b96e60001bc08a3",
+            "last_modified": "2018-01-17T19:01:41.654Z",
+            "date_created": "2018-01-17T19:01:41.654Z",
+            "name": "View Client",
+            "module": "SCREENING_MODULE",
+            "operation": "VIEW",
+            "entity": "CLIENT",
+            "endpoints": [],
+            "description": "View client information"
+          },
+          {
+            "_id": "5a5f9d2d0b96e60001bc08a2",
+            "last_modified": "2018-01-17T18:59:57.050Z",
+            "date_created": "2018-01-17T18:59:57.050Z",
+            "name": "Register Client",
+            "module": "SCREENING_MODULE",
+            "operation": "CREATE",
+            "entity": "CLIENT",
+            "endpoints": [],
+            "description": "Register a new client"
+          }
+        ]
+      },
+      "grandfather_name": "Grandfather",
+      "hired_date": "2018-01-20T21:00:00.000Z",
+      "country": "SELECT",
+      "city": "SELECT",
+      "phone": "",
+      "email": "",
+      "last_name": "Officer",
+      "first_name": "Senior",
+      "gender": "SELECT",
+      "title": "Senior Officer",
+      "picture": ""
+    },
+    "archived": false,
+    "status": "active",
+    "role": "Senior_Loan_Officer",
+    "realm": "user"
+  }
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    android:background="@color/gray_super_light"
+    tools:context=".ui.register.RegisterFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/registerFragmentToolbar"
+        style="@style/toolbar"
+        app:title="@string/register_fragment_title">
+
+        <LinearLayout style="@style/toolbar_menu_container">
+
+            <ImageView
+                android:id="@+id/registerMenuToggleLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_item_background"
+                android:contentDescription="@string/contentDescription"
+                android:paddingBottom="10dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:paddingTop="10dp"
+                app:srcCompat="@drawable/register_location_disabled_icon" />
+
+            <TextView
+                android:id="@+id/registerMenuSave"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_register_save" />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerFragmentToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout style="@style/register_layout_row_container">
+
+                <include layout="@layout/fragment_register_personal_details_section_layout" />
+
+                <include layout="@layout/fragment_register_family_status_section_layout" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/register_layout_row_container">
+
+                <include layout="@layout/fragment_register_address_section_layout" />
+
+                <include layout="@layout/fragment_register_spouse_details_section_layout" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/registerLocationUpdateContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/registerFragmentToolbar"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:id="@+id/registerLocationUpdateIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/contentDescription"
+            app:srcCompat="@drawable/register_location_disabled_icon" />
+
+        <TextView
+            android:id="@+id/registerLocationUpdateLabel"
+            style="@style/label.small"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/personal_details_updating_location_label" />
+    </LinearLayout>
+
+
+
+    <View
+        style="@style/shadow.horizontal.bottom"
+        android:layout_below="@+id/registerFragmentToolbar" />
+</RelativeLayout>

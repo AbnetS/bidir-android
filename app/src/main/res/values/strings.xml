@@ -1,0 +1,922 @@
+<resources>
+    <!-- ============================== ALL ============================== -->
+    <string name="app_name">A-CAT</string>
+    <string name="contentDescription">cd</string>
+
+    <!-- ============================== SAMPLES ============================== -->
+    <string name="sample_label">Normal Label</string>
+    <string name="sample_label_small">Small Label</string>
+    <string name="sample_label_large">Large Label</string>
+    <string name="sample_button">SAMPLE BUTTON</string>
+
+    <string name="sample_button_ok">OKAY</string>
+    <string name="sample_button_done">DONE</string>
+    <string name="sample_button_save">SAVE</string>
+    <string name="sample_button_cancel">CANCEL</string>
+    <string name="sample_button_yes">YES</string>
+    <string name="sample_button_no">NO</string>
+    <string name="sample_button_continue">CONTINUE</string>
+    <string name="sample_input_hint">Input Hint</string>
+    <string name="profile_input_hint">Unavailable</string>
+
+    <!--COMMON ERRORS-->
+    <string name="error_no_internet_connectivity" translatable="false">No Internet connection found</string>
+    <string name="error_connectivity_error" translatable="false">There was a problem attempting to establish a connection. Please try again.</string>
+
+    <!-- ============================== LOGIN ============================== -->
+    <!-- ============================== LOGIN FRAGMENT ============================== -->
+    <string name="login_username_input_hint" translatable="false">username</string>
+    <string name="login_password_input_hint">password</string>
+    <string name="login_forgot_password_label">Forgot password? Tap here</string>
+    <string name="login_button">SIGN IN</string>
+
+    <string name="login_error_username_prompt">Please enter in username</string>
+    <string name="login_error_password_prompt">Please enter in password</string>
+    <string name="login_progress_message">Signing in&#8230;</string>
+    <string name="login_success_message">Logged in.</string>
+    <string name="login_logout_message">Logged out.</string>
+
+    <!--LOGIN ERRORS-->
+    <string name="login_error_title">Login Error</string>
+    <string name="login_error_invalid_username_password">Invalid username or password</string>
+    <string name="login_error_generic">There was a problem during login. Please try again.</string>
+
+    <!-- ============================== HOME ============================== -->
+    <!-- ============================== MAIN FRAGMENT ============================== -->
+    <string-array name="main_fragment_titles">
+        <item>@string/clients_fragment_title</item>
+        <item>@string/screenings_fragment_title</item>
+        <item>@string/loan_applications_fragment_title</item>
+        <item>@string/acat_fragment_title</item>
+    </string-array>
+    <string name="main_fragment_progress_message_label">Downloading data&#8230;</string>
+    <string name="main_fragment_progress_message_data_label" formatted="false">Downloading data (%d%%) &#8230;</string>
+
+    <string name="main_fragment_show_download_complete_message">Download complete.</string>
+
+    <!-- ============================== CLIENTS FRAGMENT ============================== -->
+    <string name="clients_fragment_title">Clients</string>
+    <string name="clients_fragment_no_clients_label">No clients found.\nTap the + button to register a new Client.</string>
+    <string name="clients_fragment_no_groups_label">No groups found.\nTap the + button to register a new Group.</string>
+
+    <string name="clients_fragment_status_new">New</string>
+
+    <string name="clients_fragment_status_screening_in_progress">Screening - In Progress</string>
+    <string name="clients_fragment_status_eligible">Eligible</string>
+    <string name="clients_fragment_status_ineligible">Ineligible</string>
+
+    <string name="clients_fragment_status_loan_application_new">Loan Application - New</string>
+    <string name="clients_fragment_status_loan_application_in_progress">Loan Application - In Progress</string>
+    <string name="clients_fragment_status_loan_application_accepted">Loan Application - Accepted</string>
+    <string name="clients_fragment_status_loan_application_declined">Loan Application - Declined</string>
+
+    <string name="clients_fragment_status_acat_new">A-CAT - New</string>
+    <string name="clients_fragment_status_acat_in_progress">ACAT - In Progress</string>
+    <string name="clients_fragment_status_acat_submitted">ACAT - Submitted</string>
+    <string name="clients_fragment_status_acat_resubmitted">ACAT - Resubmitted</string>
+    <string name="clients_fragment_status_acat_authorized">ACAT - Authorized</string>
+    <string name="clients_fragment_status_acat_declined_for_review">ACAT - Declined for Review</string>
+    <string name="clients_fragment_status_loan_granted">Loan - Granted</string>
+    <string name="clients_fragment_status_loan_paid">Loan - Paid</string>
+    <string name="clients_fragment_status_loan_appraise_in_progress">Appraisal - In Progress</string>
+    <string name="clients_fragment_status_loan_payment_in_progress">Payment - In Progress</string>
+
+    <string name="clients_fragment_status_unknown">Unknown Client Status</string>
+
+    <string name="group_creation_success_message">Group created successfully.</string>
+
+    <string name="clients_filter_menu_label_all">All</string>
+    <string name="client_filter_menu_label_new">New</string>
+    <string name="client_filter_menu_label_screening">Screening</string>
+    <string name="client_filter_menu_label_loan_application">Loan Application</string>
+    <string name="client_filter_menu_label_acat">A-CAT</string>
+    <string name="client_filter_menu_label_granted">Granted</string>
+    <string name="client_filter_menu_label_paid">Paid</string>
+
+    <!-- ============================== SCREENINGS FRAGMENT ============================== -->
+    <string name="screenings_fragment_title">Screenings</string>
+    <string name="screenings_fragment_no_screenings_label">No Individual screenings found.</string>
+    <string name="screenings_fragment_no_group_screenings_label">No Grouped screenings found.</string>
+
+
+    <string name="screenings_fragment_status_new">New</string>
+    <string name="screenings_fragment_status_in_progress">In Progress</string>
+    <string name="screenings_fragment_status_submitted">Submitted</string>
+    <string name="screenings_fragment_status_approved">Approved</string>
+    <string name="screenings_fragment_status_declined_final">Rejected</string>
+    <string name="screenings_fragment_status_declined_under_review">Declined - Under Review</string>
+
+    <string name="screenings_fragment_status_unknown">Unknown Screening Status</string>
+
+    <string name="screening_filter_menu_label_all">All</string>
+    <string name="screening_filter_menu_label_new">@string/screenings_fragment_status_new</string>
+    <string name="screening_filter_menu_label_in_progress">@string/screenings_fragment_status_in_progress</string>
+    <string name="screening_filter_menu_label_submitted">@string/screenings_fragment_status_submitted</string>
+    <string name="screening_filter_menu_label_eligible">@string/screenings_fragment_status_approved</string>
+    <string name="screening_filter_menu_label_rejected">@string/screenings_fragment_status_declined_final</string>
+
+    <!-- ============================== LOAN APPLICATIONS FRAGMENT ============================== -->
+    <string name="loan_applications_fragment_title">Applications</string>
+    <string name="loan_applications_no_applications_found_label">No Individual loan applications found.</string>
+    <string name="loan_applications_no_group_applications_found_label">No Grouped loan applications found.</string>
+
+    <string name="loan_applications_fragment_status_new">@string/screenings_fragment_status_new</string>
+    <string name="loan_applications_fragment_status_in_progress">@string/screenings_fragment_status_in_progress</string>
+    <string name="loan_applications_fragment_status_submitted">@string/screenings_fragment_status_submitted</string>
+    <string name="loan_applications_fragment_status_accepted">Accepted</string>
+    <string name="loan_applications_fragment_status_declined_final">@string/screenings_fragment_status_declined_final</string>
+    <string name="loan_applications_fragment_status_declined_under_review">@string/screenings_fragment_status_declined_under_review</string>
+
+    <string name="loan_applications_fragment_status_unknown">Unknown Loan Application Status</string>
+
+    <string name="loan_filter_menu_label_all">@string/screening_filter_menu_label_all</string>
+    <string name="loan_filter_menu_label_new">@string/screening_filter_menu_label_new</string>
+    <string name="loan_filter_menu_label_in_progress">@string/screening_filter_menu_label_in_progress</string>
+    <string name="loan_filter_menu_label_submitted">@string/screening_filter_menu_label_submitted</string>
+    <string name="loan_filter_menu_label_approved">Accepted</string>
+    <string name="loan_filter_menu_label_declined">Declined</string>
+
+    <!-- ============================== ACAT APPLICATIONS FRAGMENT =============================== -->
+    <string name="acat_fragment_title">A-CAT</string>
+    <string name="acat_applications_fragment_status_new">ACAT - New</string>
+    <string name="acat_applications_fragment_status_in_progress">@string/loan_applications_fragment_status_in_progress</string>
+    <string name="acat_applications_fragment_status_submitted">@string/screenings_fragment_status_submitted</string>
+    <string name="acat_applications_fragment_status_resubmitted">Resubmitted</string>
+    <string name="acat_applications_fragment_status_accepted">Authorized</string>
+    <string name="acat_applications_fragment_status_declined_under_review">Declined for Review</string>
+    <string name="acat_applications_fragment_status_unknown">Unknown ACAT Application Status</string>
+
+    <string name="loan_approved_update_error">There was a problem updating loan approved amount.</string>
+    <string name="loan_approved_success_message">Loan Amount Successfully Updated.</string>
+    <string name="loan_approved_updating_message">Updating Loan Amount.</string>
+    <string name="menu_main_notifications">Notifications</string>
+    <string name="menu_main_search">Search</string>
+    <string name="menu_main_filter_label">Filter</string>
+    <string name="menu_main_individual_type_label">Individuals</string>
+    <string name="menu_main_group_type_label">Groups</string>
+
+    <string name="acat_filter_menu_label_all">All</string>
+    <string name="acat_filter_menu_label_new">New</string>
+    <string name="acat_filter_menu_label_in_progress">In - Progress</string>
+    <string name="acat_filter_menu_label_submitted">Submitted</string>
+    <string name="acat_filter_menu_label_resubmitted">Resubmitted</string>
+    <string name="acat_filter_menu_label_approved">Authorized</string>
+    <string name="acat_filter_menu_label_declined">Declined</string>
+
+    <!-- ============================== TASKS FRAGMENT ============================== -->
+    <string name="tasks_title_label">Tasks</string>
+    <string-array name="tasks_filter_options">
+        <item>By application date</item>
+        <item>By application status</item>
+    </string-array>
+
+    <string name="tasks_no_data_label">No tasks found.</string>
+
+    <!-- ============================== REGISTER FRAGMENT ============================== -->
+    <string name="register_fragment_title">Register Client</string>
+    <string name="register_fragment_edit_title">Edit Client</string>
+
+    <string name="register_progress_label">Creating client. Please wait&#8230;</string>
+    <string name="register_progress_update_label">Updating client. Please wait&#8230;</string>
+
+    <string name="register_cancel_title">Cancel Client Registration</string>
+    <string name="register_cancel_message">Registration was not completed.\nCancel it?</string>
+    <string name="register_cancel_confirmation">Registration canceled.</string>
+
+    <string name="register_cancel_update_title">Cancel Client Update</string>
+    <string name="register_cancel_update_message">Update was not completed.\nCancel it?</string>
+    <string name="register_cancel_update_confirmation">Update canceled.</string>
+
+    <string name="register_complete_title">Complete Registration</string>
+    <string name="register_complete_message">Complete client registration?</string>
+
+    <string name="register_complete_update_title">Update Registration</string>
+    <string name="register_complete_update_message">Update and save client data?</string>
+
+    <string name="register_success_title">Registration Complete</string>
+    <string name="register_success_message">Client has successfully been created.</string>
+
+    <string name="register_error_title">Registration Failed</string>
+    <string name="register_error_client_already_exists">A client with the same ID or phone number is already registered. Please try again.</string>
+    <string name="register_error_generic">There was a problem during registration. Please try again.</string>
+
+    <string name="register_error_update_title">Update Failed</string>
+    <string name="register_error_update_generic">There was a problem updating client data. Please try again.</string>
+
+    <string name="gps_request_explanation_title">GPS Permission</string>
+    <string name="gps_request_explanation_message">In order to use GPS, your permission is required. Continue?</string>
+    <string name="gps_request_denied_message">GPS permission denied.</string>
+
+    <string name="gps_enable_title">Enable GPS</string>
+    <string name="gps_enable_message">To retrieve locations, GPS needs to be enabled. Continue?</string>
+
+    <!-- ============================= UPDATE =================================== -->
+    <string name="update_cancel_prompt">Cancel update?</string>
+
+    <string name="update_success_title">Update Complete</string>
+
+    <string name="update_success_message">Client has successfully been updated.</string>
+
+    <string name="update_error_title">Update Failed</string>
+
+    <!-- ============================== REGISTER FRAGMENT ============================== -->
+    <string name="register_select_id_card_picker_prompt">Select ID Card</string>
+    <string name="register_select_photo_picker_prompt">Select Photo</string>
+
+    <!--PERSONAL DETAILS SECTION-->
+    <string name="register_error_missing_photo_prompt">Please upload a photo or take a picture</string>
+    <string name="register_error_name_prompt">Please enter in the name</string>
+    <string name="register_error_father_name_prompt">Please enter in the father\'s name</string>
+    <string name="register_error_grandfather_name_prompt">Please enter in the grandfather\'s name</string>
+    <string name="register_error_date_of_birth_prompt">Please enter in the date of birth</string>
+
+    <!--FAMILY STATUS SECTION-->
+    <string name="register_error_household_number_prompt">Please enter in the number of household members</string>
+    <string name="register_error_valid_household_number_prompt">Please enter a valid number of household members</string>
+
+    <!--ADDRESS SECTION-->
+    <string name="register_error_missing_id_card_prompt">Please upload an ID card</string>
+    <string name="register_error_id_number_prompt">Please enter in the ID number</string>
+    <string name="register_error_woreda_prompt">Please enter in the Woreda</string>
+    <string name="register_error_kebele_prompt">Please enter in the Kebele</string>
+    <string name="register_error_phone_number_prompt">Please enter in the phone number</string>
+    <string name="register_error_valid_phone_number_prompt">Please enter in a valid phone number</string>
+
+    <!--SPOUSE DETAILS SECTION-->
+    <string name="register_error_spouse_id_number_prompt">Please enter in the spouse ID number</string>
+    <string name="register_error_spouse_name_prompt">Please enter in the spouse name</string>
+    <string name="register_error_spouse_father_name_prompt">Please enter in the spouse father\'s name</string>
+    <string name="register_error_spouse_grandfather_name_prompt">Please enter in the spouse grandfather\'s name</string>
+
+    <string name="menu_register_save">SAVE</string>
+
+    <!--PERSONAL DETAILS SECTION-->
+    <string name="personal_details_updating_location_label" formatted="false">Lat: %.2f, Long: %.2f</string>
+    <string name="personal_details_section_title">Personal Details</string>
+    <string name="personal_details_upload_photo_button">UPLOAD PHOTO</string>
+    <string name="personal_details_take_picture_button">TAKE PICTURE</string>
+    <string name="personal_details_name_input_hint">Name</string>
+    <string name="personal_details_father_name_input_hint">Father\'s Name</string>
+    <string name="personal_details_grandfather_name_input_hint">Grandfather\'s Name</string>
+    <string name="personal_details_gender_male_choice">Male</string>
+    <string name="personal_details_gender_female_choice">Female</string>
+    <string name="personal_details_date_of_birth_label">Date of Birth</string>
+    <string name="personal_details_select_dob_button">Select Date</string>
+    <string name="personal_details_change_dob_button">Change Date</string>
+
+    <!--FAMILY STATUS SECTION-->
+    <string name="family_status_section_title">Family Status</string>
+    <string name="family_status_single_choice">Single</string>
+    <string name="family_status_married_choice">Married</string>
+    <string name="family_status_divorced_choice">Divorced</string>
+    <string name="family_status_widowed_choice">Widowed</string>
+    <string name="family_status_household_number_input_hint">Number of Household Members</string>
+
+    <!--ADDRESS SECTION-->
+    <string name="address_section_title">Address</string>
+    <string name="address_upload_id_card_button">UPLOAD ID CARD</string>
+    <string name="address_take_picture_button">@string/personal_details_take_picture_button</string>
+    <string name="address_id_no_input_hint">ID Number</string>
+    <string name="address_woreda_input_hint">Woreda</string>
+    <string name="address_kebele_input_hint">Kebele</string>
+    <string name="address_house_no_input_hint">House No</string>
+    <string name="address_phone_number_input_hint">Phone Number (09XX-XXX-XXX)</string>
+    <string name="address_current_location_label">Previous Location:</string>
+
+    <!--SPOUSE DETAILS SECTION-->
+    <string name="spouse_details_section_title">Spouse Details</string>
+    <string name="spouse_details_id_number_input_hint">@string/address_id_no_input_hint</string>
+    <string name="spouse_details_name_input_hint">@string/personal_details_name_input_hint</string>
+    <string name="spouse_details_father_name_input_hint">@string/personal_details_father_name_input_hint</string>
+    <string name="spouse_details_grandfather_name_input_hint">@string/personal_details_grandfather_name_input_hint</string>
+
+    <!--GENERAL SECTION-->
+    <string name="register_error_spouse_personal_id_numbers_match_message">The personal and spouse ID numbers cannot be the same</string>
+    <string name="register_error_id_match_prompt">ID matches other</string>
+
+    <!-- ============================== SCREENING QUESTIONS ============================== -->
+
+    <!-- ============================== PROFILE ===============================-->
+    <string name="profile_full_name">Full Name:</string>
+    <string name="profile_gender">Gender:</string>
+    <string name="profile_birth_date">BirthDate:</string>
+    <string name="profile_spouse_id_no">Spouse ID No:</string>
+    <string name="profile_spouse_full_name">Spouse Full Name:</string>
+    <string name="profile_id_no">ID Number:</string>
+    <string name="profile_woreda">Woreda:</string>
+    <string name="profile_house_no">House No:</string>
+    <string name="profile_kebele">Kebele:</string>
+    <string name="profile_phone_number">Phone Number:</string>
+    <string name="profile_marital_status">Marital Status:</string>
+    <string name="profile_no_of_household_members">No of household members:</string>
+    <string name="profile_latitude">Latitude</string>
+    <string name="profile_longitude">Longitude</string>
+    <string name="profile_loan_count" formatted="false">%d loan</string>
+    <string name="profile_loan_count_many" formatted="false">%d loans</string>
+    <string name="profile_no_location_text">No location saved.</string>
+
+    <string name="profile_update_progress">Updating profile&#8230;</string>
+    <string name="profile_missing_full_name_prompt">Please Enter in full name</string>
+    <string name="profile_missing_birth_date_prompt">@string/register_error_date_of_birth_prompt</string>
+    <string name="profile_missing_gender_prompt">Please Enter in gender</string>
+    <string name="profile_missing_house_hold_number_prompt">@string/register_error_household_number_prompt</string>
+    <string name="profile_missing_spouse_id_prompt">@string/register_error_spouse_id_number_prompt</string>
+    <string name="profile_missing_spouse_full_name_prompt">Please Enter in Spouse full name</string>
+    <string name="profile_spouse_personal_id_nuber_match_prompt">@string/register_error_spouse_personal_id_numbers_match_message</string>
+    <string name="profile_missing_personal_id_prompt">@string/register_error_id_number_prompt</string>
+    <string name="profile_missing_kebele_prompt">@string/register_error_kebele_prompt</string>
+    <string name="profile_missing_woreda_prompt">@string/register_error_woreda_prompt</string>
+    <string name="profile_missing_phone_no_prompt">@string/register_error_phone_number_prompt</string>
+    <string name="profile_error_valid_household_number">@string/register_error_valid_household_number_prompt</string>
+    <string name="profile_error_vlaid_phone_number">@string/register_error_valid_phone_number_prompt</string>
+    <string name="profile_error_id_match_prompt">@string/register_error_valid_phone_number_prompt</string>
+    <string name="profile_missing_photo_prompt">Please upload a profile photo</string>
+
+    <string name="profile_success_title">Profile update complete</string>
+    <string name="profile_success_message">Profile has been successfully updated</string>
+    <string name="profile_error_title">Profile update failed.</string>
+    <string name="profile_missing_id_card_prompt">Please upload an ID card</string>
+
+    <string name="profile_error_generic">There was a problem during profile update. Please try again.</string>
+
+    <!-- ============================== QUESTIONS ============================== -->
+    <!-- ============================== QUESTIONS FRAGMENT ============================== -->
+    <string name="menu_questions_save">@string/menu_register_save</string>
+    <string name="menu_questions_submit">SUBMIT</string>
+    <string name="menu_questions_approve">ACCEPT</string>
+    <string name="menu_questions_decline">DECLINE</string>
+
+    <string name="questions_error_mandatory_unfilled">Please fill in the mandatory question</string>
+
+    <!--QUESTIONS UPDATE ERRORS-->
+    <string name="questions_error_title">Update Error</string>
+    <string name="questions_error_loading_title">Loading Error</string>
+
+    <string name="questions_error_generic">There was a problem updating screening information. Please try again.</string>
+    <string name="questions_error_loading_generic">There was a problem loading screening information. Please try again.</string>
+
+    <!-- ============================== SCREENING FRAGMENT ============================== -->
+    <string name="screening_creating_progress_message">Creating Screening&#8230;</string>
+    <string name="screening_updating_progress_message">Updating Screening&#8230;</string>
+    <string name="screening_loading_progress_message">Loading Screening. Please wait&#8230;</string>
+    <string name="screening_update_success_message">Update complete.</string>
+    <string name="screening_creation_successful_message">Screening created.</string>
+    <string name="new_loan_cycle_started">New Loan Cycle started.</string>
+    <string name="loan_cycle_creation_error">New Loan could not be created.</string>
+    <string name="client_status_update_success_message">Client status has been set successfully.</string>
+    <string name="client_status_update_fail_message">Client status change has failed.</string>
+    <string name="client_status_updating_message">Updating Client status. Please wait&#8230;</string>
+
+    <!-- ============================== LOAN APPLICATION FRAGMENT ============================== -->
+    <string name="loan_application_loading_progress_message">Loading Loan Application. Please wait&#8230;</string>
+    <string name="loan_application_updating_progress_message">Updating Loan Application&#8230;</string>
+
+    <!--LOAN APPLICATION UPDATE ERROR-->
+    <string name="loan_application_update_error_title">@string/questions_error_title</string>
+    <string name="loan_application_update_error_message">There was a problem updating loan application information. Please try again.</string>
+
+    <!--QUESTION ITEM LAYOUT-->
+    <string name="question_item_answer_input_hint">Enter answer</string>
+    <string name="question_item_value_input_hint">Enter value</string>
+
+    <!-- ============================== QUESTION DIALOG ============================== -->
+    <string name="question_sample_title">Question Title</string>
+    <string name="question_sample_message">Are you sure you want to do this?</string>
+
+
+    <!-- ============================== ERROR DIALOG ============================== -->
+    <string name="error_sample_title">Connectivity Error</string>
+    <string name="error_sample_message_label">@string/error_connectivity_error</string>
+    <string name="error_view_more_label">+ VIEW MORE +</string>
+    <string name="error_view_less_label">- VIEW LESS -</string>
+
+    <!-- ============================== MESSAGE DIALOG ============================== -->
+    <string name="message_sample_title">Process Complete</string>
+    <string name="message_sample_message_label">The process has successfully completed without any errors.</string>
+
+    <!-- ============================== RECORD LOAN DIALOG ========================== -->
+    <string name="record_loan_dialog_title">Record Approved Loan</string>
+    <string name="record_loan_approved_loan_amount_label">Enter the approved loan amount</string>
+    <string name="record_loan_input_hint">Loan Amount</string>
+    <string name="record_loan_cancel_button_label">Cancel</string>
+    <string name="record_loan_ok_button_label">OK</string>
+    <string name="record_loan_amount_input_prompt">Please enter the approved loan amount</string>
+
+    <!-- ============================== CREATE GROUP DIALOG ========================= -->
+    <string name="group_dialog_title">Create Group</string>
+    <string name="group_code_input_hint">Group Name</string>
+    <string name="group_member_count_input_hint">Number of Members</string>
+    <string name="group_loan_amount_input_hint">Total Loan Amount</string>
+    <string name="group_ok_button_label">OK</string>
+    <string name="group_cancel_button_label">Cancel</string>
+    <string name="group_code_input_prompt">Please enter the group name.</string>
+    <string name="group_member_count_input_prompt">Please enter group member count.</string>
+    <string name="group_loan_amount_input_prompt">Please enter total loan amount.</string>
+    <string name="group_cycle_input_loan_amount">Enter Total Loan Amount.</string>
+    
+    <!-- ============================== DATE SELECTOR DIALOG ============================== -->
+    <string name="date_selector_edit_title">Edit Date</string>
+    <string name="date_selector_add_title">Add Date</string>
+    <string name="date_selector_day_input_hint">Day</string>
+    <string name="date_selector_month_input_hint">Month</string>
+    <string name="date_selector_year_input_hint">Enter Year</string>
+
+    <string name="date_selector_auto_fill_age_label">Auto-fill by age</string>
+    <string name="date_selector_auto_fill_age_input_hint">Enter in age</string>
+
+    <string name="date_selector_day_prompt">Please enter in day</string>
+    <string name="date_selector_valid_day_prompt">Please enter in a valid day</string>
+    <string name="date_selector_month_prompt">Please enter in month</string>
+    <string name="date_selector_valid_month_prompt">Please enter in a valid month</string>
+    <string name="date_selector_year_prompt">Please enter in year</string>
+    <string name="date_selector_valid_year_prompt">Please enter in a valid year</string>
+
+    <!-- ============================== DECLINE DIALOG ============================== -->
+    <string name="decline_screening_title">Decline Screening</string>
+    <string name="decline_loan_application_title">Decline Loan Application</string>
+    <string name="decline_description">Enter your remark for declining this request:</string>
+    <string name="reject_label">Reject</string>
+    <string name="decline_decline_send_for_review_label">Decline - Send back for review</string>
+    <string name="decline_send_button">SEND</string>
+    <string name="decline_remark_empty_prompt">Please enter in your remark.</string>
+    <string name="decline_remark_input_hint">Enter your remark</string>
+    <string name="decline_declined_success_message">Screening Declined</string>
+    <string name="decline_sent_back_for_review_success_message">Screening sent back for review</string>
+
+    <!-- ============================== ADD GROUP MEMBER DIALOG ======================= -->
+    <string name="add_group_member_title">Select Member Type:</string>
+    <string name="add_group_member_new_member_label">New Member</string>
+    <string name="add_group_member_existing_member_label">Existing Member</string>
+    <string name="add_group_member_ok_button">OK</string>
+    <string name="add_group_member_cancel_button">Cancel</string>
+
+    <!-- ============================== SET LOAN PAID DIALOG ========================== -->
+    <string name="set_loan_dialog_title_label">ALERT</string>
+    <string name="set_loan_dialog_prompt_label">Are you sure you want to proceed?</string>
+    <string name="set_loan_dialog_yes_button">YES</string>
+    <string name="set_loan_dialog_no_button">NO</string>
+
+    <!-- ============================= PROFILE ======================================= -->
+    <string name="full_name">Full Name:</string>
+    <string name="gender">Gender:</string>
+    <string name="birth_date">BirthDate:</string>
+    <string name="spouse_id_no">Spouse ID No:</string>
+    <string name="spouse_full_name">Spouse Full Name:</string>
+    <string name="id_no">ID No:</string>
+    <string name="sub_city">SubCity:</string>
+    <string name="house_no">House No:</string>
+    <string name="kebele">Kebele:</string>
+    <string name="phone_number">Phone Number:</string>
+    <string name="martial_status">Martial Status:</string>
+    <string name="no_of_household_members">No of household members:</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="asterisk">&#42;</string>
+
+    <!-- ============================== Naivagation ====================================== -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation drawer menu labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_notification">Notification</string>
+    <string name="nav_tasks">Tasks</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_about">About</string>
+    <string name="nav_logout">LogOut</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="remark">REMARK:</string>
+    <string name="quetions_error_answer_unfilled">Please Answer at least one question.</string>
+
+    <!-- ================================  Preliminary Info =============================== -->
+    <string name="menu_preliminary_info_next">NEXT</string>
+    <string name="acat_title_preliminary_info">Preliminary Information</string>
+    <string name="type_of_crop">Select crops:</string>
+    <string name="preliminary_selected_crops_label">Selected crops: </string>
+    <string name="preliminary_no_crops_selected_label">No crops selected</string>
+
+    <string name="preliminary_questions_error_answer_unfilled">Please select at least one crop.</string>
+    <string name="initializing_acat_message">Initializing Crop-A-CAT&#8230;</string>
+    <string name="preliminary_info_loading_message">Loading Preliminary Information&#8230;</string>
+    <string name="preliminary_info_update_error_generic">There was a problem updating preliminary information. Please try again.</string>
+    <string name="preliminary_info_load_error_generic">There was a problem loading preliminary information. Please try again.</string>
+
+    <string name="acat_applications_no_applications_found_label">No A-CAT applications found.</string>
+    <string name="group_acat_applications_no_applications_found_label">No Group Applications found.</string>
+
+
+    <string name="loan_product_prompt">Select Loan Product</string>
+
+
+    <!-- ==================================== ACAT ======================================== -->
+    <string name="acat_cropping_area">Cropping Area per Hectare</string>
+    <string name="acat_switch_button_text">Access to non financial resources</string>
+    <string name="acat_checkBox_group_title">Type of crop</string>
+
+    <string name="acat_spinner_title">Select First month</string>
+    <string name="next_step">NEXT STEP</string>
+    <string name="previous_step">PREVIOUS STEP</string>
+    <string-array name="acat_month_entry">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string name="cash_outflow">Cash Outflow</string>
+    <string name="subtotal">SUBTOTAL</string>
+    <string name="expandable_view_title">INPUTS AND ACTIVITIES COST</string>
+    <string name="acat_total_cost">TOTAL COST (TC)</string>
+    <string name="acat_net_cash_flow_default_value">0</string>
+    <string name="net_cashflow">Net Cashflow</string>
+    <string name="cost_estimation">Step 1 - Cost Estimation</string>
+    <string name="estimated_yield">Step 2 - Estimated Yield</string>
+    <string name="menu_acat_done">DONE</string>
+    <string name="acat_unit">Unit</string>
+    <string name="acat_quantity">Quantity</string>
+    <string name="acat_unit_price">Unit Price</string>
+    <string name="acat_total">Total</string>
+    <string name="acat_default_value">0</string>
+    <string name="acat_actual">Actual</string>
+    <string name="acat_estimated">Estimated</string>
+    <string name="acat_remaining">Remaining</string>
+    <string name="acat_remark">Remark</string>
+    <string name="menu_acat_save">SAVE</string>
+    <string name="estimated_total_yield">Estimated Total Yield</string>
+    <string name="acat_maximum">Maximum</string>
+    <string name="acat_minimum">Minimum</string>
+    <string name="acat_average">Average</string>
+    <string name="acat_total_revenue">TOTAL REVENUE (TR)</string>
+    <string name="acat_total_income">NET INCOME (TR - TC)</string>
+    <string name="acat_marketable_yield_average">Average</string>
+    <string name="acat_marketable_yield_amount">amount</string>
+    <string name="acat_marketable_own_consumption">Own Consumption</string>
+    <string name="acat_seed_reserve">Seed Reserve</string>
+    <string name="acat_marketable_seed_reserve">Seed Reserve</string>
+    <string name="acat_marketable_product_of_the_market">Product of the market</string>
+    <string name="acat_marketable_union">Union</string>
+    <string name="acat_marketable_factory">Factory/ Institution</string>
+    <string name="acat_marketable_trader">Trader</string>
+    <string name="acat_estimated_price">Estimated Price</string>
+    <string name="estimated_yield_save_and_done">SAVE AND DONE</string>
+    <string name="maximum_estimated_price">Maximum Estimated Price</string>
+    <string name="loan_proposal_title">Step 5 - Loan Proposal</string>
+    <string name="loan_requested">Loan Requested</string>
+    <string name="loan_proposed">Loan Proposed</string>
+    <string name="loan_approved">Loan Approved</string>
+    <string name="loan_deductibles">Loan Deductibles</string>
+    <string name="compulsory_saving">Compulsory Saving</string>
+    <string name="service_charges">Service Charges</string>
+    <string name="total_deductibles">TOTAL DEDUCTIBLES</string>
+    <string name="cost_of_loan">Cost of Loan</string>
+    <string name="interest_to_be_paid">Interest to be Paid</string>
+    <string name="insurance_cost">Insurance Cost</string>
+    <string name="registration_fee">Registration Fee</string>
+    <string name="total_loan_cost">TOTAL LOAN COST</string>
+    <string name="cash_at_hand">CASH AT HAND</string>
+    <string name="loan_proposal">Loan Application</string>
+    <string name="repayable">Repayable</string>
+    <string name="cumulative_cashflow">Cumulative \nCashflow</string>
+    <string name="loan_proposal_net_income_title_label">Net Income</string>
+    <string name="loan_proposal_max_amount_title_label">Max Loan Amount</string>
+    <string name="acat_data_not_synced_message">A-CAT data not Synced yet.</string>
+    <string name="acat_application_update_error_title">@string/questions_error_title</string>
+    <string name="acat_application_update_error_message">There was a problem updating A-CAT application information. Please try again.</string>
+    <string name="acat_appliation_load_error_message">There was a problem loading A-CAT appliation information. Please try again.</string>
+    <string name="acat_application_loading_progress_message">Loading A-CAT Application. Please wait&#8230;</string>
+    <string name="acat_application_updating_progress_message">Updating A-CAT Application&#8230;</string>
+
+    <!-- ================================== Client ACAT Section ============================ -->
+
+    <string-array name="expense_month">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string name="acat_preliminary_select_expense_month_label">First expense month:</string>
+    <string name="acat_questions_error_generic" translatable="false">There was a problem updating Client A-CAT information.</string>
+    <string name="expense_month_list" translatable="false">Select first expense month</string>
+    <string name="cropping_area_input_label" translatable="false">Cropping area per ha: </string>
+    <string name="acat_preliminary_cropping_area_input_hint">Enter cropping area</string>
+    <string name="acat_preliminary_non_financial_services_label">Non-financial services:</string>
+
+    <string name="acat_gps_location_label">No locations added</string>
+    <string name="acat_gps_locations_present_label" formatted="false">%d location%s</string>
+    <string name="acat_gps_location_add_button">Add</string>
+    <string name="acat_gps_location_edit_button">Edit</string>
+    <string name="menu_acat_preliminary_info_save">@string/menu_questions_save</string>
+
+    <string name="gsp_location_type_label">Location type:</string>
+    <string name="gps_location_single_choice">Single</string>
+    <string name="gps_location_multiple_choice">Multiple</string>
+    <string name="financial_resource_switch_menu_title">Access to\n non-financial\n services</string>
+    <string name="acat_preliminary_info_updating_message">Updating Client A-CAT Preliminary Information&#8230;</string>
+
+    <string name="questions_update_success_message">Updated.</string>
+    <string name="revenue_probable_yield">Average Yield</string>
+    <string name="revenue_max_yield">Max Yield</string>
+    <string name="revenue_min_yield">Min Yield</string>
+    <string name="assessment_fragment_title">ASSESSMENT RESULT</string>
+    <string name="loan_proposal_fragment_title">LOAN PROPOSAL</string>
+    <string name="estimated_amount">0.0</string>
+    <string name="own_consumption">Own Cons.</string>
+    <string name="seed_resource">Seed Res.</string>
+    <string name="for_market">For market</string>
+    <string name="detail">DETAILS</string>
+    <string name="service_training">Training</string>
+    <string name="non_financial_services">Non-financial Services</string>
+    <string name="service_advisory">Advisory</string>
+    <string name="service_technical_support">Technical Support</string>
+    <string name="service_access_to_inputs">Access to Inputs</string>
+    <string name="financtial_service_details">DETAILS</string>
+
+    <string-array name="acat_loan_proposal_titles">
+        <item>@string/assessment_fragment_title</item>
+        <item>@string/loan_proposal_fragment_title</item>
+    </string-array>
+    <string name="cost_estimation_loading_state">Loading Client Crop A-CAT</string>
+    <string name="loan_proposal_loading_state">Loading Loan Proposal Assessment</string>
+    <string name="loan_proposal_updating_state">Updating Loan Proposal.</string>
+    <string name="acat_item_subtotal_label">Subtotal</string>
+    <string name="seed_variety">Variety</string>
+    <string name="seed_source_union">Union</string>
+    <string name="seed_source_factory">Factory/ Institution</string>
+    <string name="seed_source_trader">Trader</string>
+    <string name="acat_item_name">A-CAT Item</string>
+
+    <string name="acat_estimated_yield">Step 2 - Estimated Yield</string>
+    <string name="dialog_acat_title">A-CAT</string>
+    <string name="dialog_first_sentence">You have successfully filled \n ACAT for</string>
+    <string name="dialog_second_sentence">Please \n proceed with filling ACAT for \n Next Item.</string>
+    <string name="acat_dialog_ok_button">OK</string>
+
+    <!-- ===================================== OPTION MENU ========================= -->
+    <string name="option_menu">&#8942;</string>
+    <string name="summary_menu">Summary</string>
+    <string name="record_approved_loan_menu">Grant Loan</string>
+    <string name="monitor_loan_menu">Monitor Loan</string>
+    <string name="produce_for_the_market_label_title">Produce for the market</string>
+    <string name="add_other_acat_item_label">Other</string>
+    <string name="new_loan_cycle_menu">New Loan Cycle</string>
+    <string name="loan_paid_menu">Set as Loan Paid</string>
+
+    <!-- ==================================== ACAT ESTIMATED YIELD ======================================== -->
+    <string name="error_missing_unit_error">Please enter in the unit.</string>
+    <string name="error_missing_quantity_error">Please enter in the quantity.</string>
+    <string name="error_invalid_quantity_error">Please enter in a valid quantity.</string>
+    <string name="error_missing_unit_price_error">Please enter in the unit price.</string>
+    <string name="error_invalid_unit_price_error">Please enter in a valid unit price.</string>
+
+    <string name="error_missing_own_cons_error">Please enter in the consumption quantity.</string>
+    <string name="error_missing_seed_res_error">Please enter in the reserve quantity.</string>
+    <string name="error_missing_for_market_error">Please enter in for market quantity.</string>
+    <string name="error_invalid_yield_consumption_quantity_error">The quantity and consumption values do not match</string>
+    <string name="overall_crop_result_summary">Overall Crop Result Summary</string>
+    <string name="individual_crop_result_summary">Individual Crop Result Summary</string>
+    <string name="no_deductible_found">No Deductible Found.</string>
+    <string name="no_cost_of_loan_found">No Cost of Loan found.</string>
+    <string name="cash_disbursed">CASH DISBURSED</string>
+    <string name="total_loan_repayable_p_i">Total Loan Repayable (P + I)</string>
+    
+    <string name="estimated_yield_prob_revenue_label">AVERAGE REVENUE</string>
+    <string name="estimated_yield_minimum_revenue_label">MIN REVENUE</string>
+    <string name="estimated_yield_maximum_revenue_label">MAX REVENUE</string>
+
+    <string name="updating_acat_message">Updating A-CAT.</string>
+
+    <!-- ==================================== GPS SELECTOR ======================================== -->
+    <string name="gps_selector_title" formatted="false">%s Cropping Area GPS Locations</string>
+    <string name="gps_selector_locations_title">GPS Locations</string>
+    <string name="gps_selector_current_location_title">Current Location</string>
+    <string name="gps_selector_current_location_label">-, -</string>
+
+    <string name="gps_selector_add_new_button">+Add New</string>
+    <string name="gps_selector_update_button">Update</string>
+    <string name="gps_selector_location_type_label">Location type:</string>
+    <string name="gps_selector_no_locations_label">No saved locations found.\nTap \'+ADD NEW\' to add a location.</string>
+
+    <string  name="gps_selector_locations_saved_message">Locations saved.</string>
+
+    <string name="menu_gps_selector_save">SAVE LOCATIONS</string>
+
+    <!-- ==================================== SUMMARY SCREEN ======================================== -->
+    <string name="summary_type_of_crop_label">Type of Crop</string>
+    <string name="summary_first_expense_month_label">First Expense Month</string>
+    <string name="summary_cropping_area_per_ha_label">Cropping area per ha</string>
+
+    <!-- ==================================== SUMMARY MENU ======================================== -->
+    <string name="summary_menu_cost_estimation_title_label">Cost Estimation</string>
+    <string name="summary_menu_inputs_and_activities_label">Inputs and Activities Costs</string>
+    <string name="summary_menu_inputs_label">INPUTS</string>
+    <string name="summary_menu_seeds_label">Seed</string>
+    <string name="summary_menu_fertilizers_label">Fertilizers</string>
+    <string name="summary_menu_chemicals_label">Chemicals</string>
+    <string name="summary_menu_labor_costs_label">LABOUR COST</string>
+    <string name="summary_menu_other_costs_label">OTHER COSTS</string>
+
+    <string name="summary_menu_estimated_yield_title_label">Estimated Yield</string>
+    <string name="summary_menu_estimated_probable_yield_label">Probable Yield</string>
+    <string name="summary_menu_max_yield_label">Maximum Yield</string>
+    <string name="summary_menu_min_yield_label">Minimum Yield</string>
+
+    <!-- ==================================== SUMMARY INPUTS FRAGMENT ======================================== -->
+    <string name="summary_inputs_title">INPUTS</string>
+    <string name="summary_inputs_estimated_title_label">Estimated</string>
+    <string name="summary_inputs_actual_title_label">Actual</string>
+    <string name="summary_inputs_seed_title_label">Seed</string>
+    <string name="summary_inputs_fertilizer_title_label">Fertilizer</string>
+    <string name="summary_inputs_chemicals_title_label">Chemicals</string>
+    <string name="summary_inputs_subtotal_title_label">Subtotal</string>
+    <string name="summary_inputs_value_label">0</string>
+
+    <string name="summary_inputs_cash_flow">CASH FLOW</string>
+
+    <!-- ==================================== SUMMARY COSTS FRAGMENT ======================================== -->
+    <string name="summary_costs_title_labor_costs_label">@string/summary_menu_labor_costs_label</string>
+    <string name="summary_costs_subtitle_estimated_label">@string/summary_inputs_estimated_title_label</string>
+    <string name="summary_costs_subtitle_actual_label">@string/summary_inputs_actual_title_label</string>
+
+    <string name="summary_costs_list_title_unit_label">Unit</string>
+    <string name="summary_costs_list_title_quantity_label">Quantity</string>
+    <string name="summary_costs_list_title_unit_price_label">Unit \n Price</string>
+    <string name="summary_costs_list_title_total_price_label">Total \n Price</string>
+
+    <!-- =================================== SUMMARY YIELD FRAGMENT ========================================== -->
+    <string name="yield_type_preview">Probable Yield</string>
+    <string name="summary_yield_own_cons_title_label">Own Cons.</string>
+    <string name="summary_yield_seed_res_title_label">Seed Res.</string>
+    <string name="summary_yield_for_market_title_label">For Market</string>
+    <string name="summary_yield_value_label">@string/summary_inputs_value_label</string>
+    <string name="summary_yield_subtitle_estimated_title_label">@string/summary_inputs_estimated_title_label</string>
+    <string name="summary_yield_subtitle_actual_title_label">@string/summary_inputs_actual_title_label</string>
+    <string name="summary_yield_unit_label_title">Unit</string>
+    <string name="summary_yield_unit_price_label_title">Unit Price</string>
+    <string name="summary_yield_total_price_label_title">Total Price</string>
+
+    <!-- ====================================== SUMMARY CROPS FRAGMENT =========================================== -->
+    <string name="crop_summary_main_title_label">Crops</string>
+    <string name="crop_summary_main_title_loan_proposal_label">Loan Proposal</string>
+    <string name="crop_summary_loan_proposal_menu_label">@string/crop_summary_main_title_loan_proposal_label</string>
+
+    <!-- ====================================== SUMMARY CROPS LIST FRAGMENT ====================================== -->
+    <string name="crop_list_summary_costs_title">COSTS</string>
+    <string name="crop_list_summary_estimated_title_label">@string/summary_inputs_estimated_title_label</string>
+    <string name="crop_list_summary_actual_title_label">@string/summary_inputs_actual_title_label</string>
+    <string name="crop_list_summary_inputs_title_label">Inputs</string>
+    <string name="crop_list_summary_labour_costs_title_label">Labour Costs</string>
+    <string name="crop_list_summary_other_costs_title_label">Other Costs</string>
+    <string name="crop_list_summary_total_title_label">TOTAL</string>
+    <string name="crop_list_summary_yield_title">YIELD</string>
+    <string name="crop_list_summary_probable_yield_title_label">Average</string>
+    <string name="crop_list_summary_maximum_yield_title_label">Maximum</string>
+    <string name="crop_list_summary_minimum_yield_title_label">Minimum</string>
+    <string name="crop_list_summary_own_cons_title_label">@string/summary_yield_own_cons_title_label</string>
+    <string name="crop_list_summary_seed_res_title_label">@string/summary_yield_seed_res_title_label</string>
+    <string name="crop_list_summary_for_market_title_label">@string/summary_yield_for_market_title_label</string>
+    <string name="crop_list_summary_value_label">@string/summary_inputs_value_label</string>
+    <string name="crop_list_summary_yield_total_title_label">Total Yield</string>
+
+    <!-- ======================================= SUMMARY LOAN PROPOSAL FRAGMENT ================================== -->
+    <string name="loan_proposal_summary_total_title">TOTAL</string>
+    <string name="loan_proposal_summary_loan_proposal_title">LOAN PROPOSAL</string>
+    <string name="loan_proposal_summary_total_revenu_title_label">Total Revenue</string>
+    <string name="loan_proposal_summary_total_cost_title_label">Total Cost</string>
+    <string name="loan_proposal_summary_nec_income_title_label">Net Income</string>
+    <string name="loan_proposal_summary_loan_requested_title_label">Loan Requested</string>
+    <string name="loan_proposal_summary_loan_proposed_title_label">Loan Proposed</string>
+    <string name="loan_proposal_summary_loan_approved_title_label">Loan Approved</string>
+    <string name="loan_proposal_summary_total_deductible_title_label">Total Deductible</string>
+    <string name="loan_proposal_summary_total_loan_costs_title_label">Total Loan Cost</string>
+    <string name="loan_proposal_summary_cash_at_hand_title_label">Cash at Hand</string>
+    <string name="loan_proposal_summary_repayable_title_label">Repayable</string>
+    <string name="loan_proposal_summary_value_label">@string/summary_inputs_value_label</string>
+    <string name="crop_item_list_loan_proposal_label_title">Loan Proposal</string>
+
+    <!-- ======================================= FOR MARKET DETAIL DIALOG ======================================== -->
+    <string name="for_market_detail_dialog_estimated_title">@string/summary_inputs_estimated_title_label</string>
+    <string name="for_market_detail_dialog_actual_title">@string/summary_inputs_actual_title_label</string>
+    <string name="for_market_detail_dialog_remark_title">Remark</string>
+    <string name="for_market_detail_dialog_amount_hint">amount</string>
+    <string name="for_market_detail_union_title">Union</string>
+    <string name="for_market_detail_factory_title">Factory/ Institution</string>
+    <string name="for_market_detail_trader_title">Trader</string>
+    <string name="decline_acat_title">Decline A-CAT</string>
+
+    <!-- ======================================== OTHER ACAT ITEM DIALOG ============================================= -->
+    <string name="other_dialog_additional_field_hint">additional field</string>
+    <string name="other_dialog_unit_of_measurement_input">unit of measurement</string>
+    <string name="other_acat_item_empty_prompt">Please enter A-CAT item.</string>
+    <string name="other_acat_item_unit_empty_prompt">Please enter item unit.</string>
+    <string name="acat_not_authorized">Client A-CAT is not Authorized yet.</string>
+    <string name="acat_loan_not_recorded">Granted Loan Amount not recorded yet.</string>
+    <string name="acat_loan_not_paid_yet_lable">Loan has not been paid yet.</string>
+
+    <!-- ======================================== GROUPED APPLICATION FRAGMENT ======================================= -->
+    <string name="grouped_fragment_no_clients_label">No clients found.\nTap the + button to add a Client.</string>
+    <string name="group_leader_missing_prompt">Please assign a group Leader</string>
+    <string name="group_progress_label">Creating Group Application&#8230;</string>
+    <string name="group_updating_status_label">Updating group status. Please wait&#8230;</string>
+    <string name="group_client_list_select_title">Select Client</string>
+
+    <string name="group_filter_menu_label_all">@string/clients_filter_menu_label_all</string>
+    <string name="group_filter_menu_label_new">@string/client_filter_menu_label_new</string>
+    <string name="group_filter_menu_label_screening">@string/client_filter_menu_label_screening</string>
+    <string name="group_filter_menu_label_loan_application">@string/client_filter_menu_label_loan_application</string>
+    <string name="group_filter_menu_label_acat">@string/client_filter_menu_label_acat</string>
+
+    <!-- ======================================== GROUPED SCREENING APPLICATION ====================================== -->
+    <string name="group_screening_fragment_status_new">@string/screenings_fragment_status_new</string>
+    <string name="group_screening_fragment_status_in_progress">@string/screenings_fragment_status_in_progress</string>
+    <string name="group_screening_fragment_status_submitted">@string/screenings_fragment_status_submitted</string>
+    <string name="group_screening_fragment_status_approved">@string/screenings_fragment_status_approved</string>
+    <string name="group_screening_fragment_status_declined_under_review">@string/screenings_fragment_status_declined_under_review</string>
+    <string name="group_screening_fragment_status_declined_final">@string/screenings_fragment_status_declined_final</string>
+
+    <string name="group_screening_fragment_status_unknown">@string/screenings_fragment_status_unknown</string>
+
+    <string name="group_screening_filter_menu_label_all">@string/screening_filter_menu_label_all</string>
+    <string name="group_screening_filter_menu_label_new">@string/screening_filter_menu_label_new</string>
+    <string name="group_screening_filter_menu_label_in_progress">@string/screening_filter_menu_label_in_progress</string>
+    <string name="group_screening_filter_menu_label_submitted">@string/screening_filter_menu_label_submitted</string>
+    <string name="group_screening_filter_menu_label_eligible">@string/screening_filter_menu_label_eligible</string>
+    <string name="group_screening_filter_menu_label_rejected">@string/screening_filter_menu_label_rejected</string>
+
+    <!-- ======================================== GROUPED LOAN APPLICATION FRAGMENT =================================== -->
+    <string name="group_loan_fragment_status_new">@string/loan_applications_fragment_status_new</string>
+    <string name="group_loan_fragment_status_in_progress">@string/loan_applications_fragment_status_in_progress</string>
+    <string name="group_loan_fragment_status_submitted">@string/loan_applications_fragment_status_submitted</string>
+    <string name="group_loan_fragment_status_accepted">@string/loan_applications_fragment_status_accepted</string>
+    <string name="group_loan_fragment_status_declined_under_review">@string/loan_applications_fragment_status_declined_under_review</string>
+    <string name="group_loan_fragment_status_declined_final">@string/loan_applications_fragment_status_declined_final</string>
+
+    <string name="group_loan_fragment_status_unknown">@string/loan_applications_fragment_status_unknown</string>
+
+    <string name="group_loan_filter_menu_label_all">@string/loan_filter_menu_label_all</string>
+    <string name="group_loan_filter_menu_label_new">@string/loan_filter_menu_label_new</string>
+    <string name="group_loan_filter_menu_label_in_progress">@string/loan_filter_menu_label_in_progress</string>
+    <string name="group_loan_filter_menu_label_submitted">@string/loan_filter_menu_label_submitted</string>
+    <string name="group_loan_filter_menu_label_approved">@string/loan_filter_menu_label_approved</string>
+    <string name="group_loan_filter_menu_label_declined">@string/loan_filter_menu_label_declined</string>
+
+
+    <!-- ========================================= GROUPED ACAT APPLICATION FRAGMENT ================================= -->
+    <string name="group_acat_loading_progress">Loading A-CATs. Please wait&#8230;</string>
+    <string name="grouped_acat_applications_fragment_status_new">A-CAT - New</string>
+    <string name="grouped_acat_applications_fragment_status_in_progress">@string/loan_applications_fragment_status_in_progress</string>
+    <string name="grouped_acat_applications_fragment_status_submitted">@string/screenings_fragment_status_submitted</string>
+    <string name="grouped_acat_applications_fragment_status_resubmitted">Resubmitted</string>
+    <string name="grouped_acat_applications_fragment_status_accepted">Authorized</string>
+    <string name="grouped_acat_applications_fragment_status_declined_under_review">Declined for Review</string>
+    <string name="grouped_acat_applications_fragment_status_unknown">Unknown A-CAT Application Status</string>
+    <string name="grouped_acat_applications_fragment_not_authorized_label">Group A-CAT not authorized yet.</string>
+    <string name="grouped_acat_applications_fragment_loan_not_granted_label">Group Loan not granted yet.</string>
+    <string name="grouped_acat_applications_fragment_loan_not_paid_label">Group Loan not paid yet.</string>
+
+    <string name="group_acat_filter_menu_label_all">@string/acat_filter_menu_label_all</string>
+    <string name="group_acat_filter_menu_label_new">@string/acat_filter_menu_label_new</string>
+    <string name="group_acat_filter_menu_label_in_progress">@string/acat_filter_menu_label_in_progress</string>
+    <string name="group_acat_filter_menu_label_submitted">@string/acat_filter_menu_label_submitted</string>
+    <string name="group_acat_filter_menu_label_resubmitted">@string/acat_filter_menu_label_resubmitted</string>
+    <string name="group_acat_filter_menu_label_approved">@string/acat_filter_menu_label_approved</string>
+    <string name="group_acat_filter_menu_label_declined">@string/acat_filter_menu_label_declined</string>
+
+    <!-- ======================================== GROUPED APPLICATION MENU TITLE ===================================== -->
+    <string name="assign_leader_menu">Assign as Leader</string>
+
+    <!-- ======================================== CLIENT LIST FRAGMENT =============================================== -->
+    <string name="client_list_ok_button_label">OK</string>
+    <string name="client_list_selected_count_label">%d SELECTED</string>
+    <string name="client_list_no_client_label">No Clients Found.</string>
+    <string name="group_member_updated_success_message">Client member updated successfully.</string>
+    <string name="group_member_update_fail_message">There was a problem trying to update Group application.</string>
+    <string name="group_error_title">@string/questions_error_title</string>
+    <string name="updating_group_message">Updating Group&#8230;</string>
+    <string name="clients_loading_progress">Loading Clients. Please wait&#8230;</string>
+    <string name="clients_updating_progress">Updating Clients. Please wait&#8230;</string>
+    <string name="clients_generic_error">There was problem Updating Clients.</string>
+    <string name="menu_group_screening_done">DONE</string>
+    <string name="menu_group_loan_done">@string/menu_group_screening_done</string>
+    <string name="menu_group_acat_done">@string/menu_group_screening_done</string>
+</resources>

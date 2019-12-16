@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="2"
+    android:background="@color/white"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_super_light"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                style="@style/label"
+                android:text="Yield"
+                android:textAlignment="center"
+                android:textColor="@color/green_dark" />
+
+            <TextView
+                android:id="@+id/subtotal_label"
+                style="@style/label"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingTop="4dp"
+                android:text="@string/cash_outflow"
+                android:textColor="@color/green_dark" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cash_out_flow_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            tools:itemCount="12"
+            tools:listitem="@layout/data_entry_cash_outflow_item_layout" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

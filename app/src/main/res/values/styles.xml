@@ -1,0 +1,270 @@
+<resources>
+    <!-- ============================== ALL ============================== -->
+    <!-- application theme -->
+    <style name="app_theme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <!--image picker theme-->
+    <style name="ImagePickerTheme" parent="ef_BaseTheme">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <!--no toolbar theme-->
+    <style name="app_theme.no_toolbar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <!--no toolbar fullscreen theme-->
+    <style name="app_theme.no_toolbar.fullscreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--activity root-->
+    <style name="activity_root">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!--fragment root-->
+    <style name="fragment_root">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!--dialog root-->
+    <style name="dialog_root">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!--toolbar-->
+    <style name="toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!--toolbar menu container-->
+    <style name="toolbar_menu_container">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical|end</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--toolbar menu label-->
+    <style name="toolbar_menu_label" parent="label.small.green">
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:background">@drawable/list_item_background</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:capitalize">words</item>
+    </style>
+
+    <!--bottom toolbar-->
+    <style name="lower_toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!--lower toolbar title label-->
+    <style name="lower_toolbar_title_label" parent="label.small.green">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- ============================== VIEWS ============================== -->
+    <!--LABEL-->
+    <style name="label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:text">@string/sample_label</item>
+    </style>
+
+    <!-- IMAGE -->
+    <style name="image">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <!--green label-->
+    <style name="label.green">
+        <item name="android:textColor">@color/green</item>
+    </style>
+    <!--gray label-->
+    <style name="label.gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <!--red label-->
+    <style name="label.red">
+        <item name="android:textColor">@color/red</item>
+    </style>
+    <!--white label-->
+    <style name="label.white">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--tiny label -->
+    <style name="label.tiny">
+        <item name="android:textSize">@dimen/text_size_tiny</item>
+    </style>
+    <!--small label-->
+    <style name="label.small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+
+    <!--small green label-->
+    <style name="label.small.green">
+        <item name="android:textColor">@drawable/selectable_text_view_element</item>
+    </style>
+    <!--small gray label-->
+    <style name="label.small.gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <!--small white label-->
+    <style name="label.small.white">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <!--large label-->
+    <style name="label.large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+    <!--large green label-->
+    <style name="label.large.green">
+        <item name="android:textColor">@color/green</item>
+    </style>
+    <!--large gray label-->
+    <style name="label.large.gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+    <!--large white label-->
+    <style name="label.large.white">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--BUTTON-->
+    <style name="button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/sample_button_ok</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <!--dark button-->
+    <style name="button.dark">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!--green button-->
+    <style name="button.dark.green">
+        <item name="android:background">@drawable/selectable_green_background</item>
+    </style>
+    <!--green dialog button-->
+    <style name="button.dark.green.dialog">
+        <item name="android:layout_width">200dp</item>
+    </style>
+    <!--gray button-->
+    <style name="button.dark.gray">
+        <item name="android:background">@drawable/selectable_gray_background</item>
+    </style>
+    <!--gray dialog button-->
+    <style name="button.dark.gray.dialog">
+        <item name="android:layout_width">200dp</item>
+    </style>
+    <!--red button-->
+    <style name="button.dark.red">
+        <item name="android:background">@drawable/selectable_red_background</item>
+    </style>
+    <!--red dialog button-->
+    <style name="button.dark.red.dialog">
+        <item name="android:layout_width">200dp</item>
+    </style>
+
+    <!--INPUT-->
+    <style name="input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">@string/sample_input_hint</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColorHighlight">@color/primary</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:maxLength">50</item>
+        <item name="android:inputType">text</item>
+        <item name="android:background">@drawable/input_green_background</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <!--list separator-->
+    <style name="list_separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/gray_super_light</item>
+    </style>
+
+    <!--shadow-->
+    <style name="shadow">
+        <item name="android:layout_width">8dp</item>
+        <item name="android:layout_height">8dp</item>
+    </style>
+    <!--horizontal shadow-->
+    <style name="shadow.horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/item_shadow_horizontal</item>
+    </style>
+    <!--horizontal bottom shadow-->
+    <style name="shadow.horizontal.bottom" />
+    <!--horizontal top shadow-->
+    <style name="shadow.horizontal.top">
+        <item name="android:rotation">180</item>
+    </style>
+    <!--vertical shadow-->
+    <style name="shadow.vertical">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/item_shadow_vertical</item>
+    </style>
+    <!--vertical left shadow-->
+    <style name="shadow.vertical.left" />
+    <!--vertical right shadow-->
+    <style name="shadow.vertical.right">
+        <item name="android:rotation">180</item>
+    </style>
+
+    <style name="app_theme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="app_theme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="app_theme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="popupMenuStyle">
+        <item name="android:itemBackground">@drawable/selectable_pop_up_background</item>
+        <item name="android:colorBackground">@color/gray_super_light</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+
+</resources>

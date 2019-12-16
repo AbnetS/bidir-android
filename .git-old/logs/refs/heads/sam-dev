@@ -1,0 +1,47 @@
+0000000000000000000000000000000000000000 36bd7161ed7c99ec285adacf907425de34214312 samuel <samkura47@gmail.com> 1536827536 +0300	branch: Created from origin/sam-dev
+36bd7161ed7c99ec285adacf907425de34214312 c845ea0adc0c77406067f1c995fe00a718618946 samuel <samkura47@gmail.com> 1536831389 +0300	commit: reverting authority back to dev mode
+c845ea0adc0c77406067f1c995fe00a718618946 415298759f0180b0b2712277111155ebfae35c64 samuel <samkura47@gmail.com> 1536855646 +0300	commit: fixes made on the training
+415298759f0180b0b2712277111155ebfae35c64 a70602dcdf1bffde849fbf0f3396620b769ca9ed samuel <samkura47@gmail.com> 1536857989 +0300	commit: adding ssh key
+a70602dcdf1bffde849fbf0f3396620b769ca9ed 65f2e2b4df043b3e8ac85ee1f1f84d81c341b43c samuel <samkura47@gmail.com> 1538216897 +0300	commit: adding ACATApplication Sync class for synchronization
+65f2e2b4df043b3e8ac85ee1f1f84d81c341b43c 27f9a88353eb6eaf366393971fedf20bb98dd491 samuel <samkura47@gmail.com> 1538223903 +0300	commit: handle empty acat Item Dto object
+27f9a88353eb6eaf366393971fedf20bb98dd491 a2233524de90ba468d36e4c09b9bbcbb732ed9b4 samuel <samkura47@gmail.com> 1538224073 +0300	commit (merge): Merge branch 'dev' into sam-dev
+a2233524de90ba468d36e4c09b9bbcbb732ed9b4 1555cdd73be92efc3fdbc597242a3e0a19558878 samuel <samkura47@gmail.com> 1538313733 +0300	commit: separation of cost and revenue section
+1555cdd73be92efc3fdbc597242a3e0a19558878 ddb8770c0effd6966c8bd2e74c9dbca4c5cd91ae samuel <samkura47@gmail.com> 1538314073 +0300	merge feature/ACATSync: Merge made by the 'recursive' strategy.
+ddb8770c0effd6966c8bd2e74c9dbca4c5cd91ae f5896abf7b1f822358ac55f395f2ec34c505639f samuel <samkura47@gmail.com> 1538379974 +0300	merge upstream/ab-dev: Fast-forward
+f5896abf7b1f822358ac55f395f2ec34c505639f eac5d63f5891800773a529bc334cea641b1b2b29 samuel <samkura47@gmail.com> 1538380115 +0300	merge feature/ACATSync: Merge made by the 'recursive' strategy.
+eac5d63f5891800773a529bc334cea641b1b2b29 3afc574afff96bef1ffd32034bfe23da5eab55e7 samuel <samkura47@gmail.com> 1538465129 +0300	merge feature/ACATSync: Fast-forward
+3afc574afff96bef1ffd32034bfe23da5eab55e7 c2d2a9bbe476f92a6e208e6a65c89641ad8407b3 samuel <samkura47@gmail.com> 1538477517 +0300	merge feature/ACATSync: Fast-forward
+c2d2a9bbe476f92a6e208e6a65c89641ad8407b3 b669ceca0eb08e349bb4cc21ffd62ab7ed725b16 samuel <samkura47@gmail.com> 1538602327 +0300	commit: adding sync button to ACAT application
+b669ceca0eb08e349bb4cc21ffd62ab7ed725b16 6476bcce8a6eb2c8829b0fb5b07010f1ef673f10 samuel <samkura47@gmail.com> 1538603840 +0300	commit: ready for merge
+6476bcce8a6eb2c8829b0fb5b07010f1ef673f10 b5d73eef1470eb7ca161bb4949deeab0965020d1 samuel <samkura47@gmail.com> 1538604041 +0300	commit (merge): Merge branch 'ab-dev' into sam-dev
+b5d73eef1470eb7ca161bb4949deeab0965020d1 31f023cab48d079864b0956e77fac95bdc5dfa0e samuel <samkura47@gmail.com> 1538693789 +0300	commit: saving new items on grouped ACAT Item
+31f023cab48d079864b0956e77fac95bdc5dfa0e d4fe4993cb7841dc61dc09cfdc681847041cba20 samuel <samkura47@gmail.com> 1538694528 +0300	commit (merge): Merge branch 'ab-dev' into sam-dev
+d4fe4993cb7841dc61dc09cfdc681847041cba20 cb394959987a5dbce709bec4e374d668a910627a samuel <samkura47@gmail.com> 1538703882 +0300	commit: sync ACATItem successfull
+cb394959987a5dbce709bec4e374d668a910627a 141f4a392565557edb169f1bf681b370d8e72206 samuel <samkura47@gmail.com> 1538706375 +0300	commit: uploading other items with sync
+141f4a392565557edb169f1bf681b370d8e72206 60663926ab44d8aa5c98a34d49dc583bc33917c6 samuel <samkura47@gmail.com> 1538740297 +0300	commit: fix sync issue
+60663926ab44d8aa5c98a34d49dc583bc33917c6 6e4f9693e14234329b5e1e94fc652ea1a8054888 samuel <samkura47@gmail.com> 1538852988 +0300	commit: chaning other button implementation for grouped items
+6e4f9693e14234329b5e1e94fc652ea1a8054888 8abe8a7f5eb05172bec2ea945f2b43438cb5761d samuel <samkura47@gmail.com> 1538909338 +0300	commit: adding pending ACAT Item creation icon
+8abe8a7f5eb05172bec2ea945f2b43438cb5761d 4213b30172da70fa2bbf131521942bed3d362c29 samuel <samkura47@gmail.com> 1538912005 +0300	commit: cleaning commented out codes on ACAT Item cost estimation
+4213b30172da70fa2bbf131521942bed3d362c29 154612ddb5ab8db113f34d056f3e2e4f78e3d589 samuel <samkura47@gmail.com> 1538944479 +0300	commit: fix group list item query to fetch the correct value
+154612ddb5ab8db113f34d056f3e2e4f78e3d589 2b4e0b49a581c6399b8d93106fb5d18938a30e5d samuel <samkura47@gmail.com> 1539176184 +0300	commit: adding record and monitor menu on the option menu for ACAT
+2b4e0b49a581c6399b8d93106fb5d18938a30e5d bce3a3a572f7143ab1b08e64fd9bf7e8f8b9f4bd samuel <samkura47@gmail.com> 1539457615 +0300	commit: fetching actual values from local storage
+bce3a3a572f7143ab1b08e64fd9bf7e8f8b9f4bd 27c503ed768ff3caa74240eb33b63bb0602d4297 samuel <samkura47@gmail.com> 1539460106 +0300	commit: displaying the respected achieved or estimated values
+27c503ed768ff3caa74240eb33b63bb0602d4297 983ce1abd3e1ea3e671d63450ffd95c6028465ed samuel <samkura47@gmail.com> 1539618506 +0300	commit: ACAT monitoring but needs to be tested
+983ce1abd3e1ea3e671d63450ffd95c6028465ed ebac9ee96fd34e84e7dac62b4636abb2fcf6a6c7 samuel <samkura47@gmail.com> 1539860303 +0300	commit: complete ACAT monitoring
+ebac9ee96fd34e84e7dac62b4636abb2fcf6a6c7 320e2b10434786e48064566f52e73244e9796eb2 samuel <samkura47@gmail.com> 1541256231 +0300	commit: handle gender, status and incorrecly created ACATs
+320e2b10434786e48064566f52e73244e9796eb2 708e20b5eae5db6c8bd93479fcf3374caa12947a samuel <samkura47@gmail.com> 1541257436 +0300	commit: adding option menu on clients Fragment
+708e20b5eae5db6c8bd93479fcf3374caa12947a 6143135fdf2277dcbd28220e6bcc25a72aaa8e30 samuel <samkura47@gmail.com> 1541265018 +0300	commit: adding record loan amount dialog
+6143135fdf2277dcbd28220e6bcc25a72aaa8e30 9762243822d4bb5da5740ce7a9d3abc2e2f9d016 samuel <samkura47@gmail.com> 1541584008 +0300	commit: ACAT workflow redone but still needs testing
+9762243822d4bb5da5740ce7a9d3abc2e2f9d016 73fd2a303c22a01ff0142203ae5b02d5e141818b samuel <samkura47@gmail.com> 1541585557 +0300	commit: prompting loan grant and authrization before monitoring and recording respectively
+73fd2a303c22a01ff0142203ae5b02d5e141818b c3e520062ce025fab79e2d46621ecb0c02386f7e samuel <samkura47@gmail.com> 1542712287 +0300	commit: adding loan cycle and cleaning up some things
+c3e520062ce025fab79e2d46621ecb0c02386f7e 5141656216e51356672c4f1c6c77ac22a12778e4 samuel <samkura47@gmail.com> 1543012435 +0300	commit: loan cycle issues fixed.
+5141656216e51356672c4f1c6c77ac22a12778e4 3d92fdaf06a356e6cacba5fc476918c181e786cc samuel <samkura47@gmail.com> 1543015779 +0300	commit: submitting crop ACAT on the go while accepting 'client ACAT'
+3d92fdaf06a356e6cacba5fc476918c181e786cc 8601401839fc94598b36698c817a6b76ce5530cb samuel <samkura47@gmail.com> 1543224438 +0300	commit: changing GPS display formate for better accuracy
+8601401839fc94598b36698c817a6b76ce5530cb 280de9dc59a4cfe122dfdb55e9ac4c6d9637cf9d samuel <samkura47@gmail.com> 1543603844 +0300	commit: tested loan_cycle
+280de9dc59a4cfe122dfdb55e9ac4c6d9637cf9d 2304b968fddb42228061d181e444a824be780af1 samuel <samkura47@gmail.com> 1544433325 +0300	commit: updating loan requested and loan proposed
+2304b968fddb42228061d181e444a824be780af1 70f1a86c4cbe30adecc7bc2d2022add7a3c1e2b5 samuel <samkura47@gmail.com> 1545493160 +0300	commit: adding individual vs group loan button
+70f1a86c4cbe30adecc7bc2d2022add7a3c1e2b5 890299131f3d6772a733cdf5a64fa6e835e98cf8 samuel <samkura47@gmail.com> 1549010718 +0300	commit: too many skipped commits
+890299131f3d6772a733cdf5a64fa6e835e98cf8 aeab1aadea49e44dfda0709143fd77dfd8a14b99 samuel <samkura47@gmail.com> 1549012534 +0300	commit: adding fragment and presenter for grouped application
+aeab1aadea49e44dfda0709143fd77dfd8a14b99 58e4b6eac903ee3a92ba5bace020b94fc312975c samuel <samkura47@gmail.com> 1549016365 +0300	commit: displaying grouped client list in separate view
+58e4b6eac903ee3a92ba5bace020b94fc312975c a193eb9c29e749ea87682163a274be729014b137 samuel <samkura47@gmail.com> 1549035171 +0300	commit: adding service to update the members and leader of a group
+                                                                        

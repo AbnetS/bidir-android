@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="4dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_weight="2"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/label"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:text="@string/acat_estimated_price" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/estimated_expected_price_title"
+            style="@style/label"
+            android:layout_marginLeft="140dp"
+            android:layout_marginStart="140dp"
+            android:background="@color/green_super_light"
+            android:padding="4dp"
+            android:text="@string/acat_estimated" />
+
+        <TextView
+            android:id="@+id/estimated_achieved_price_title"
+            style="@style/label"
+            android:layout_marginLeft="120dp"
+            android:layout_marginStart="120dp"
+            android:layout_toEndOf="@id/estimated_expected_price_title"
+            android:layout_toRightOf="@id/estimated_expected_price_title"
+            android:background="@color/green_super_light"
+            android:padding="4dp"
+            android:text="@string/acat_actual" />
+
+        <TextView
+            android:id="@+id/estimated_price_remark_title"
+            style="@style/label"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="120dp"
+            android:layout_marginStart="120dp"
+            android:layout_toEndOf="@id/estimated_achieved_price_title"
+            android:layout_toRightOf="@id/estimated_achieved_price_title"
+            android:background="@color/green_super_light"
+            android:padding="4dp"
+            android:text="@string/acat_remark" />
+
+        <TextView
+            android:id="@+id/estimated_maximum_price_title"
+            style="@style/label"
+            android:layout_alignBaseline="@id/estimated_maximum_expected_input"
+            android:layout_below="@id/estimated_expected_price_title"
+            android:padding="8dp"
+            android:text="@string/acat_maximum"
+
+            />
+
+        <TextView
+            android:id="@+id/estimated_average_price_title"
+            style="@style/label"
+            android:layout_alignBaseline="@id/estimated_average_expected_input"
+            android:layout_below="@id/estimated_maximum_price_title"
+            android:padding="8dp"
+            android:text="@string/acat_average" />
+
+        <TextView
+            android:id="@+id/estimated_minimum_price_title"
+            style="@style/label"
+            android:layout_alignBaseline="@id/estimated_minimum_expected_input"
+            android:layout_below="@id/estimated_average_price_title"
+            android:padding="8dp"
+            android:text="@string/acat_minimum" />
+
+        <EditText
+            android:id="@+id/estimated_maximum_expected_input"
+            style="@style/acat_layout_input"
+            android:layout_width="140dp"
+            android:layout_below="@id/estimated_expected_price_title"
+            android:layout_marginLeft="140dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="24dp" />
+
+        <EditText
+            android:id="@+id/estimated_average_expected_input"
+            style="@style/acat_layout_input"
+            android:layout_width="140dp"
+            android:layout_below="@id/estimated_maximum_expected_input"
+            android:layout_marginLeft="140dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="24dp" />
+
+        <EditText
+            android:id="@+id/estimated_minimum_expected_input"
+            style="@style/acat_layout_input"
+            android:layout_width="140dp"
+            android:layout_below="@id/estimated_average_expected_input"
+            android:layout_marginLeft="140dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="24dp" />
+
+        <EditText
+            android:id="@+id/estimated_maximum_achieved_input"
+            style="@style/acat_layout_input"
+            android:layout_width="140dp"
+            android:layout_alignBaseline="@id/estimated_maximum_expected_input"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_toEndOf="@id/estimated_maximum_expected_input"
+            android:layout_toRightOf="@id/estimated_maximum_expected_input" />
+
+        <EditText
+            android:id="@+id/estimated_average_achieved_input"
+            style="@style/acat_layout_input"
+            android:layout_width="140dp"
+            android:layout_alignBaseline="@id/estimated_average_expected_input"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_toEndOf="@id/estimated_average_expected_input"
+            android:layout_toRightOf="@id/estimated_average_expected_input" />
+
+        <EditText
+            android:id="@+id/estimated_minimum_achieved_input"
+            style="@style/acat_layout_input"
+            android:layout_width="140dp"
+            android:layout_alignBaseline="@id/estimated_minimum_expected_input"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_toEndOf="@id/estimated_minimum_expected_input"
+            android:layout_toRightOf="@id/estimated_minimum_expected_input" />
+
+        <EditText
+            android:id="@+id/estimated_maximum_remark_input"
+            style="@style/acat_layout_input"
+            android:layout_alignBaseline="@id/estimated_maximum_achieved_input"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="60dp"
+            android:layout_toEndOf="@id/estimated_maximum_achieved_input"
+            android:layout_toRightOf="@id/estimated_maximum_achieved_input" />
+
+        <EditText
+            android:id="@+id/estimated_average_remark_input"
+            style="@style/acat_layout_input"
+            android:layout_alignBaseline="@id/estimated_average_achieved_input"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="60dp"
+            android:layout_toEndOf="@id/estimated_average_achieved_input"
+            android:layout_toRightOf="@id/estimated_average_achieved_input" />
+
+        <EditText
+            android:id="@+id/estimated_minimum_remark_input"
+            style="@style/acat_layout_input"
+            android:layout_alignBaseline="@id/estimated_minimum_achieved_input"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginStart="60dp"
+            android:layout_toEndOf="@id/estimated_minimum_achieved_input"
+            android:layout_toRightOf="@id/estimated_minimum_achieved_input" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/acat_estimated_yield_save_and_done_button"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/green"
+        android:text="@string/estimated_yield_save_and_done"
+        android:textColor="@color/white" />
+</LinearLayout>

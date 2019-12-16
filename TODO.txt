@@ -1,0 +1,28 @@
+// TODO: Add code coverage support (Android Studio's code coverage sucks)
+
+// TODO: Unit Tests
+// TODO: Ensure all presenters deliver work on connected view
+// TODO: Move off ALL Database access to background thread to speed up APP.
+
+1. Save estimated values (u price, qty, total price) of probable revenue in acatitemvalue (which is done I think)
+2. Save/update cash outflow in CashFlow using yield id as a reference...also done?
+3. Save/Overwrite estimatedProbRevenue in 'Probable Revenue' section.
+4. " Save/Overwrite estimatedProbRevenue in parent 'Revenue' section
+5. Save/Overwrite estimatedProbRevenue as estimatedSubTotal in parent 'Revenue' section.
+6. Save/update net cash flow (this is actually cumulative cashflow) in CashFlow using the probable revenue section id as a reference
+7. Save/update net cash flow (this is actually cumulative cashflow) in CashFlow using the parent revenue section id as a reference.
+
+"Save/Overwrite total value in 'estimated sub total' of probable Yield section." <<
+a) Get the probable yield section
+b) Get its ItemValue containing the total cost
+c) Update the probable yield section's estimatedSubTotal with the total cost from its ItemValue
+
+"4. Save/Overwrite total in No.3 as "estimatedProbRevenue" in parent 'Revenue' section" <<
+a) Get the probable yield section's ItemValue
+b) Get the parent revenue section
+c) Overwrite the parent revenue section's estimatedProbRevenue with the ItemValue's total cost.
+
+"5. Save/Overwrite total in No.3 as estimatedSubTotal in parent 'Revenue' section."
+a) Get the probable yield section's ItemValue
+b) Get the parent revenue section
+c) Overwrite the parent revenue section's estimatedSubTotal with the ItemValue's total cost.

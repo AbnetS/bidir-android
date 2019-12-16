@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:showIn="@layout/fragment_crop_summary">
+
+    <TextView
+        android:id="@+id/cropSummaryCropMenuTitleLabel"
+        style="@style/label.small.green"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        android:text="@string/crop_summary_main_title_label"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/green" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cropSummaryMenuRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/crop_summary_menu_label_layout"/>
+
+    <TextView
+        android:id="@+id/cropSummaryLoanProposalMenuTitleLabel"
+        style="@style/label.small.green"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        android:text="@string/crop_summary_main_title_loan_proposal_label"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/green" />
+
+    <TextView
+        android:background="@drawable/list_item_background"
+        android:id="@+id/cropMenuLoanProposalItemNameLabel"
+        style="@style/label.small"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:text="@string/crop_summary_loan_proposal_menu_label" />
+
+    <View
+        style="@style/list_separator"
+        android:layout_height="2dp"/>
+</LinearLayout>

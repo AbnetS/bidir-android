@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.common.dialogs.recordloan.RecordLoanDialog">
+
+    <TextView
+        android:id="@+id/recordLoanDialogTitleLabel"
+        style="@style/label.large"
+        android:text="@string/record_loan_dialog_title"
+        android:padding="32dp"/>
+
+    <TextView
+        android:id="@+id/recordLoanDialogInputPromptLabel"
+        style="@style/label.small.gray"
+        android:text="@string/record_loan_approved_loan_amount_label"
+        android:paddingLeft="32dp"
+        android:paddingStart="32dp" />
+    <EditText
+        android:id="@+id/recordDialogLoanAmountInput"
+        style="@style/input"
+        android:hint="@string/record_loan_input_hint"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:inputType="numberDecimal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/recordDialogCancelButton"
+            style="@style/button.dark.gray.dialog"
+            android:layout_weight="1"
+            android:text="@string/record_loan_cancel_button_label" />
+
+        <Button
+            android:id="@+id/recordDialogOKButton"
+            style="@style/button.dark.green.dialog"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/record_loan_ok_button_label" />
+    </LinearLayout>
+</LinearLayout>

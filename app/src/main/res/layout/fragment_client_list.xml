@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home.main.clientlists.ClientListFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/clientListToolbar"
+        style="@style/toolbar">
+
+        <LinearLayout
+            style="@style/toolbar_menu_container">
+
+            <TextView
+                android:id="@+id/clientListMenuOK"
+                style="@style/toolbar_menu_label"
+                android:text="@string/client_list_ok_button_label"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/clientListSelectedMemberCount"
+            style="@style/label.green"
+            android:layout_gravity="center"
+            tools:text="@string/client_list_selected_count_label"/>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/shadowView"
+        style="@style/shadow.horizontal.bottom"
+        android:layout_below="@+id/clientListToolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/clientListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shadowView"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/client_list_item_layout" />
+
+    <TextView
+        android:id="@+id/clientListNoClientsLabel"
+        style="@style/label.green"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="@string/client_list_no_client_label"
+        android:visibility="gone"/>
+
+</RelativeLayout>

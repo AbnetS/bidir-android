@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single" >
+
+        <item android:id="@+id/allGroupScreeningMenu"
+            android:title="@string/group_screening_filter_menu_label_all"
+            android:checked="true"/>
+        <item android:id="@+id/newGroupScreeningsMenu"
+            android:title="@string/group_screening_filter_menu_label_new" />
+        <item android:id="@+id/inProgressGroupScreeningMenu"
+            android:title="@string/group_screening_filter_menu_label_in_progress" />
+        <item android:id="@+id/submittedGroupScreeningMenu"
+            android:title="@string/group_screening_filter_menu_label_submitted" />
+        <item android:id="@+id/eligibleGroupScreeningMenu"
+            android:title="@string/group_screening_filter_menu_label_eligible" />
+        <item android:id="@+id/rejectedGroupScreeningMenu"
+            android:title="@string/group_screening_filter_menu_label_rejected" />
+
+    </group>
+</menu>

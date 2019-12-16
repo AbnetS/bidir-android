@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="2.7"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/subtotal_label"
+        style="@style/label.large.white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/green_light"
+        android:gravity="center"
+        android:text="@string/subtotal"
+        android:textAlignment="center" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/subtotal_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/subtotal_item_layout" />
+</LinearLayout>

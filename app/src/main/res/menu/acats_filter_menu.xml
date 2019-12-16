@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single" >
+
+        <item android:id="@+id/allACATsMenu"
+            android:title="@string/acat_filter_menu_label_all"
+            android:checked="true"/>
+        <item android:id="@+id/newACATsMenu"
+            android:title="@string/acat_filter_menu_label_new" />
+        <item android:id="@+id/inProgressACATsMenu"
+            android:title="@string/acat_filter_menu_label_in_progress" />
+        <item android:id="@+id/submittedACATsMenu"
+            android:title="@string/acat_filter_menu_label_submitted" />
+        <item android:id="@+id/resubmittedACATsMenu"
+            android:title="@string/acat_filter_menu_label_resubmitted" />
+        <item android:id="@+id/approvedACATsMenu"
+            android:title="@string/acat_filter_menu_label_approved" />
+        <item android:id="@+id/declinedACATsMenu"
+            android:title="@string/acat_filter_menu_label_declined" />
+
+    </group>
+</menu>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:layout_weight="1"
+    android:background="@color/white"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <View
+        android:id="@+id/profile_family_status_view"
+        style="@style/profile_view_divider" />
+
+    <TextView
+        android:id="@+id/profile_label_marital_status"
+        style="@style/profile_layout_label_margin"
+        android:layout_toLeftOf="@id/profile_family_status_view"
+        android:layout_toStartOf="@id/profile_family_status_view"
+        android:gravity="end"
+        android:text="@string/profile_marital_status" />
+
+    <TextView
+        android:id="@+id/profile_label_marital_status_value"
+        style="@style/profile_layout_value_section_label"
+        android:layout_toEndOf="@id/profile_family_status_view"
+        android:layout_toRightOf="@id/profile_family_status_view" />
+
+    <TextView
+        android:id="@+id/profile_label_household_count"
+        style="@style/profile_layout_label_margin"
+        android:layout_below="@id/profile_label_marital_status"
+        android:layout_toLeftOf="@id/profile_family_status_view"
+        android:layout_toStartOf="@id/profile_family_status_view"
+        android:gravity="end"
+        android:text="@string/profile_no_of_household_members" />
+
+    <TextView
+        android:id="@+id/profile_label_household_count_value"
+        style="@style/profile_layout_value_section_label"
+        android:layout_below="@id/profile_label_marital_status_value"
+        android:layout_toEndOf="@id/profile_family_status_view"
+        android:layout_toRightOf="@id/profile_family_status_view" />
+
+</RelativeLayout>

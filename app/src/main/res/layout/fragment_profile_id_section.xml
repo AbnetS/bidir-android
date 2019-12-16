@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:layout_weight="1"
+    android:background="@color/white"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <ImageView
+        android:id="@+id/profile_id_holder"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/contentDescription"
+        app:srcCompat="@drawable/register_address_id_sample" />
+
+    <LinearLayout
+        android:id="@+id/profile_id_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_id_holder"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/profile_id_view"
+                style="@style/profile_view_divider" />
+
+            <TextView
+                android:id="@+id/profile_label_id"
+                style="@style/profile_layout_label_margin"
+                android:layout_toLeftOf="@id/profile_id_view"
+                android:layout_toStartOf="@id/profile_id_view"
+                android:text="@string/profile_id_no" />
+
+            <TextView
+                android:id="@+id/profile_label_id_value"
+                style="@style/profile_layout_value_section_label"
+                android:layout_toEndOf="@id/profile_id_view"
+                android:layout_toRightOf="@id/profile_id_view" />
+
+            <TextView
+                android:id="@+id/profile_label_woreda"
+                style="@style/profile_layout_label_margin"
+                android:layout_below="@id/profile_label_id"
+                android:layout_toLeftOf="@id/profile_id_view"
+                android:layout_toStartOf="@id/profile_id_view"
+                android:text="@string/profile_woreda" />
+
+            <TextView
+                android:id="@+id/profile_label_woreda_value"
+                style="@style/profile_layout_value_section_label"
+                android:layout_below="@id/profile_label_id_value"
+                android:layout_toEndOf="@id/profile_id_view"
+                android:layout_toRightOf="@id/profile_id_view" />
+
+            <TextView
+                style="@style/profile_layout_label_margin"
+                android:layout_below="@id/profile_label_woreda"
+                android:layout_toLeftOf="@id/profile_id_view"
+                android:layout_toStartOf="@id/profile_id_view"
+                android:text="@string/profile_house_no" />
+
+            <TextView
+                android:id="@+id/profile_label_house_number_value"
+                style="@style/profile_layout_value_section_label"
+                android:layout_below="@id/profile_label_woreda_value"
+                android:layout_toEndOf="@id/profile_id_view"
+                android:layout_toRightOf="@id/profile_id_view" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/profile_kebele_view"
+                style="@style/profile_view_divider" />
+
+            <TextView
+                android:id="@+id/profile_label_kebele"
+                style="@style/profile_layout_label_margin"
+                android:layout_toLeftOf="@id/profile_kebele_view"
+                android:layout_toStartOf="@id/profile_kebele_view"
+                android:text="@string/profile_kebele" />
+
+            <TextView
+                android:id="@+id/profile_label_kebele_value"
+                style="@style/profile_layout_value_section_label"
+                android:layout_toEndOf="@id/profile_kebele_view"
+                android:layout_toRightOf="@id/profile_kebele_view" />
+
+            <TextView
+                android:id="@+id/profile_label_phone_number"
+                style="@style/profile_layout_label_margin"
+                android:layout_below="@id/profile_label_kebele"
+                android:layout_toLeftOf="@id/profile_kebele_view"
+                android:layout_toStartOf="@id/profile_kebele_view"
+                android:gravity="end"
+                android:text="@string/profile_phone_number" />
+
+            <TextView
+                android:id="@+id/profile_label_phone_number_value"
+                style="@style/profile_layout_value_section_label"
+                android:layout_below="@id/profile_label_kebele_value"
+                android:layout_toEndOf="@id/profile_kebele_view"
+                android:layout_toRightOf="@id/profile_kebele_view" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

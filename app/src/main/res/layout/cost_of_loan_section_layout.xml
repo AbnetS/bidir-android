@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_weight="3.5"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/cost_of_loan_label"
+        style="@style/label.small"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/cost_of_loan" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_below="@id/cost_of_loan_label" >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cost_of_loan_item_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listItem="@layout/loan_product_item_layout" />
+
+        <LinearLayout
+            android:id="@+id/total_cost_of_loan_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_marginTop="40dp">
+
+            <TextView
+                style="@style/label.small"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/total_loan_cost" />
+
+            <TextView
+                android:id="@+id/total_cost_of_loan"
+                style="@style/label.small"
+                android:layout_width="240dp"
+                android:background="@color/green_light"
+                android:gravity="center"
+                android:text="@string/acat_default_value" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/loan_no_cost_of_loan_label"
+        style="@style/label.green"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:layout_toRightOf="@id/cost_of_loan_label"
+        android:layout_toEndOf="@id/cost_of_loan_label"
+        android:layout_centerInParent="true"
+        android:text="@string/no_cost_of_loan_found"
+
+         />
+
+</RelativeLayout>

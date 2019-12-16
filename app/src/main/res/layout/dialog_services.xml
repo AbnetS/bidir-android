@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.common.dialogs.service.ServiceSelectorDialog">
+
+    <TextView
+        style="@style/label.green"
+        android:text="@string/non_financial_services" />
+
+    <LinearLayout
+        android:id="@+id/servicesCheckBoxContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/service_training_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:checked="false"
+            android:padding="8dp"
+            android:text="@string/service_training"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/service_advisory_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:checked="false"
+            android:padding="8dp"
+            android:text="@string/service_advisory"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/service_technical_support_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:checked="false"
+            android:padding="8dp"
+            android:text="@string/service_technical_support"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/service_access_to_input_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:checked="false"
+            android:padding="8dp"
+            android:text="@string/service_access_to_inputs"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/serviceDialogCancelButton"
+            style="@style/button.dark.gray.dialog"
+            android:layout_weight="1"
+            android:text="@string/sample_button_cancel" />
+
+        <Button
+            android:id="@+id/serviceDialogOKButton"
+            style="@style/button.dark.green.dialog"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/ef_ok" />
+    </LinearLayout>
+
+</LinearLayout>

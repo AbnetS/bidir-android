@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:layout_weight="1"
+    android:background="@color/white"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <RelativeLayout
+        android:id="@+id/profile_spouse_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/profile_spouse_detail_view"
+            style="@style/profile_view_divider" />
+
+        <TextView
+            android:id="@+id/profile_label_spouse_id"
+            style="@style/profile_layout_label_margin"
+            android:layout_toLeftOf="@id/profile_spouse_detail_view"
+            android:layout_toStartOf="@id/profile_spouse_detail_view"
+            android:text="@string/profile_spouse_id_no" />
+
+        <TextView
+            android:id="@+id/profile_label_spouse_id_value"
+            style="@style/profile_layout_value_section_label"
+            android:layout_toEndOf="@id/profile_spouse_detail_view"
+            android:layout_toRightOf="@id/profile_spouse_detail_view" />
+
+        <TextView
+            android:id="@+id/profile_label_spouse_name"
+            style="@style/profile_layout_label_margin"
+            android:layout_below="@id/profile_label_spouse_id"
+            android:layout_toLeftOf="@id/profile_spouse_detail_view"
+            android:layout_toStartOf="@id/profile_spouse_detail_view"
+            android:text="@string/profile_spouse_full_name" />
+
+        <TextView
+            android:id="@+id/profile_label_spouse_full_name_value"
+            style="@style/profile_layout_value_section_label"
+            android:layout_below="@id/profile_label_spouse_id_value"
+            android:layout_toEndOf="@id/profile_spouse_detail_view"
+            android:layout_toRightOf="@id/profile_spouse_detail_view" />
+    </RelativeLayout>
+</RelativeLayout>

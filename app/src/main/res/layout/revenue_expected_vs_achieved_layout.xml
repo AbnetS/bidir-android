@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="2dp"
+    android:layout_weight="1"
+    android:background="@color/gray_super_light"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/revenue_estimated_vs_actual_scrollable_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:orientation="vertical"
+                android:paddingTop="64dp"
+                tools:ignore="RtlSymmetry">
+
+                <TextView
+                    style="@style/label.small"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:text="@string/acat_unit" />
+
+                <TextView
+                    style="@style/label.small"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="32dp"
+                    android:text="@string/acat_quantity" />
+
+                <TextView
+                    style="@style/label.small"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="32dp"
+                    android:text="@string/acat_unit_price" />
+
+                <TextView
+                    style="@style/label.small"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="32dp"
+                    android:text="@string/acat_total" />
+
+                <LinearLayout
+                    android:id="@+id/revenueYieldInputIndicatorsContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/label.small"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="32dp"
+                        android:text="@string/own_consumption" />
+
+                    <TextView
+                        style="@style/label.small"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="32dp"
+                        android:text="@string/seed_resource" />
+
+                    <TextView
+                        style="@style/label.small"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="32dp"
+                        android:text="@string/for_market" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/label.large"
+                    android:layout_width="match_parent"
+                    android:background="@color/green_super_light"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="@string/acat_estimated"
+                    android:textColor="@color/green" />
+
+                <EditText
+                    android:id="@+id/revenueEstimatedUnitInput"
+                    style="@style/acat_layout_input"
+                    android:hint="@string/acat_unit"
+                    android:padding="16dp"
+                    android:selectAllOnFocus="true"/>
+
+                <EditText
+                    android:id="@+id/revenueEstimatedQuantityInput"
+                    style="@style/acat_layout_input"
+                    android:hint="@string/acat_quantity"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8"
+                    android:padding="16dp"
+                    android:selectAllOnFocus="true"/>
+
+                <EditText
+                    android:id="@+id/revenueEstimatedUnitPriceInput"
+                    style="@style/acat_layout_input"
+                    android:hint="@string/acat_unit_price"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8"
+                    android:padding="16dp"
+                    android:selectAllOnFocus="true"/>
+
+                <TextView
+                    android:id="@+id/revenueEstimatedTotalLabel"
+                    style="@style/label.large"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/green_light"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="@string/acat_default_value" />
+
+                <LinearLayout
+                    android:id="@+id/revenueEstimatedYieldConsumptionInputsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/revenueEstimatedOwnConsInput"
+                        style="@style/acat_layout_input"
+                        android:hint="@string/estimated_amount"
+                        android:inputType="numberDecimal"
+                        android:maxLength="8"
+                        android:padding="16dp"
+                        android:selectAllOnFocus="true"/>
+
+                    <EditText
+                        android:id="@+id/revenueEstimatedSeedResInput"
+                        style="@style/acat_layout_input"
+                        android:hint="@string/estimated_amount"
+                        android:inputType="numberDecimal"
+                        android:maxLength="8"
+                        android:padding="16dp"
+                        android:selectAllOnFocus="true"/>
+
+                    <EditText
+                        android:id="@+id/revenueEstimatedForMarketInput"
+                        style="@style/acat_layout_input"
+                        android:hint="@string/estimated_amount"
+                        android:inputType="numberDecimal"
+                        android:maxLength="8"
+                        android:padding="16dp"
+                        android:selectAllOnFocus="true"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/label.large"
+                    android:layout_width="match_parent"
+                    android:background="@color/green_super_light"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="@string/acat_actual"
+                    android:textColor="@color/green" />
+
+                <EditText
+                    android:id="@+id/revenueActualUnitInput"
+                    style="@style/acat_layout_input"
+                    android:hint="@string/acat_unit"
+                    android:padding="16dp"
+                    android:selectAllOnFocus="true"/>
+
+                <EditText
+                    android:id="@+id/revenueActualQuantityInput"
+                    style="@style/acat_layout_input"
+                    android:hint="@string/acat_quantity"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8"
+                    android:padding="16dp"
+                    android:selectAllOnFocus="true"/>
+
+                <EditText
+                    android:id="@+id/revenueActualUnitPriceInput"
+                    style="@style/acat_layout_input"
+                    android:hint="@string/acat_unit_price"
+                    android:inputType="numberDecimal"
+                    android:maxLength="8"
+                    android:padding="16dp"
+                    android:selectAllOnFocus="true"/>
+
+                <TextView
+                    android:id="@+id/revenueActualTotalLabel"
+                    style="@style/label.large"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/green_light"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="@string/acat_default_value" />
+
+                <LinearLayout
+                    android:id="@+id/revenueActualYieldConsumptionInputsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/revenueActualOwnConsInput"
+                        style="@style/acat_layout_input"
+                        android:hint="@string/estimated_amount"
+                        android:inputType="numberDecimal"
+                        android:maxLength="8"
+                        android:padding="16dp"
+                        android:selectAllOnFocus="true"/>
+
+                    <EditText
+                        android:id="@+id/revenueActualSeedResInput"
+                        style="@style/acat_layout_input"
+                        android:hint="@string/estimated_amount"
+                        android:inputType="numberDecimal"
+                        android:maxLength="8"
+                        android:padding="16dp"
+                        android:selectAllOnFocus="true"/>
+
+                    <EditText
+                        android:id="@+id/revenueActualForMarketInput"
+                        style="@style/acat_layout_input"
+                        android:hint="@string/estimated_amount"
+                        android:inputType="numberDecimal"
+                        android:maxLength="8"
+                        android:padding="16dp"
+                        android:selectAllOnFocus="true"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp">
+
+                <LinearLayout
+                    android:id="@+id/item_value_input_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/label"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/acat_remark" />
+
+                    <EditText
+                        android:id="@+id/revenueYieldRemarkInput"
+                        style="@style/acat_layout_input"
+                        android:layout_width="160dp"
+                        android:hint="@string/acat_remark"
+                        android:inputType="textCapWords|textMultiLine"
+                        android:scrollHorizontally="false" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item_expense_value_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_value_input_container"
+                    android:layout_marginTop="200dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/label"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/acat_remark" />
+
+                    <EditText
+                        android:id="@+id/revenueYieldConsumptionRemarkInput"
+                        style="@style/acat_layout_input"
+                        android:layout_width="160dp"
+                        android:hint="@string/acat_remark"
+                        android:inputType="textCapWords|textMultiLine"
+                        android:scrollHorizontally="false" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

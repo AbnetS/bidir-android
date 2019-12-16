@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single" >
+
+        <item android:id="@+id/allClientsMenu"
+            android:title="@string/clients_filter_menu_label_all"
+            android:checked="true"/>
+        <item android:id="@+id/newClientsMenu"
+            android:title="@string/client_filter_menu_label_new" />
+        <item android:id="@+id/screeningClientsMenu"
+            android:title="@string/client_filter_menu_label_screening" />
+        <item android:id="@+id/loanClientsMenu"
+            android:title="@string/client_filter_menu_label_loan_application" />
+        <item android:id="@+id/acatClientsMenu"
+            android:title="@string/client_filter_menu_label_acat" />
+        <item android:id="@+id/grantedClientsMenu"
+            android:title="@string/client_filter_menu_label_granted" />
+        <item android:id="@+id/paidClientsMenu"
+            android:title="@string/client_filter_menu_label_paid" />
+
+    </group>
+
+</menu>

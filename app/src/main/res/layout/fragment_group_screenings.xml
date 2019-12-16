@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    tools:context=".ui.home.main.groupedscreenings.GroupedScreeningsFragment">
+
+    <View
+        android:id="@+id/groupedScreeningsToolbarShadow"
+        style="@style/shadow.horizontal.bottom"
+        android:layout_below="@+id/groupedScreeningsToolbar" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/groupedScreeningsToolbar"
+        style="@style/toolbar">
+        <LinearLayout style="@style/toolbar_menu_container">
+
+            <TextView
+                android:id="@+id/groupScreeningMenuDone"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_group_screening_done" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/groupedScreeningRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/groupedScreeningsToolbarShadow"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/group_applications_item_layout" />
+
+</RelativeLayout>

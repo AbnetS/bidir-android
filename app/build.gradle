@@ -1,0 +1,182 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+dependencies {
+    debugCompile "io.objectbox:objectbox-android-objectbrowser:$objectBoxVersion"
+    releaseCompile "io.objectbox:objectbox-android:$objectBoxVersion"
+}
+
+apply plugin: 'io.objectbox'
+apply plugin: 'io.fabric'
+apply plugin: 'jacoco-android'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+apply from: 'env.gradle'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.gebeya.mobile.bidir"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "0.0-0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        project.loadParams("config/base.props").each { param ->
+            buildConfigField 'String', param.key, param.value
+        }
+    }
+
+    buildTypes {
+        debug {
+//            testCoverageEnabled = true
+            project.loadParams("config/debug.props").each { param ->
+                buildConfigField 'String', param.key, param.value
+            }
+            // This line is added to prevent reverse engineering.
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        staging {
+            initWith(debug)
+            project.loadParams("config/staging.props").each { param ->
+                buildConfigField 'String', param.key, param.value
+            }
+        }
+
+        release {
+            project.loadParams("config/release.props").each { param ->
+                buildConfigField 'String', param.key, param.value
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "testing"
+    productFlavors {
+        dev {
+            dimension "testing"
+        }
+
+        terrafina {
+            dimension "testing"
+            project.loadParams("config/terrafina.props").each { param ->
+                buildConfigField 'String', param.key, param.value
+            }
+        }
+
+        sfpi {
+            dimension "testing"
+            project.loadParams("config/sfpi.props").each { param ->
+                buildConfigField 'String', param.key, param.value
+            }
+        }
+
+        buusaa {
+            dimension "testing"
+            project.loadParams("config/buusaa.props").each { param ->
+                buildConfigField 'String', param.key, param.value
+            }
+        }
+
+        harbu {
+            dimension "testing"
+            project.loadParams("config/harbu.props").each { param ->
+                buildConfigField 'String', param.key, param.value
+            }
+        }
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues = true
+        }
+        unitTests.all {
+            jacoco {
+                includeNoLocationClasses = true
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+jacocoAndroidUnitTestReport {
+    excludes += jacocoExcludes
+}
+
+dependencies {
+    // Compile dependencies
+    implementation project(':framework')
+    implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    implementation "com.android.support:design:$supportLibraryVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation("com.crashlytics.sdk.android:crashlytics:$crashlyticsVersion") {
+        transitive = true
+    }
+    implementation "com.google.android.gms:play-services-location:$playServicesVersion"
+    implementation "com.android.support:multidex:$multiDexVersion"
+    implementation "com.squareup.picasso:picasso:$picassoVersion"
+    implementation "joda-time:joda-time:$jodatimeVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation "io.objectbox:objectbox-java:$objectBoxVersion"
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation "com.pnikosis:materialish-progress:1.7"
+    implementation "com.bignerdranch.android:expandablerecyclerview:3.0.0-RC1"
+    implementation "com.github.esafirm.android-image-picker:imagepicker:$imagePickerVersion"
+
+    // Dependency injection
+    implementation "com.github.stephanenicolas.toothpick:toothpick-runtime:$toothpickVersion"
+    implementation "com.github.stephanenicolas.toothpick:smoothie:$toothpickVersion"
+    testImplementation "com.github.stephanenicolas.toothpick:toothpick-testing:$toothpickVersion"
+    annotationProcessor "com.github.stephanenicolas.toothpick:toothpick-compiler:$toothpickVersion"
+
+    // ReactiveX dependencies
+    implementation "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroidVersion"
+
+    // Test dependencies
+    // Local JVM testing dependencies
+    testImplementation "junit:junit:$jUnitVersion"
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+    testImplementation "org.robolectric:robolectric:$robolectricVersion"
+    testImplementation 'org.robolectric:shadows-support-v4:3.4-rc2'
+
+    // Mock dependencies
+    androidTestImplementation "org.mockito:mockito-android:$mockitoVersion"
+    androidTestImplementation "com.android.support:support-annotations:$supportLibraryVersion"
+
+    // Test runners and rules
+    androidTestImplementation "com.android.support.test:runner:$testRunnerVersion"
+    androidTestImplementation "com.android.support.test:rules:$testRulesVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVersion"
+
+    // ObjectBox desktop local testing configurations
+    testImplementation "io.objectbox:objectbox-$platform:$objectBoxVersion"
+}

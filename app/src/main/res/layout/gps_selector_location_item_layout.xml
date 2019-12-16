@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/selectorLocationItemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <View
+            android:id="@+id/selectorLocationItemIndicator"
+            android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:background="@color/green" />
+
+        <TextView
+            android:id="@+id/selectorLocationItemPositionLabel"
+            style="@style/label.small.green"
+            android:layout_width="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/selectorLocationItemLocationLabel"
+            style="@style/label.small"
+            android:layout_width="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            tools:text="12.38, -19.44" />
+
+        <ImageView
+            android:id="@+id/selectorLocationItemRemoveIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/list_item_background"
+            android:contentDescription="@string/contentDescription"
+            android:padding="12dp"
+            app:srcCompat="@drawable/gps_location_item_remove_icon" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/list_separator"
+        android:layout_below="@+id/selectorLocationItemContainer" />
+
+</RelativeLayout>

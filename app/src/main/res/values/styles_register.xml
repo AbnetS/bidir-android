@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================== REGISTER FRAGMENT ============================== -->
+    <!--layout row container-->
+    <style name="register_layout_row_container">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!--section header title-->
+    <style name="register_layout_section_header_title" parent="label.small">
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <!--section header container-->
+    <style name="register_layout_section_header_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/green_super_light</item>
+    </style>
+
+    <!--section data container-->
+    <style name="register_layout_section_data_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!--section button-->
+    <style name="register_layout_section_button" parent="button.dark.green">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:drawablePadding">8dp</item>
+    </style>
+
+    <!--section input-->
+    <style name="register_layout_section_input" parent="input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+
+    <!--section radio group-->
+    <style name="register_layout_section_radio_group">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--section radio button-->
+    <style name="register_layout_section_radio_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginRight">24dp</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <!--mandatory input indicator-->
+    <style name="register_mandatory_input" parent="@style/label.red">
+        <item name="android:text">@string/asterisk</item>
+    </style>
+</resources>

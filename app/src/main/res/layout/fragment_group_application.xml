@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/fragment_root"
+    tools:context=".ui.home.main.groupedclient.GroupedClientFragment">
+
+    <View
+        android:id="@+id/groupedApplicationToolbarShadow"
+        style="@style/shadow.horizontal.bottom"
+        android:layout_below="@+id/groupedApplicationToolbar" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/groupedApplicationToolbar"
+        style="@style/toolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/groupedApplicationRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/groupedApplicationToolbarShadow"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/group_clients_item_layout" />
+    <TextView
+        android:id="@+id/groupedNoClientsLabel"
+        style="@style/label.green"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="@string/grouped_fragment_no_clients_label"
+        />
+
+    <RelativeLayout
+        android:id="@+id/clientsAddNewFabContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="32dp">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/clientsAddNewFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/clients_add_new_icon" />
+
+    </RelativeLayout>
+</RelativeLayout>

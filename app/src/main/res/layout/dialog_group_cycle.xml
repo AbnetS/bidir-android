@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".ui.common.dialogs.newgroupcycle.GroupLoanCycleDialog">
+
+    <TextView
+        android:id="@+id/groupCycleDialogTitleLabel"
+        style="@style/label.large"
+        android:text="@string/group_cycle_input_loan_amount"
+        android:padding="32dp"/>
+
+    <EditText
+        android:id="@+id/groupCycleDialogLoanAmountInput"
+        style="@style/input"
+        android:hint="@string/group_loan_amount_input_hint"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="numberDecimal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/groupCycleDialogCancelButton"
+            style="@style/button.dark.gray.dialog"
+            android:layout_weight="1"
+            android:text="@string/group_cancel_button_label" />
+
+        <Button
+            android:id="@+id/groupCycleDialogOKButton"
+            style="@style/button.dark.green.dialog"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/group_ok_button_label" />
+    </LinearLayout>
+
+</LinearLayout>

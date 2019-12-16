@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="4dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginStart="4dp"
+    android:layout_weight="5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_super_light"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="8dp">
+
+        <TextView
+            style="@style/label"
+            android:text="@string/maximum_estimated_price"
+            android:textAlignment="center"
+            android:textColor="@color/green_dark" />
+
+        <TextView
+            android:id="@+id/subtotal_label"
+            style="@style/label"
+            android:paddingTop="4dp"
+            android:text="@string/cash_outflow"
+            android:textColor="@color/green_dark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/acat_red_custom_border"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            style="@style/label"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/acat_remaining" />
+
+        <TextView
+            style="@style/label"
+            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
+            android:text="@string/acat_default_value"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cash_out_flow_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:listitem="@layout/data_entry_cash_outflow_item_layout" />
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_super_light">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/acat_loan_proposal_toolbar"
+        style="@style/toolbar">
+
+        <LinearLayout style="@style/toolbar_menu_container">
+
+            <TextView
+                android:id="@+id/loanAssessmentMenuSave"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_register_save" />
+
+            <TextView
+                android:id="@+id/loanAssessmentMenuSubmit"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_questions_submit" />
+
+            <TextView
+                android:id="@+id/loanAssessmentMenuApprove"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_questions_approve" />
+
+            <TextView
+                android:id="@+id/loanAssessmentMenuDecline"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_questions_decline" />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/loanProposalLowerToolbarContainer"
+        style="@style/lower_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/acat_loan_proposal_toolbar">
+        <Button
+            android:id="@+id/loan_proposal_previous_button"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:background="@color/green"
+            android:text="@string/previous_step"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/loanProposalFragmentTabLayoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/loanProposalLowerToolbarContainer">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/loanProposalFragmentTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/green"
+            app:tabIndicatorHeight="3dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/green"
+            app:tabTextColor="@color/gray"
+            >
+
+        </android.support.design.widget.TabLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/loanProposalFragmentViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loanProposalFragmentTabLayoutContainer" />
+
+</RelativeLayout>

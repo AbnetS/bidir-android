@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_super_light">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/acat_estimated_yield_toolbar"
+        style="@style/toolbar">
+
+        <LinearLayout style="@style/toolbar_menu_container">
+
+            <TextView
+                android:id="@+id/acat_menu_done"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_acat_save" />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/acat_estimated_yield_lower_toolbar_container"
+        style="@style/lower_toolbar"
+        android:layout_below="@id/acat_estimated_yield_toolbar">
+
+        <TextView
+            android:id="@+id/acat_estimated_yield_crop_item_label"
+            style="@style/label.small"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/green_dark"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/acat_step_title"
+            style="@style/label.small.green"
+            android:layout_below="@+id/acat_estimated_yield_crop_item_label"
+            android:layout_centerHorizontal="true"
+            android:text="@string/acat_estimated_yield" />
+
+        <Button
+            android:id="@+id/acat_estimated_yield_next_step_button"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@color/green"
+            android:text="@string/next_step"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/acat_estimated_yield_previous_step_button"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:background="@color/green"
+            android:text="@string/previous_step"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/revenueProbableYieldListContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/acat_estimated_yield_lower_toolbar_container">
+
+        <include layout="@layout/revenue_probable_max_min_layout" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/acat_estimated_yield_scrollable_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/acat_estimated_yield_footer_section"
+        android:layout_below="@+id/acat_estimated_yield_lower_toolbar_container"
+        android:layout_toEndOf="@+id/revenueProbableYieldListContainer"
+        android:layout_toLeftOf="@+id/revenueProbableCashFlowContainer"
+        android:layout_toRightOf="@+id/revenueProbableYieldListContainer"
+        android:layout_toStartOf="@+id/revenueProbableCashFlowContainer"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:id="@+id/revenueProbableExpectedVsAchievedLayoutContainer"
+            style="@style/acat_layout_row_container"
+            android:layout_margin="4dp">
+
+            <include layout="@layout/revenue_expected_vs_achieved_layout" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/revenueProbableExpectedVsAchievedProgressContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_alignBottom="@+id/acat_estimated_yield_scrollable_content"
+        android:layout_alignEnd="@+id/acat_estimated_yield_scrollable_content"
+        android:layout_alignLeft="@+id/acat_estimated_yield_scrollable_content"
+        android:layout_alignRight="@+id/acat_estimated_yield_scrollable_content"
+        android:layout_alignStart="@+id/acat_estimated_yield_scrollable_content"
+        android:layout_alignTop="@+id/acat_estimated_yield_scrollable_content"
+        android:background="@color/white">
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            app:matProg_barColor="@color/primary"
+            app:matProg_barWidth="3dp"
+            app:matProg_circleRadius="30dp"
+            app:matProg_progressIndeterminate="true" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/revenueProbableCashFlowContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/acat_estimated_yield_footer_section"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/acat_estimated_yield_lower_toolbar_container">
+
+        <include layout="@layout/revenue_cash_flow_layout" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/acat_estimated_yield_footer_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="4dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/estimated_total_yield_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/acat_rectangle_with_green_boarder"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                style="@style/label.small"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:text="@string/estimated_yield_prob_revenue_label" />
+
+            <TextView
+                android:id="@+id/loan_assessment_probable_revenue_label"
+                style="@style/label"
+                android:layout_marginEnd="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginStart="2dp"
+                android:width="150dp"
+                android:background="@color/green_light"
+                android:gravity="center"
+                android:text="@string/acat_default_value" />
+
+            <TextView
+                style="@style/label.small"
+                android:layout_marginEnd="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/estimated_yield_minimum_revenue_label" />
+
+            <TextView
+                android:id="@+id/loan_assessment_minimum_revenue_label"
+                style="@style/label"
+                android:layout_marginEnd="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginStart="2dp"
+                android:width="150dp"
+                android:background="@color/green_light"
+                android:gravity="center"
+                android:text="@string/acat_default_value" />
+
+            <TextView
+                style="@style/label.small"
+                android:layout_marginEnd="2dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/estimated_yield_maximum_revenue_label" />
+
+            <TextView
+                android:id="@+id/loan_assessment_maximum_revenue_label"
+                style="@style/label"
+                android:layout_gravity="end"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:width="150dp"
+                android:background="@color/green_light"
+                android:gravity="center"
+                android:text="@string/acat_default_value" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/acat_footer_estimated_yield_net_cash_flow_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/estimated_total_yield_footer"
+            android:background="@color/green_light"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/label.large"
+                android:layout_gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/net_cashflow" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/acat_net_cash_flow_recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/acat_footer_cash_flow_item_layout" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

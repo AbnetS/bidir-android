@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.common.dialogs.creategroup.CreateGroupDialog">
+
+    <TextView
+        android:id="@+id/groupDialogTitleLabel"
+        style="@style/label.large"
+        android:text="@string/group_dialog_title"
+        android:padding="32dp"/>
+
+    <EditText
+        android:id="@+id/groupDialogGroupCodeInput"
+        style="@style/input"
+        android:hint="@string/group_code_input_hint"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+    <EditText
+        android:id="@+id/groupDialogMemberCountInput"
+        style="@style/input"
+        android:hint="@string/group_member_count_input_hint"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="numberDecimal"/>
+    <EditText
+        android:id="@+id/groupDialogLoanAmountInput"
+        style="@style/input"
+        android:hint="@string/group_loan_amount_input_hint"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="numberDecimal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/groupDialogCancelButton"
+            style="@style/button.dark.gray.dialog"
+            android:layout_weight="1"
+            android:text="@string/group_cancel_button_label" />
+
+        <Button
+            android:id="@+id/groupDialogOKButton"
+            style="@style/button.dark.green.dialog"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/group_ok_button_label" />
+    </LinearLayout>
+</LinearLayout>

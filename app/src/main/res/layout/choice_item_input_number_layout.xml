@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/answerItemInputLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/question_item_value_input_hint"
+    android:imeOptions="actionDone"
+    android:maxLength="8"
+    android:inputType="numberDecimal"
+    android:textColor="@color/green"
+    android:textSize="@dimen/text_size_small" />

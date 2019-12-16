@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/assignLeaderMenu"
+        android:title="@string/assign_leader_menu" />
+
+    <item android:id="@+id/recordApprovedLoanMenu"
+        android:title="@string/record_approved_loan_menu" />
+
+    <item android:id="@+id/monitorMenu"
+        android:title="@string/monitor_loan_menu" />
+
+    <item android:id="@+id/loanPaidMenu"
+        android:title="@string/loan_paid_menu" />
+
+</menu>

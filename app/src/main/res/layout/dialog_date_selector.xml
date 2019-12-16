@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/dialog_root"
+    tools:context=".ui.common.dialogs.dateselector.DateSelectorDialog"
+    tools:ignore="all">
+
+    <TextView
+        android:id="@+id/dateSelectorTitleLabel"
+        style="@style/label.large"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="@string/date_selector_add_title" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/dateSelectorDayInput"
+            style="@style/input"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:hint="@string/date_selector_day_input_hint"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2" />
+
+        <EditText
+            android:id="@+id/dateSelectorMonthInput"
+            style="@style/input"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:hint="@string/date_selector_month_input_hint"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2" />
+
+        <EditText
+            android:id="@+id/dateSelectorYearInput"
+            style="@style/input"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:hint="@string/date_selector_year_input_hint"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dateSelectorAutoFillAgeLabel"
+            style="@style/label"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="@string/date_selector_auto_fill_age_label" />
+
+        <EditText
+            android:id="@+id/dateSelectorAutoFillAgeInput"
+            style="@style/input"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:hint="@string/date_selector_auto_fill_age_input_hint"
+            android:inputType="number"
+            android:maxLength="4"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dateSelectorCancelButton"
+            style="@style/button.dark.gray"
+            android:layout_width="150dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:text="@string/sample_button_cancel" />
+
+        <Button
+            android:id="@+id/dateSelectorSaveButton"
+            style="@style/button.dark.green"
+            android:layout_width="150dp"
+            android:text="@string/sample_button_save" />
+
+    </LinearLayout>
+</LinearLayout>

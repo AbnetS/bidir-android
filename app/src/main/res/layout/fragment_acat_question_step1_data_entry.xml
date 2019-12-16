@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:background="@color/gray_super_light"
+    tool:context=".ui.questions.acat.acatitemcostestimation.ACATItemCostEstimationFragment" >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/acat_step_1_data_entry_toolbar"
+        style="@style/toolbar">
+
+        <LinearLayout style="@style/toolbar_menu_container">
+
+            <TextView
+                android:id="@+id/acat_menu_done"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_acat_done" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/acat_step_1_data_entry_lower_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@id/acat_step_1_data_entry_toolbar"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+
+            <View
+                style="@style/list_separator"
+                android:layout_height="2dp"
+                android:layout_alignEnd="@+id/acat_item_indicator_layout_container"
+                android:layout_alignLeft="@+id/acat_item_indicator_layout_container"
+                android:layout_alignRight="@+id/acat_item_indicator_layout_container"
+                android:layout_alignStart="@+id/acat_item_indicator_layout_container"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/green" />
+
+            <LinearLayout
+                android:id="@+id/acat_item_indicator_layout_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/acat_step_1_data_entry_scrollable_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/acat_footer_section"
+        android:layout_below="@id/acat_step_1_data_entry_lower_toolbar"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            style="@style/acat_loan_proposal_row_container"
+            android:layout_margin="4dp">
+
+            <include layout="@layout/fragment_acat_data_entry_left_section_layout" />
+
+            <include layout="@layout/fragment_acat_data_entry_middle_section_layout" />
+
+            <include layout="@layout/fragment_acat_data_entry_cash_out_flow_section_layout" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/acat_footer_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/acat_footer_total_cost_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/acat_green_custom_border"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+
+            >
+
+            <TextView
+                style="@style/label.large"
+                android:text="@string/acat_item_subtotal_label"
+                android:paddingRight="8dp"
+                android:paddingEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/acat_item_subtotal_item_label"
+                style="@style/label.large"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp" />
+
+            <TextView
+                android:id="@+id/acat_item_subtotal_value"
+                style="@style/label.large"
+                android:layout_width="240dp"
+                android:background="@color/green_light"
+                android:gravity="center"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    android:orientation="vertical"
+    android:background="@color/gray_super_light"
+    tools:context=".ui.summary.SummaryActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/cropSummaryToolbar"
+        style="@style/toolbar" >
+    </android.support.v7.widget.Toolbar>
+    <View
+        style="@style/shadow.horizontal.bottom" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <include
+            layout="@layout/crop_summary_menu_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            />
+
+        <RelativeLayout
+            android:id="@+id/cropSummaryInnerFragmentContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="@color/gray_super_light" />
+    </LinearLayout>
+</LinearLayout>

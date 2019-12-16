@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gebeya.mobile.bidir">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_acat"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/app_theme">
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar.fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar" />
+        <activity
+            android:name=".ui.register.RegisterActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.form.screening.ScreeningActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.form.loanapplication.LoanApplicationActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.questions.loanapplication.LoanApplicationQuestionsActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.questions.loanapplication.LoanApplicationQuestionsForTaskActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.questions.acat.initializeclientacat.PreliminaryInformationActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:noHistory="true"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.questions.acat.ACATQuestionsActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.questions.acat.acatapplication.ACATPreliminaryInfoActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.questions.acat.acatestimatedyield.ACATEstimatedYieldActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".ui.questions.acat.estimatedyield.ACATEstimatedRevenueActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.questions.acat.acatloanproposal.ACATLoanProposalActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.questions.acat.acatcostestimation.ACATCostEstimationActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".ui.gps_location_selector.GPSSelectorActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.questions.acat.acatcropitem.ACATCropItemActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.summary.SummaryActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden"
+            android:noHistory="true"/>
+
+        <activity android:name=".ui.crop_summary.CropSummaryActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity android:name=".ui.home.main.groupedclient.GroupedClientActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ui.home.main.clientlists.ClientListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ui.home.main.groupedscreenings.GroupedScreeningsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ui.home.main.groupedloans.GroupedLoansActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ui.home.main.groupedacat.GroupedACATActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/app_theme.no_toolbar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <receiver android:name=".data.base.remote.backend.sync.NetworkBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".data.base.remote.backend.sync.client.ClientSyncService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".data.base.remote.backend.sync.acat.ACATSyncService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".data.base.remote.backend.sync.screening.ComplexScreeningSyncService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".data.base.remote.backend.sync.loanapplication.ComplexLoanApplicationSyncService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".data.base.remote.backend.sync.acat.ACATDataDownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="1f404d468da30e2e87cdc3f84023ff404c8d0f0a" />
+
+    </application>
+</manifest>

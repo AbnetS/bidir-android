@@ -1,0 +1,71 @@
+buildscript {
+    ext.objectBoxVersion = '1.3.3'
+    ext.jacocoVersion = '0.1.2'
+    repositories {
+        google()
+        jcenter()
+        maven { url "http://objectbox.net/beta-repo/" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.2'
+        classpath "io.objectbox:objectbox-gradle-plugin:$objectBoxVersion"
+        classpath "com.dicedmelon.gradle:jacoco-android:$jacocoVersion"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "http://objectbox.net/beta-repo/" }
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// Common versions definitions (for both the :app and :framework modules)
+ext {
+    // SDK and tools
+    minSdkVersion = 15
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+    buildToolsVersion = '27.0.3'
+
+    // App dependencies
+    supportLibraryVersion = '27.1.1'
+    playServicesVersion = '15.0.1'
+    multiDexVersion = '1.0.3'
+    jUnitVersion = '4.12'
+    mockitoVersion = '2.11.0'
+    testRunnerVersion = '1.0.1'
+    testRulesVersion = '1.0.1'
+    espressoVersion = '3.0.1'
+    robolectricVersion = '3.4.2'
+    rxjavaVersion = '2.1.6'
+    rxandroidVersion = '2.0.1'
+    jodatimeVersion = '2.9.9'
+    retrofitVersion = '2.3.0'
+    picassoVersion = '2.5.2'
+    crashlyticsVersion = '2.7.1@aar'
+    toothpickVersion = '1.1.3'
+    imagePickerVersion = '1.12.0'
+    jacocoExcludes = [
+            '**/*_.*',
+            '**/data/**/*Cursor.*',
+            '**/*Injector.*',
+            '**/*IdGetter.*',
+            '**/*Factory.*',
+            '**/*Activity.*'
+    ]
+
+    osName = System.getProperty("os.name").toLowerCase()
+    isLinux = osName.contains("linux")
+    isWindows = osName.contains("windows")
+    is64 = System.getProperty("sun.arch.data.model") == "64"
+    isLinux64 = isLinux && is64
+    isWindows64 = isWindows && is64
+    platform = isLinux64 ? "linux" : "windows"
+}

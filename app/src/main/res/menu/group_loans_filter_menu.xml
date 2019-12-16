@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single" >
+
+        <item android:id="@+id/allGroupLoansMenu"
+            android:title="@string/group_loan_filter_menu_label_all"
+            android:checked="true"/>
+        <item android:id="@+id/newGroupLoansMenu"
+            android:title="@string/group_loan_filter_menu_label_new" />
+        <item android:id="@+id/inProgressGroupLoansMenu"
+            android:title="@string/group_loan_filter_menu_label_in_progress" />
+        <item android:id="@+id/submittedGroupLoansMenu"
+            android:title="@string/group_loan_filter_menu_label_submitted" />
+        <item android:id="@+id/approvedGroupLoansMenu"
+            android:title="@string/group_loan_filter_menu_label_approved" />
+        <item android:id="@+id/declinedGroupLoansMenu"
+            android:title="@string/group_loan_filter_menu_label_declined" />
+
+    </group>
+</menu>

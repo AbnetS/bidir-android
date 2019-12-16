@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    tools:context=".ui.register.RegisterFragment">
+
+    <TextView
+        android:id="@+id/personalDetailsSectionTitleLabel"
+        style="@style/register_layout_section_header_title"
+        android:layout_margin="16dp"
+        android:text="@string/personal_details_section_title" />
+
+    <RelativeLayout style="@style/register_layout_section_header_container">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/personalDetailsUploadPhotoButton"
+                style="@style/register_layout_section_button"
+                android:text="@string/personal_details_upload_photo_button" />
+
+            <ImageView
+                android:id="@+id/personalDetailsPhotoIcon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp"
+                android:contentDescription="@string/contentDescription"
+                app:srcCompat="@drawable/register_personal_details_picture_sample" />
+
+            <Button
+                android:id="@+id/personalDetailTakePictureButton"
+                style="@style/register_layout_section_button"
+                android:text="@string/personal_details_take_picture_button" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout style="@style/register_layout_section_data_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView style="@style/register_mandatory_input" />
+
+            <EditText
+                android:id="@+id/personalDetailsNameInput"
+                style="@style/register_layout_section_input"
+                android:hint="@string/personal_details_name_input_hint"
+                android:nextFocusDown="@+id/personalDetailsFatherNameInput" />
+
+            <TextView style="@style/register_mandatory_input" />
+
+            <EditText
+                android:id="@+id/personalDetailsFatherNameInput"
+                style="@style/register_layout_section_input"
+                android:hint="@string/personal_details_father_name_input_hint"
+                android:nextFocusDown="@+id/personalDetailsGrandfatherNameInput" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView style="@style/register_mandatory_input" />
+
+            <EditText
+                android:id="@+id/personalDetailsGrandfatherNameInput"
+                style="@style/register_layout_section_input"
+                android:hint="@string/personal_details_grandfather_name_input_hint"
+                android:imeOptions="actionDone" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/personalDetailsGenderGroup"
+            style="@style/register_layout_section_radio_group"
+            android:checkedButton="@+id/personalDetailsGenderMaleChoice">
+
+            <RadioButton
+                android:id="@+id/personalDetailsGenderMaleChoice"
+                style="@style/register_layout_section_radio_button"
+                android:text="@string/personal_details_gender_male_choice" />
+
+            <RadioButton
+                android:id="@+id/personalDetailsGenderFemaleChoice"
+                style="@style/register_layout_section_radio_button"
+                android:text="@string/personal_details_gender_female_choice" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/personalDetailsMandatoryIndicator"
+                style="@style/register_mandatory_input"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" />
+
+            <TextView
+                android:id="@+id/personalDetailsDateOfBirthLabel"
+                style="@style/label"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_toEndOf="@id/personalDetailsMandatoryIndicator"
+                android:layout_toRightOf="@id/personalDetailsMandatoryIndicator"
+                android:text="@string/personal_details_date_of_birth_label" />
+
+            <Button
+                android:id="@+id/personalDetailsSelectDobButton"
+                style="@style/register_layout_section_button"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/personal_details_select_dob_button" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

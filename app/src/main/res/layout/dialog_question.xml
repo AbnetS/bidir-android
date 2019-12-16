@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/dialog_root"
+    android:orientation="vertical"
+    tools:context=".ui.common.dialogs.question.QuestionDialog">
+
+    <TextView
+        android:id="@+id/questionDialogTitleLabel"
+        style="@style/label.large.green"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        tools:text="@string/question_sample_title" />
+
+    <TextView
+        android:id="@+id/questionDialogMessageLabel"
+        style="@style/label"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        tools:text="@string/question_sample_message" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/questionDialogNegativeButton"
+            style="@style/button.dark.gray.dialog"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:text="@string/sample_button_no" />
+
+        <Button
+            android:id="@+id/questionDialogPositiveButton"
+            style="@style/button.dark.green.dialog"
+            android:text="@string/sample_button_yes" />
+    </LinearLayout>
+
+</LinearLayout>

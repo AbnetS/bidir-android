@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================== ALL ============================== -->
+    <!--WHITES TO BLACKS-->
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="gray_super_light">#eaeaea</color>
+    <color name="gray_lighter">#c1c1c1</color>
+    <color name="gray_light">#b1b1b1</color>
+    <color name="gray">#848484</color>
+    <color name="gray_dark">#737373</color>
+    <color name="black">#000000</color>
+    <color name="black_shadow">#33000000</color>
+    <color name="black_filter">#66000000</color>
+    <color name="read_only_shield_color">#88FFFFFF</color>
+
+    <!--GREENS-->
+    <color name="green_super_light">#f1f9ef</color>
+    <color name="green_light">#b2dc8a</color>
+    <color name="green">#66ba15</color>
+    <color name="green_dark">#589f13</color>
+
+    <!--ORANGES-->
+    <color name="orange">#c43a1e</color>
+
+    <!--REDS-->
+    <color name="red">#FF0000</color>
+    <color name="redDark">#b90000</color>
+
+    <!--CONTEXTUAL COLORS-->
+    <color name="primary">@color/green</color>
+    <color name="primary_dark">@color/green</color>
+    <color name="accent">@color/green</color>
+
+    <!--APP COLORS-->
+    <color name="color_primary">@color/primary</color>
+    <color name="color_primary_dark">@color/primary_dark</color>
+    <color name="color_accent">@color/accent</color>
+
+    <!-- ACAT colors -->
+    <color name="acat_item_selected">#b2dc8a</color>
+    <color name="acat_item_normal">#ffffff</color>
+</resources>

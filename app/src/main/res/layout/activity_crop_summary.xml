@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cropSummaryFragmentContainer"
+    style="@style/activity_root"
+    tools:context=".ui.crop_summary.CropSummaryActivity" />

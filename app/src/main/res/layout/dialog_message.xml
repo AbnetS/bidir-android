@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/dialog_root"
+    android:orientation="vertical"
+    android:padding="4dp"
+    tools:context=".ui.common.dialogs.message.MessageDialog">
+
+    <TextView
+        android:id="@+id/messageDialogTitleLabel"
+        style="@style/label.large.green"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        tools:text="@string/message_sample_title" />
+
+    <TextView
+        android:id="@+id/messageDialogMessageLabel"
+        style="@style/label"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        tools:text="@string/message_sample_message_label" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/messageDialogOkayButton"
+            style="@style/button.dark.green.dialog"
+            android:text="@string/sample_button_ok" />
+    </LinearLayout>
+
+</LinearLayout>

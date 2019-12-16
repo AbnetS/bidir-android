@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginStart="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/estimated_total_yield_title"
+        style="@style/label"
+        android:padding="12dp"
+        android:text="@string/estimated_total_yield" />
+
+    <RelativeLayout
+        android:id="@+id/marketable_yield_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/estimated_total_yield_title"
+        android:background="@color/white"
+        android:padding="4dp">
+
+        <RelativeLayout
+            android:id="@+id/title_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_super_light"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/expected_label"
+                style="@style/label.green"
+                android:layout_marginLeft="200dp"
+                android:layout_marginStart="200dp"
+                android:text="@string/acat_estimated" />
+
+            <TextView
+                android:id="@+id/achieved_label"
+                style="@style/label.green"
+                android:layout_marginLeft="120dp"
+                android:layout_marginStart="120dp"
+                android:layout_toEndOf="@id/expected_label"
+                android:layout_toRightOf="@id/expected_label"
+
+                android:text="@string/acat_actual" />
+
+            <TextView
+                android:id="@+id/remark_label"
+                style="@style/label.green"
+                android:layout_marginLeft="200dp"
+                android:layout_marginStart="200dp"
+                android:layout_toEndOf="@id/achieved_label"
+                android:layout_toRightOf="@id/achieved_label"
+                android:text="@string/acat_remark" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/own_consumption_label"
+            style="@style/label.small"
+            android:layout_below="@id/title_container"
+            android:layout_gravity="center_vertical|end"
+            android:padding="16dp"
+            android:text="@string/acat_maximum" />
+
+        <TextView
+            android:id="@+id/seed_reserve_label"
+            style="@style/label.small"
+            android:layout_below="@id/own_consumption_label"
+            android:layout_gravity="end"
+            android:padding="16dp"
+            android:text="@string/acat_average" />
+
+        <TextView
+            android:id="@+id/minimum_label"
+            style="@style/label.small"
+            android:layout_below="@id/seed_reserve_label"
+            android:layout_gravity="end"
+            android:padding="16dp"
+            android:text="@string/acat_minimum" />
+
+        <EditText
+            android:id="@+id/maximum_input"
+            style="@style/acat_layout_input"
+            android:layout_width="200dp"
+            android:layout_alignBaseline="@id/own_consumption_label"
+            android:layout_toRightOf="@id/own_consumption_label"
+            android:hint="@string/acat_maximum" />
+
+        <EditText
+            android:id="@+id/average_input"
+            style="@style/acat_layout_input"
+            android:layout_width="200dp"
+            android:layout_alignBaseline="@id/seed_reserve_label"
+            android:layout_alignLeft="@id/maximum_input"
+            android:layout_marginLeft="-2dp"
+            android:layout_toRightOf="@id/seed_reserve_label"
+            android:hint="@string/acat_average" />
+
+        <EditText
+            android:id="@+id/minimum_input"
+            style="@style/acat_layout_input"
+            android:layout_width="200dp"
+            android:layout_alignBaseline="@id/minimum_label"
+            android:layout_alignLeft="@id/maximum_input"
+            android:layout_marginLeft="-2dp"
+            android:layout_toRightOf="@id/minimum_label"
+            android:hint="@string/acat_minimum" />
+
+        <EditText
+            android:id="@+id/achieved_average_input"
+            style="@style/acat_layout_input"
+            android:layout_width="200dp"
+            android:layout_alignBaseline="@id/average_input"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_toRightOf="@id/average_input"
+            android:hint="@string/acat_average" />
+
+        <EditText
+            android:id="@+id/maximum_remark_input"
+            style="@style/acat_layout_input"
+            android:layout_alignBaseline="@id/own_consumption_label"
+            android:layout_toRightOf="@id/achieved_average_input"
+            android:hint="@string/acat_remark" />
+
+        <EditText
+            android:id="@+id/average_remark_input"
+            style="@style/acat_layout_input"
+            android:layout_alignBaseline="@id/seed_reserve_label"
+            android:layout_alignLeft="@id/maximum_remark_input"
+            android:layout_marginLeft="-2dp"
+            android:layout_toRightOf="@id/achieved_average_input"
+            android:hint="@string/acat_remark" />
+
+        <EditText
+            android:id="@+id/minimum_remark_input"
+            style="@style/acat_layout_input"
+            android:layout_alignBaseline="@id/minimum_label"
+            android:layout_alignLeft="@id/maximum_remark_input"
+            android:layout_marginLeft="-2dp"
+            android:layout_toRightOf="@id/achieved_average_input"
+            android:hint="@string/acat_remark" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single" >
+
+        <item android:id="@+id/allScreeningMenu"
+            android:title="@string/screening_filter_menu_label_all"
+            android:checked="true"/>
+        <item android:id="@+id/newScreeningsMenu"
+            android:title="@string/screening_filter_menu_label_new" />
+        <item android:id="@+id/inProgressScreeningMenu"
+            android:title="@string/screening_filter_menu_label_in_progress" />
+        <item android:id="@+id/submittedScreeningMenu"
+            android:title="@string/screening_filter_menu_label_submitted" />
+        <item android:id="@+id/eligibleScreeningMenu"
+            android:title="@string/screening_filter_menu_label_eligible" />
+        <item android:id="@+id/rejectedScreeningMenu"
+            android:title="@string/screening_filter_menu_label_rejected" />
+
+    </group>
+
+</menu>

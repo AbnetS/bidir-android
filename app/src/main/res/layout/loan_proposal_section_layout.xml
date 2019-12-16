@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:id="@+id/loan_proposal_cash_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/label.small"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/loan_proposal" />
+
+        <TextView
+            android:id="@+id/loan_proposal_net_income_label"
+            style="@style/label.small"
+            android:layout_toLeftOf="@id/loan_proposal_net_income_value_label"
+            android:text="@string/loan_proposal_net_income_title_label"
+            android:textColor="@color/green"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/loan_proposal_net_income_value_label"
+            style="@style/label.small"
+            android:paddingLeft="16dp"
+            android:paddingRight="8dp"
+            android:textAlignment="center"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/acat_default_value"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/loan_proposal_max_amount_label"
+            style="@style/label.small"
+            android:layout_toLeftOf="@+id/loan_proposal_max_amount_value_label"
+            android:text="@string/loan_proposal_max_amount_title_label"
+            android:textColor="@color/green"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/loan_proposal_max_amount_value_label"
+            style="@style/label.small"
+            android:paddingLeft="16dp"
+            android:paddingRight="32dp"
+            android:textAlignment="center"
+            android:layout_toLeftOf="@+id/loan_proposal_net_income_label"
+            android:layout_toStartOf="@+id/loan_proposal_net_income_label"
+            android:text="@string/acat_default_value"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/laon_proposal_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="16dp">
+
+        <EditText
+            android:id="@+id/loan_requested_input"
+            style="@style/acat_layout_input"
+            android:hint="@string/loan_requested"
+            android:padding="4dp"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/loan_proposed_input"
+            style="@style/acat_layout_input"
+            android:hint="@string/loan_proposed"
+            android:padding="4dp"
+            android:inputType="numberDecimal"/>
+
+    </LinearLayout>
+</LinearLayout>

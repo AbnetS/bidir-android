@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    tools:context=".ui.form.loanapplication.LoanApplicationFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/loanApplicationToolbar"
+        style="@style/toolbar">
+
+        <LinearLayout style="@style/toolbar_menu_container">
+
+            <TextView
+                android:id="@+id/loanApplicationMenuSave"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_register_save"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/loanApplicationMenuSubmit"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_questions_submit"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/loanApplicationMenuApprove"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_questions_approve"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/loanApplicationMenuDecline"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_questions_decline"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <HorizontalScrollView
+        android:id="@+id/loanApplicationIndicatorHorizontalContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loanApplicationToolbar"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <View
+                style="@style/list_separator"
+                android:layout_height="2dp"
+                android:layout_alignEnd="@+id/loanApplicationIndicatorContainer"
+                android:layout_alignLeft="@+id/loanApplicationIndicatorContainer"
+                android:layout_alignRight="@+id/loanApplicationIndicatorContainer"
+                android:layout_alignStart="@+id/loanApplicationIndicatorContainer"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/loanApplicationIndicatorContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/loanApplicationRemarkContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loanApplicationIndicatorHorizontalContainer"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <TextView
+            style="@style/label.gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/remark"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/loanApplicationRemarkLabel"
+            style="@style/label.green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/loanApplicationRemarkContainer">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/loanApplicationRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/form_question_item_layout" />
+
+        <View
+            android:id="@+id/loanApplicationReadOnlyShield"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/read_only_shield_color"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        style="@style/shadow.horizontal.bottom"
+        android:layout_below="@+id/loanApplicationToolbar" />
+
+</RelativeLayout>

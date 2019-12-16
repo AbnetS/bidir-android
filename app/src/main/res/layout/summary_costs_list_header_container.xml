@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="@integer/summary_cost_list_item_name_weight" />
+
+    <TextView
+        style="@style/label.green"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/summary_cost_list_item_unit_weight"
+        android:gravity="center"
+        android:text="@string/summary_costs_list_title_unit_label" />
+    <TextView
+        style="@style/label.green"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/summary_cost_list_item_quantity_weight"
+        android:gravity="center"
+        android:text="@string/summary_costs_list_title_quantity_label" />
+
+
+    <TextView
+        style="@style/label.green"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/summary_cost_list_item_unit_price_weight"
+        android:gravity="center"
+        android:text="@string/summary_costs_list_title_unit_price_label" />
+
+    <TextView
+        style="@style/label.green"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/summary_cost_list_item_total_price_weight"
+        android:gravity="center"
+        android:text="@string/summary_costs_list_title_total_price_label" />
+
+</LinearLayout>

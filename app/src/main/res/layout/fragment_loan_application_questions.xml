@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    tools:context=".ui.questions.loanapplication.LoanApplicationQuestionsFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/questionsToolbar"
+        style="@style/toolbar">
+
+        <LinearLayout style="@style/toolbar_menu_container">
+
+            <TextView
+                android:id="@+id/loanAssessmentMenuSave"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_register_save" />
+
+            <TextView
+                android:id="@+id/loanAssessmentMenuSubmit"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_questions_submit" />
+
+            <TextView
+                android:id="@+id/loanAssessmentMenuApprove"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_questions_approve" />
+
+            <TextView
+                android:id="@+id/loanAssessmentMenuDecline"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_questions_decline" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <HorizontalScrollView
+        android:id="@+id/questionsIndicatorHorizontalContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/questionsToolbar"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <View
+                style="@style/list_separator"
+                android:layout_alignEnd="@+id/questionsIndicatorContainer"
+                android:layout_alignLeft="@+id/questionsIndicatorContainer"
+                android:layout_alignRight="@+id/questionsIndicatorContainer"
+                android:layout_alignStart="@+id/questionsIndicatorContainer"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+
+            <LinearLayout
+                android:id="@+id/questionsIndicatorContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/questionsRemarkContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/questionsIndicatorHorizontalContainer"
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/label.gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/remark"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/questionsRemarkLabel"
+            style="@style/label.green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/questionsRemarkContainer">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/questionsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/loan_application_question_item_layout" />
+
+        <View
+            android:id="@+id/questionsReadOnlyShield"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF0000" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/shadow.horizontal.bottom"
+        android:layout_below="@+id/questionsToolbar" />
+</RelativeLayout>

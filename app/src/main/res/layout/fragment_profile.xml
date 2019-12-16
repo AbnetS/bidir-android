@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    android:background="@color/gray_super_light"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/profileFragmentToolbar"
+        style="@style/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileFragmentToolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/profilePictureContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/fragment_profile_picture_section" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profilePictureContainer"
+                android:orientation="horizontal">
+
+                <LinearLayout style="@style/profile_layout_left_container">
+
+                    <include layout="@layout/fragment_profile_personal_detail_section" />
+
+                    <include layout="@layout/fragment_profile_family_status" />
+
+                    <include layout="@layout/fragment_profile_spouse_detail" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/profile_layout_right_container">
+
+                    <include layout="@layout/fragment_profile_id_section" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/profileEditFabContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="32dp">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/profile_edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:tint="@color/white"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_edit" />
+    </RelativeLayout>
+
+
+    <View
+        style="@style/shadow.horizontal.bottom"
+        android:layout_below="@+id/profileFragmentToolbar" />
+</RelativeLayout>

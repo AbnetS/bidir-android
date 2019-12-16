@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp">
+
+    <TextView
+        android:id="@+id/summaryCostsListItemNameLabel"
+        style="@style/label.gray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/summary_cost_list_item_name_weight"
+        tools:text="Land Prep: Ploughing by Tractor" />
+
+    <TextView
+        android:id="@+id/summaryCostsListItemUnitLabel"
+        style="@style/label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="@integer/summary_cost_list_item_unit_weight"
+        android:gravity="center"
+        tools:text="day" />
+
+    <TextView
+        android:id="@+id/summaryCostsListItemQuantityLabel"
+        style="@style/label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="@integer/summary_cost_list_item_unit_weight"
+        android:gravity="center"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/summaryCostsListItemUnitPriceLabel"
+        style="@style/label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="@integer/summary_cost_list_item_unit_price_weight"
+        android:gravity="center"
+        tools:text="2.00" />
+
+    <TextView
+        android:id="@+id/summaryCostsListItemTotalPriceLabel"
+        style="@style/label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="@integer/summary_cost_list_item_total_price_weight"
+        android:gravity="center"
+        tools:text="200" />
+
+</LinearLayout>

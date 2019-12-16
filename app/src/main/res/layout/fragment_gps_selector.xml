@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    android:orientation="vertical"
+    tools:context=".ui.gps_location_selector.GPSSelectorFragment"
+    tools:ignore="NestedWeights">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/gpsSelectorToolbar"
+        style="@style/toolbar">
+
+        <LinearLayout style="@style/toolbar_menu_container">
+
+            <TextView
+                android:id="@+id/gpsSelectorMenuSaveLocations"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_gps_selector_save" />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/label.green"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/gps_selector_locations_title" />
+
+                <TextView
+                    android:id="@+id/gpsSelectorLocationsCounterLabel"
+                    style="@style/label.small.white"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/question_indicator_completed_background"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    tools:text="7" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/gpsSelectorLocationsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    tools:listitem="@layout/gps_selector_location_item_layout" />
+
+                <TextView
+                    android:id="@+id/gpsSelectorNoLocationsLabel"
+                    style="@style/label.small.green"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/gps_selector_no_locations_label"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/label.small.green"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/gps_selector_location_type_label" />
+
+                    <RadioGroup
+                        android:id="@+id/gpsSelectorLocationTypeRadioGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkedButton="@+id/gpsSelectorLocationTypeSingleChoice"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/gpsSelectorLocationTypeSingleChoice"
+                            style="@style/label.small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gps_location_single_choice" />
+
+                        <RadioButton
+                            android:id="@+id/gpsSelectorLocationTypeMultipleChoice"
+                            style="@style/label.small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gps_location_multiple_choice" />
+
+                    </RadioGroup>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/gray_super_light" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/label.green"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/gps_selector_current_location_title" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:background="@color/gray_super_light">
+
+                <ImageView
+                    android:id="@+id/gpsSelectorCurrentLocationIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:layout_toLeftOf="@+id/gpsSelectorCurrentLocationLabel"
+                    android:layout_toStartOf="@+id/gpsSelectorCurrentLocationLabel"
+                    android:contentDescription="@string/contentDescription"
+                    app:srcCompat="@drawable/register_location_icon" />
+
+                <TextView
+                    android:id="@+id/gpsSelectorCurrentLocationLabel"
+                    style="@style/label.large"
+                    android:layout_centerInParent="true"
+                    android:text="@string/gps_selector_current_location_label"
+                    android:textSize="@dimen/text_size_larger" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/gpsSelectorAddNewButton"
+                        style="@style/button.dark.green.dialog"
+                        android:layout_margin="4dp"
+                        android:text="@string/gps_selector_add_new_button" />
+
+                    <Button
+                        android:id="@+id/gpsSelectorUpdateButton"
+                        style="@style/button.dark.green.dialog"
+                        android:layout_margin="4dp"
+                        android:text="@string/gps_selector_update_button"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

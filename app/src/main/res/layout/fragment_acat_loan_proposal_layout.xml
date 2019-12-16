@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/acat_loan_proposal_toolbar"
+        style="@style/toolbar">
+
+        <LinearLayout style="@style/toolbar_menu_container">
+
+            <TextView
+                android:id="@+id/loan_proposal_menu_save"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_register_save" />
+
+            <TextView
+                android:id="@+id/loan_proposal_menu_submit"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_questions_submit" />
+
+            <TextView
+                android:id="@+id/loan_proposal_menu_approve"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_questions_approve" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/acat_loan_proposal_lower_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@id/acat_loan_proposal_toolbar"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/acat_step_title"
+            style="@style/label.large.green"
+            android:layout_below="@id/acat_crop_item_label"
+            android:layout_centerInParent="true"
+            android:text="@string/loan_proposal_title" />
+
+        <Button
+            android:id="@+id/acat_loan_proposal_previous_step_button"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:background="@color/green"
+            android:text="@string/previous_step"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/acat_loan_proposal_scrollable_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/acat_loan_proposal_footer_section"
+        android:layout_below="@id/acat_loan_proposal_lower_toolbar"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/gray_super_light">
+
+        <LinearLayout
+            android:id="@+id/loan_proposal_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/loan_proposal_section_layout" />
+
+            <LinearLayout style="@style/acat_layout_row_container">
+
+                <include layout="@layout/loan_deductible_section_layout" />
+
+                <include layout="@layout/cost_of_loan_section_layout" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="86dp"
+                android:layout_marginStart="86dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/label.large"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/cash_at_hand" />
+
+                <TextView
+                    android:id="@+id/cash_at_hand"
+                    style="@style/label.large"
+                    android:layout_width="240dp"
+                    android:background="@color/green_light"
+                    android:gravity="center"
+                    android:text="@string/acat_default_value" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/acat_loan_proposal_footer_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/acat_loan_proposal_footer_repayable_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/acat_green_custom_border"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp">
+
+            <TextView
+                style="@style/label.large"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/repayable" />
+
+            <TextView
+                android:id="@+id/repayable_value_label"
+                style="@style/label.large"
+                android:layout_width="240dp"
+                android:layout_gravity="center"
+                android:background="@color/green_light"
+                android:text="@string/acat_default_value"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/acat_footer_net_cash_flow_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/acat_loan_proposal_footer_repayable_section"
+            android:background="@color/green_light"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/label.large"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/net_cashflow" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/acat_net_cash_flow_recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/acat_footer_cash_flow_item_layout" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/acat_footer_cumulative_cash_flow_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/acat_footer_net_cash_flow_section"
+            android:layout_marginTop="2dp"
+            android:background="@color/green_light"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/label.large"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/cumulative_cashflow" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/acat_cumulative_cash_flow_section_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/acat_footer_cash_flow_item_layout" />
+        </LinearLayout>
+
+        <ExpandableListView
+            android:id="@+id/Crop_cash_flow_expandable_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/acat_footer_cumulative_cash_flow_section"
+            android:groupIndicator="@null" />
+    </RelativeLayout>
+</RelativeLayout>

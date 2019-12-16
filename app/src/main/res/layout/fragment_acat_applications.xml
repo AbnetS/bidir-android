@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    tools:context=".ui.home.main.acatapplications.ACATApplicationsFragment">
+
+    <RelativeLayout
+        android:id="@+id/acatApplicationFilterContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_super_light"
+        android:padding="8dp">
+
+        <include layout="@layout/sync_indicator_layout" />
+
+        <TextView
+            android:id="@+id/acatsFragmentFilterLabel"
+            style="@style/label.large.green"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableEnd="@drawable/main_menu_filter_list_icon"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/main_menu_filter_list_icon"
+            android:gravity="end"
+            android:text="@string/menu_main_filter_label" />
+
+        <include layout="@layout/loan_type_indicator_layout" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/acatApplicationsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/acatApplicationFilterContainer"
+        tools:listitem="@layout/client_item_layout" />
+
+    <TextView
+        android:id="@+id/acatApplicationsNoApplicationsLabel"
+        style="@style/label.green"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="@string/acat_applications_no_applications_found_label"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/groupAcatApplicationsNoApplicationsLabel"
+        style="@style/label.green"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:text="@string/group_acat_applications_no_applications_found_label"
+        android:visibility="gone"/>
+
+
+    <include layout="@layout/download_progress_container" />
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".ui.common.dialogs.addgroupmember.AddGroupMember">
+
+    <TextView
+        style="@style/label"
+        android:text="@string/add_group_member_title"
+        android:padding="16dp"/>
+    <RadioGroup
+        android:id="@+id/addGroupMemberRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:checkedButton="@+id/addGroupMemberNewChoice"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_gravity="center">
+
+        <RadioButton
+            android:id="@+id/addGroupMemberNewChoice"
+            style="@style/label"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:text="@string/add_group_member_new_member_label" />
+
+        <RadioButton
+            android:id="@+id/addGroupMemberExistingChoice"
+            style="@style/label"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:text="@string/add_group_member_existing_member_label"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp">
+
+        <Button
+            android:id="@+id/addGroupMemberDialogCancelButton"
+            style="@style/button.dark.gray.dialog"
+            android:layout_weight="1"
+            android:text="@string/add_group_member_cancel_button" />
+
+        <Button
+            android:id="@+id/addGroupMemberDialogOKButton"
+            style="@style/button.dark.green.dialog"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/add_group_member_ok_button" />
+    </LinearLayout>
+
+</LinearLayout>

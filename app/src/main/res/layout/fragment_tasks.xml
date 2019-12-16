@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".ui.home.tasks.TasksFragment">
+
+    <TextView
+        android:id="@+id/tasksTitleLabel"
+        style="@style/label"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/tasks_title_label" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/tasksFilterSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tasksTitleLabel"
+        android:entries="@array/tasks_filter_options"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tasksFilterSpinner">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/tasksRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/task_item_layout" />
+
+        <TextView
+            android:id="@+id/tasksNoDataLabel"
+            style="@style/label.small.green"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:text="@string/tasks_no_data_label" />
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/tasksProgressWheel"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="16dp"
+            app:matProg_barColor="@color/primary"
+            app:matProg_progressIndeterminate="true" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/shadow.horizontal.bottom"
+        android:layout_height="6dp"
+        android:layout_below="@+id/tasksFilterSpinner" />
+
+</RelativeLayout>

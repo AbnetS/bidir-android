@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/fragment_root"
+    tools:context=".ui.questions.acat.acatcropitem.ACATCropItemFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/acatCropItemToolbar"
+        style="@style/toolbar">
+        <LinearLayout style="@style/toolbar_menu_container">
+
+            <TextView
+                android:id="@+id/clientACATApprove"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_questions_approve"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/clientACATDecline"
+                style="@style/toolbar_menu_label"
+                android:text="@string/menu_questions_decline"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/acatCropItemToolbarShadow"
+        style="@style/shadow.horizontal.bottom"
+        android:layout_below="@+id/acatCropItemToolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/acatApplicationsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_below="@id/acatCropItemToolbarShadow"
+        tools:listitem="@layout/crop_item_layout" />
+
+    <RelativeLayout
+        android:id="@+id/cropItemListLoanProposalMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_background"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:layout_below="@id/acatApplicationsRecyclerView"
+        android:visibility="gone">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/mainItemLayoutImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/contentDescription"
+            app:riv_corner_radius="30dip"
+            app:srcCompat="@drawable/register_personal_details_picture_sample" />
+
+        <RelativeLayout
+            android:id="@+id/mainItemLayoutDataContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/mainItemLayoutImageView"
+            android:layout_toEndOf="@+id/mainItemLayoutImageView"
+            android:layout_toRightOf="@+id/mainItemLayoutImageView"
+            android:layout_toLeftOf="@id/textViewOptionsMenu"
+            android:layout_toStartOf="@id/textViewOptionsMenu"
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="24dp">
+
+            <TextView
+                android:id="@+id/loanProposalItemLayoutNameLabel"
+                style="@style/label"
+                android:text="@string/crop_item_list_loan_proposal_label_title"/>
+
+            <TextView
+                android:id="@+id/loanProposalItemLayoutStatusLabel"
+                style="@style/label.small.gray"
+                android:layout_below="@id/loanProposalItemLayoutNameLabel"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textViewOptionsMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:paddingBottom="24dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="24dp"
+            android:text="@string/option_menu"
+            android:textAppearance="?android:textAppearanceLarge"
+            />
+
+        <View
+            style="@style/list_separator"
+            android:layout_below="@+id/mainItemLayoutDataContainer"
+            android:layout_toEndOf="@+id/mainItemLayoutImageView"
+            android:layout_toRightOf="@+id/mainItemLayoutImageView" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

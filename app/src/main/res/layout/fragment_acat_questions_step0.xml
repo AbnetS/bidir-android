@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/fragment_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/acatStep_0_UpperToolbar"
+        style="@style/toolbar" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/acatStep_0_LowerToolbar"
+        style="@style/toolbar"
+        android:layout_below="@id/acatStep_0_UpperToolbar"
+        android:layout_centerHorizontal="true" >
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--style="@style/toolbar_menu_label" />-->
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="32dp"
+        android:background="@color/gray_super_light"
+        android:layout_below="@id/acatStep_0_LowerToolbar">
+
+        <ScrollView
+            android:id="@+id/acatStep_0_ScrollableContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="32dp"
+                android:background="@color/white">
+
+                <EditText
+                    android:id="@+id/acatEditCroppingArea"
+                    style="@style/register_layout_section_input"
+                    android:hint="@string/acat_cropping_area"
+                    android:nextFocusDown="@+id/personalDetailsFatherNameInput" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/acatSwitchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/acat_switch_button_text"
+                    style="@style/label"
+                    android:layout_alignLeft="@id/acatEditCroppingArea"
+                    android:layout_alignStart="@id/acatEditCroppingArea"
+                    android:checked="false"
+                    android:layout_below="@id/acatEditCroppingArea" />
+
+                <TextView
+                    android:id="@+id/checkBoxGroupTitle"
+                    android:layout_below="@id/acatSwitchButton"
+                    android:layout_marginTop="16dp"
+                    android:layout_alignLeft="@id/acatSwitchButton"
+                    style="@style/label"
+                    android:text="@string/acat_checkBox_group_title"/>
+                <RelativeLayout
+                    android:id="@+id/checkboxGroupContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/checkBoxGroupTitle"
+                    android:layout_toEndOf="@id/checkBoxGroupTitle"
+                    android:layout_alignTop="@id/checkBoxGroupTitle"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginStart="32dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/checkBoxGroupRecyclerView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/check_box_group_layout" />
+                </RelativeLayout>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/acatMonthSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkboxGroupContent"
+                    android:entries="@array/acat_month_entry"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp" />
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

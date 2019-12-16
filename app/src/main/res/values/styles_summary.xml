@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--summary menu title-->
+    <style name="summary_menu_title" parent="@style/label.small.green">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <!--summary menu subtitle -->
+    <style name="summary_menu_subtitle" parent="@style/label.small">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <!--summary divider-->
+    <style name="summary_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/gray_dark</item>
+    </style>
+
+    <!--summary title divider-->
+    <style name="summary_divider.title">
+        <item name="android:layout_height">2dp</item>
+        <item name="android:background">@color/green</item>
+    </style>
+
+    <!-- ==================================== SUMMARY INPUTS FRAGMENT ======================================== -->
+    <!--summary inputs row container-->
+    <style name="summary_inputs_row_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <!-- ==================================== FOR MARKET DETAIL DIALOG ====================================== -->
+    <style name="for_market_detail_row_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <!-- =================================== SUMMARY LOAN PROPOSAL FRAGMENT ================================ -->
+    <style name="summary_loan_proposal_row_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <!-- ==================================== SUMMARY COSTS FRAGMENT ======================================== -->
+    <!--summary costs list container-->
+    <style name="summary_costs_list_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <!--summary costs list-->
+    <style name="summary_costs_list">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+</resources>

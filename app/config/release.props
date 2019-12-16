@@ -1,0 +1,3 @@
+SHOW_LOGCAT="false"
+SEND_CRASH_LOGS="true"
+AUTHORITY="api.bidir.gebeya.co"

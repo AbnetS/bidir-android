@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_background"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/mainItemLayoutImageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/contentDescription"
+        app:riv_corner_radius="30dip"
+        app:srcCompat="@drawable/register_personal_details_picture_sample" />
+
+    <LinearLayout
+        android:id="@+id/mainItemLayoutDataContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/mainItemLayoutImageView"
+        android:layout_toEndOf="@+id/mainItemLayoutImageView"
+        android:layout_toRightOf="@+id/mainItemLayoutImageView"
+        android:orientation="vertical"
+        android:paddingBottom="24dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="24dp">
+
+        <TextView
+            android:id="@+id/mainItemLayoutNameLabel"
+            style="@style/label" />
+
+        <TextView
+            android:id="@+id/mainItemLayoutStatusLabel"
+            style="@style/label.small.gray" />
+    </LinearLayout>
+
+    <View
+        style="@style/list_separator"
+        android:layout_below="@+id/mainItemLayoutDataContainer"
+        android:layout_toEndOf="@+id/mainItemLayoutImageView"
+        android:layout_toRightOf="@+id/mainItemLayoutImageView" />
+
+    <View
+        android:id="@+id/mainItemLayoutCreatedIndicatorView"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/sync_indicator_status_background"
+        android:visibility="gone" />
+
+</RelativeLayout>

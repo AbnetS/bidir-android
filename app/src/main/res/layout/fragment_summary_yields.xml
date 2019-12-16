@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    tools:context=".ui.summary_inputs.SummaryInputsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/summaryYieldTitleLabel"
+                style="@style/label"
+                android:paddingBottom="16dp"
+                android:paddingLeft="48dp"
+                android:paddingRight="48dp"
+                android:paddingTop="16dp"
+                tools:text="@string/yield_type_preview" />
+
+            <RelativeLayout
+                android:id="@+id/summaryMonitorFabContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/monitorNewFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:fabSize="normal"
+                    app:srcCompat="@drawable/ic_monitor_acat" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View style="@style/summary_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                style="@style/summary_inputs_row_container"
+                android:layout_marginBottom="8dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="10" />
+
+                <TextView
+                    style="@style/label.green"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/summary_inputs_estimated_title_label" />
+
+                <TextView
+                    style="@style/label.green"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/summary_inputs_actual_title_label" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/summary_inputs_row_container">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/summary_yield_unit_label_title" />
+
+                <TextView
+                    android:id="@+id/summaryYieldEstimatedUnitValue"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/summary_yield_value_label" />
+
+                <TextView
+                    android:id="@+id/summaryYieldActualUnitValue"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/summary_yield_value_label" />
+
+            </LinearLayout>
+            <LinearLayout style="@style/summary_inputs_row_container">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/summary_yield_unit_price_label_title" />
+
+                <TextView
+                    android:id="@+id/summaryYieldEstimatedUnitPriceValue"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/summary_yield_value_label" />
+
+                <TextView
+                    android:id="@+id/summaryYieldActualUnitPriceValue"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/summary_yield_value_label" />
+
+            </LinearLayout>
+            <LinearLayout style="@style/summary_inputs_row_container">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/summary_yield_total_price_label_title" />
+
+                <TextView
+                    android:id="@+id/summaryYieldEstimatedTotalPriceValue"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/summary_yield_value_label" />
+
+                <TextView
+                    android:id="@+id/summaryYieldActualTotalPriceValue"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/summary_yield_value_label" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ownConsContainer"
+                style="@style/summary_inputs_row_container"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/summary_yield_own_cons_title_label" />
+
+                <TextView
+                    android:id="@+id/summaryYieldEstimatedOwnConsValue"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/summary_yield_value_label" />
+
+                <TextView
+                    android:id="@+id/summaryYieldActualOwnConsValue"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/summary_yield_value_label" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/seedResContainer"
+                style="@style/summary_inputs_row_container"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/summary_yield_seed_res_title_label" />
+
+                <TextView
+                    android:id="@+id/summaryYieldEstimatedSeedResValue"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/summary_yield_value_label" />
+
+                <TextView
+                    android:id="@+id/summaryYieldActualSeedResValue"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/summary_yield_value_label" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/forMarketContainer"
+                style="@style/summary_inputs_row_container"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/summary_yield_for_market_title_label" />
+
+                <TextView
+                    android:id="@+id/summaryYieldEstimatedForMarketValue"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/summary_yield_value_label" />
+
+                <TextView
+                    android:id="@+id/summaryYieldActualForMarketValue"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/summary_yield_value_label" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

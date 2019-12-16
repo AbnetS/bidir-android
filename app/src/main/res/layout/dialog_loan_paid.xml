@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.common.dialogs.loanpaid.SetLoanPaidDialog">
+
+    <TextView
+        android:id="@+id/setLoanPaidDialogTitleLabel"
+        style="@style/label.large"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/red"
+        android:text="@string/set_loan_dialog_title_label" />
+
+    <TextView
+        android:id="@+id/setLoanPaidDialogMessageLabel"
+        style="@style/label"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:text="@string/set_loan_dialog_prompt_label" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/setLoanPaidDialogNoButton"
+            style="@style/button.dark.gray.dialog"
+            android:layout_weight="1"
+            android:text="@string/set_loan_dialog_no_button" />
+
+        <Button
+            android:id="@+id/setLoanPaidDialogYesButton"
+            style="@style/button.dark.green.dialog"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/set_loan_dialog_yes_button" />
+    </LinearLayout>
+
+</LinearLayout>

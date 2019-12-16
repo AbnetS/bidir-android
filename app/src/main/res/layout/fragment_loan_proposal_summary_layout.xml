@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/fragment_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:background="@color/white"
+    tools:context=".ui.crop_summary_list.CropSummaryListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/label"
+            android:paddingBottom="16dp"
+            android:paddingLeft="48dp"
+            android:paddingRight="48dp"
+            android:paddingTop="16dp"
+            android:text="@string/loan_proposal_summary_total_title" />
+
+        <View style="@style/summary_divider"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout style="@style/summary_loan_proposal_row_container">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/loan_proposal_summary_total_revenu_title_label" />
+
+                <EditText
+                    android:id="@+id/loanProposalSummaryTotalRevenueValueLabel"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/loan_proposal_summary_value_label" />
+
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/summary_loan_proposal_row_container">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/loan_proposal_summary_total_cost_title_label" />
+
+                <EditText
+                    android:id="@+id/loanProposalSummaryTotalCostValueLabel"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/loan_proposal_summary_value_label" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/summary_loan_proposal_row_container" >
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/loan_proposal_summary_nec_income_title_label" />
+
+                <EditText
+                    android:id="@+id/loanProposalSummaryNetIncomeValueLabel"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/loan_proposal_summary_value_label" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/label"
+            android:paddingBottom="16dp"
+            android:paddingLeft="48dp"
+            android:paddingRight="48dp"
+            android:paddingTop="16dp"
+            android:text="@string/loan_proposal_summary_loan_proposal_title" />
+
+        <View style="@style/summary_divider"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout style="@style/summary_loan_proposal_row_container">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/loan_proposal_summary_loan_requested_title_label" />
+
+                <EditText
+                    android:id="@+id/loanProposalSummaryLoanRequestedValueLabel"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/loan_proposal_summary_value_label" />
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/loan_proposal_summary_total_deductible_title_label" />
+
+                <EditText
+                    android:id="@+id/loanProposalSummaryTotalDeductibleValueLabel"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/loan_proposal_summary_value_label" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/summary_loan_proposal_row_container">
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/loan_proposal_summary_loan_proposed_title_label" />
+
+                <EditText
+                    android:id="@+id/loanProposalSummaryLoanProposedValueLabel"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/loan_proposal_summary_value_label" />
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/loan_proposal_summary_total_loan_costs_title_label" />
+
+                <EditText
+                    android:id="@+id/loanProposalSummaryTotalLoanCostValueLabel"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/loan_proposal_summary_value_label" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/summary_loan_proposal_row_container" >
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/loan_proposal_summary_loan_approved_title_label" />
+
+                <EditText
+                    android:id="@+id/loanProposalSummaryLoanApprovedValueLabel"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/loan_proposal_summary_value_label" />
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/loan_proposal_summary_cash_at_hand_title_label" />
+
+                <EditText
+                    android:id="@+id/loanProposalSummaryCashAtHandValueLabel"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/loan_proposal_summary_value_label" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/summary_inputs_row_container">
+
+                <View
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    />
+
+                <View
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10" />
+
+                <TextView
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:text="@string/loan_proposal_summary_repayable_title_label" />
+
+                <EditText
+                    android:id="@+id/loanProposalSummaryRepayableValueLabel"
+                    style="@style/label"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_horizontal"
+                    android:text="@string/loan_proposal_summary_value_label" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

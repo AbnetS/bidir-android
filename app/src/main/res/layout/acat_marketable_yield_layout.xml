@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginStart="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/acat_marketable_yield_average_title"
+        style="@style/label"
+        android:padding="12dp"
+        android:text="@string/acat_marketable_yield_average" />
+
+    <TextView
+        android:id="@+id/acat_marketable_yield_average_value_label"
+        style="@style/label"
+        android:layout_toEndOf="@id/acat_marketable_yield_average_title"
+        android:layout_toRightOf="@id/acat_marketable_yield_average_title"
+        android:padding="12dp"
+        android:text="1000"
+        android:textColor="@color/green" />
+
+    <RelativeLayout
+        android:id="@+id/marketable_yield_section_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/acat_marketable_yield_average_title"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/title_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_super_light"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/expected_label"
+                style="@style/label.green"
+                android:layout_marginLeft="240dp"
+                android:layout_marginStart="240dp"
+                android:text="@string/acat_estimated" />
+
+            <TextView
+                android:id="@+id/achieved_label"
+                style="@style/label.green"
+                android:layout_marginLeft="100dp"
+                android:layout_marginStart="100dp"
+                android:layout_toEndOf="@id/expected_label"
+                android:layout_toRightOf="@id/expected_label"
+                android:text="@string/acat_actual" />
+
+            <TextView
+                android:id="@+id/remark_label"
+                style="@style/label.green"
+                android:layout_marginLeft="100dp"
+                android:layout_marginStart="100dp"
+                android:layout_toEndOf="@id/achieved_label"
+                android:layout_toRightOf="@id/achieved_label"
+                android:text="@string/acat_remark" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/marketable_yield_input_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_container"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/marketable_yield_labels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/own_consumption_label"
+                    style="@style/label.small"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginBottom="16dp"
+                    android:padding="2dp"
+                    android:text="@string/acat_marketable_own_consumption" />
+
+                <TextView
+                    android:id="@+id/seed_reserve_label"
+                    style="@style/label.small"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginBottom="16dp"
+                    android:padding="2dp"
+                    android:text="@string/acat_marketable_seed_reserve" />
+
+                <TextView
+                    android:id="@+id/product_of_the_market_label"
+                    style="@style/label.small"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginBottom="16dp"
+                    android:padding="2dp"
+                    android:text="@string/acat_marketable_product_of_the_market" />
+
+                <TextView
+                    android:id="@+id/union_label"
+                    style="@style/label.small.gray"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginBottom="16dp"
+                    android:padding="2dp"
+                    android:text="@string/acat_marketable_union" />
+
+                <TextView
+                    android:id="@+id/factory_label"
+                    style="@style/label.small.gray"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginBottom="16dp"
+                    android:padding="2dp"
+                    android:text="@string/acat_marketable_factory" />
+
+                <TextView
+                    android:id="@+id/trader_label"
+                    style="@style/label.small.gray"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginBottom="16dp"
+                    android:padding="2dp"
+                    android:text="@string/acat_marketable_trader" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/marketable_yield_expected_input_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/expected_own_consumption_input"
+                    style="@style/acat_layout_input"
+                    android:layout_width="160dp"
+                    android:hint="@string/acat_marketable_yield_amount" />
+
+                <EditText
+                    android:id="@+id/expected_seed_reserve_input"
+                    style="@style/acat_layout_input"
+                    android:layout_width="160dp"
+                    android:hint="@string/acat_marketable_yield_amount" />
+
+                <EditText
+                    android:id="@+id/expected_product_of_the_market_input"
+                    style="@style/acat_layout_input"
+                    android:layout_width="160dp"
+                    android:hint="@string/acat_marketable_yield_amount" />
+
+                <EditText
+                    android:id="@+id/expected_union_input"
+                    style="@style/acat_layout_input"
+                    android:layout_width="160dp"
+                    android:hint="@string/acat_marketable_yield_amount"
+                    android:padding="2dp" />
+
+                <EditText
+                    android:id="@+id/expected_factory_input"
+                    style="@style/acat_layout_input"
+                    android:layout_width="160dp"
+                    android:hint="@string/acat_marketable_yield_amount"
+                    android:padding="2dp" />
+
+                <EditText
+                    android:id="@+id/expected_trader_input"
+                    style="@style/acat_layout_input"
+                    android:layout_width="160dp"
+                    android:hint="@string/acat_marketable_yield_amount"
+                    android:padding="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/marketable_yield_achieved_input_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/achieved_own_consumption_input"
+                    style="@style/acat_layout_input"
+                    android:layout_width="160dp"
+                    android:hint="@string/acat_marketable_yield_amount" />
+
+                <EditText
+                    android:id="@+id/achieved_seed_reserve_input"
+                    style="@style/acat_layout_input"
+                    android:layout_width="160dp"
+                    android:hint="@string/acat_marketable_yield_amount" />
+
+                <EditText
+                    android:id="@+id/achieved_product_of_the_market_input"
+                    style="@style/acat_layout_input"
+                    android:layout_width="160dp"
+                    android:hint="@string/acat_marketable_yield_amount" />
+
+                <EditText
+                    android:id="@+id/achieved_union_input"
+                    style="@style/acat_layout_input"
+                    android:layout_width="160dp"
+                    android:hint="@string/acat_marketable_yield_amount"
+                    android:padding="2dp" />
+
+                <EditText
+                    android:id="@+id/achieved_factory_input"
+                    style="@style/acat_layout_input"
+                    android:layout_width="160dp"
+                    android:hint="@string/acat_marketable_yield_amount"
+                    android:padding="2dp" />
+
+                <EditText
+                    android:id="@+id/achieved_trader_input"
+                    style="@style/acat_layout_input"
+                    android:layout_width="160dp"
+                    android:hint="@string/acat_marketable_yield_amount"
+                    android:padding="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/marketable_yield_remark_input_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/remark_own_consumption_input"
+                    style="@style/acat_layout_input"
+                    android:hint="@string/acat_remark" />
+
+                <EditText
+                    android:id="@+id/remark_seed_reserve_input"
+                    style="@style/acat_layout_input"
+                    android:hint="@string/acat_remark" />
+
+                <EditText
+                    android:id="@+id/remark_product_of_the_market_input"
+                    style="@style/acat_layout_input"
+                    android:hint="@string/acat_remark" />
+
+                <EditText
+                    android:id="@+id/remark_union_input"
+                    style="@style/acat_layout_input"
+                    android:hint="@string/acat_remark"
+                    android:padding="2dp" />
+
+                <EditText
+                    android:id="@+id/remark_factory_input"
+                    style="@style/acat_layout_input"
+                    android:hint="@string/acat_remark"
+                    android:padding="2dp" />
+
+                <EditText
+                    android:id="@+id/remark_trader_input"
+                    style="@style/acat_layout_input"
+                    android:hint="@string/acat_remark"
+                    android:padding="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
